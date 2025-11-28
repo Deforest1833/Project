@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Safwan Moton | Family Medicine</title>
+    <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com;">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <meta name="description" content="Dr. Safwan Moton, Family Medicine physician providing comprehensive primary care with a focus on evidence‑based medicine and compassionate patient care in Sugar Land, TX and Temperance, MI." />
-    <meta name="keywords" content="Family Medicine, Primary Care, Dr Safwan Moton, Sugar Land Doctor, DO, Osteopathic Medicine, Preventive Care" />
+    <meta name="description" content="Dr. Safwan Moton is a Family Medicine Resident Physician currently practicing in Michigan, establishing care in Sugar Land, TX starting Summer 2026." />
+    <meta name="keywords" content="Family Medicine, Sugar Land Doctor, Dr Safwan Moton, DO, Primary Care, Preventive Care, Authority Health" />
     <meta name="author" content="Dr. Safwan Moton" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Safwan Moton",
+      "medicalSpecialty": "Family Medicine",
+      "jobTitle": "Resident Physician",
+      "image": "https://yourusername.github.io/Project/Headshot.png",
+      "description": "Family Medicine Physician currently completing residency in Michigan, returning to practice in Sugar Land, TX in 2026.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nova Southeastern University College of Osteopathic Medicine"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Temperance",
+          "addressRegion": "MI"
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land",
+          "addressRegion": "TX"
+        }
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +48,8 @@
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #1a3c5e; /* Deep Royal Blue */
-            --accent-color: #6c7a89;  /* Sophisticated Grey */
+            --primary-color: #1a3c5e; 
+            --accent-color: #6c7a89;  
             --bg-light: #f4f7f6;      
             --text-dark: #2c3e50;
             --font-heading: 'Cormorant Garamond', serif; 
@@ -29,7 +57,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -42,8 +69,6 @@
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
-        
-        /* Global Image Safety */
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
         /* --- ANIMATIONS --- */
@@ -80,7 +105,6 @@
         }
         .nav-links a:hover { color: var(--primary-color); }
 
-        /* MOBILE MENU */
         .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
         #mobile-menu {
             display: none; position: fixed; top: 70px; left: 0; width: 100%;
@@ -137,17 +161,14 @@
             margin-bottom: 30px; line-height: 1.1;
         }
         .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
+        
+        .image-content { display: flex; justify-content: center; }
+        
         .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
-
-        /* --- SPECIFIC FIX FOR HEADSHOT SIZE --- */
-        #about .image-content {
-            display: flex;
-            justify-content: flex-start; /* Aligns image to the left of its box */
-        }
-        #about .image-content img {
-            max-width: 380px; /* Forces the image to be smaller/reasonable */
-            width: 100%;
-        }
+        
+        /* About Section Specific: Headshot Sizing */
+        #about .image-content { justify-content: flex-start; }
+        #about .image-content img { max-width: 380px; }
 
         /* --- EDUCATION --- */
         .education { background-color: var(--bg-light); padding: 100px 5%; }
@@ -207,7 +228,7 @@
         @media (max-width: 900px) {
             .split-section, .location-container { grid-template-columns: 1fr; gap: 50px; }
             .patient-care .image-content { order: -1; }
-            #about .image-content { justify-content: center; } /* Center headshot on mobile */
+            #about .image-content { justify-content: center; }
         }
 
         @media (max-width: 768px) {
@@ -227,7 +248,7 @@
             <a href="#about">About</a>
             <a href="#care">Philosophy</a>
             <a href="#experience">Background</a>
-            <a href="#location">Practice</a>
+            <a href="#location">Current Practice</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
@@ -237,14 +258,14 @@
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#care" onclick="toggleMenu()">Philosophy</a>
         <a href="#experience" onclick="toggleMenu()">Background</a>
-        <a href="#location" onclick="toggleMenu()">Practice</a>
+        <a href="#location" onclick="toggleMenu()">Current Practice</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Expert Care for<br>Sugar Land.</h1>
-            <p>Bringing exceptional medical training, clinical excellence, and a commitment to family health to the Texas community.</p>
+            <h1>Coming Home to<br>Sugar Land in 2026.</h1>
+            <p>Bringing exceptional Family Medicine training from Michigan back to the Texas community.</p>
             <a href="#about" class="btn">Meet Dr. Moton</a>
         </div>
     </section>
@@ -256,7 +277,7 @@
         <div class="text-content reveal">
             <h2>Clinical Excellence & Compassion</h2>
             <p>
-                Dr. Safwan Moton is a Family Medicine physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. With years of experience managing complex health conditions in high-volume clinical settings, he is prepared to serve the growing needs of families in Sugar Land, Texas.
+                Dr. Safwan Moton is a Family Medicine Resident Physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. Currently completing his training in Michigan, he looks forward to establishing his long-term practice in Sugar Land, Texas in August 2026.
             </p>
             <p>
                 His approach combines robust scientific knowledge with a deep commitment to the community. Whether treating acute illnesses or managing chronic conditions, Dr. Moton prioritizes clear communication and personalized treatment plans that empower his patients to live healthier lives.
@@ -288,9 +309,9 @@
                 <h3>Authority Health Family Medicine</h3>
                 <span class="role">Residency Training • Affiliated with MSUCOM</span>
                 <ul>
-                    <li>Extensive training in broad-spectrum Family Medicine.</li>
-                    <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> in Temperance, MI.</li>
-                    <li>Experienced in managing diverse patient populations and complex chronic diseases.</li>
+                    <li><strong>Current Position:</strong> PGY-3 Resident Physician.</li>
+                    <li>Extensive training in broad-spectrum Family Medicine in Detroit/Dearborn area.</li>
+                    <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> (Temperance, MI).</li>
                 </ul>
             </div>
             <div class="timeline-item reveal">
@@ -298,7 +319,7 @@
                 <span class="role">Doctor of Osteopathic Medicine (DO)</span>
                 <ul>
                     <li>Dr. Kiran C. Patel College of Osteopathic Medicine.</li>
-                    <li>Intensive medical curriculum.</li>
+                    <li>Intensive medical curriculum with focus on holistic care.</li>
                 </ul>
             </div>
             <div class="timeline-item reveal">
@@ -306,8 +327,7 @@
                 <span class="role">Master of Science in Medical Sciences</span>
                 <ul>
                     <li>Advanced coursework in Research Methods and Biostatistics.</li>
-                    <li><strong>Published Researcher:</strong> Authored peer-reviewed studies in oncology and molecular biology following graduate studies.</li>
-                    <li>Developed keen analytical skills applied to evidence-based clinical practice.</li>
+                    <li>Published Researcher in oncology and molecular biology.</li>
                 </ul>
             </div>
             <div class="timeline-item reveal">
@@ -316,7 +336,6 @@
                 <ul>
                     <li>Graduated <strong>Magna Cum Laude</strong>.</li>
                     <li><strong>Houston Louis Stokes Scholar</strong> (H-LSAMP).</li>
-                    <li>Distinguished academic performance in the biological sciences.</li>
                 </ul>
             </div>
         </div>
@@ -325,9 +344,9 @@
     <section id="location" class="location">
         <div class="location-container">
             <div class="location-info reveal">
-                <h2>Current Practice</h2>
+                <h2>Current Residency Practice</h2>
                 <p style="margin-bottom:20px; color:#666;">
-                    Dr. Moton currently sees patients at the Family Medical Center of Michigan.
+                    Dr. Moton is currently seeing patients in Michigan until Summer 2026.
                 </p>
                 <div class="location-details">
                     <p><strong>Address:</strong><br>
@@ -355,7 +374,8 @@
             </div>
         </div>
         <div class="copyright">
-            © 2025 Dr. Safwan Moton. All Rights Reserved.
+            © 2025 Dr. Safwan Moton. All Rights Reserved. <br>
+            <span style="font-size: 0.6rem; opacity: 0.7;">Dr. Moton is currently a Resident Physician practicing under supervision in Michigan.</span>
         </div>
     </footer>
 
