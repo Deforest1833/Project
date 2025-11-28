@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Safwan Moton | Family Medicine</title>
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com;">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <meta name="description" content="Dr. Safwan Moton, Family Medicine physician providing comprehensive primary care in Sugar Land, TX and Temperance, MI." />
+    <meta name="description" content="Dr. Safwan Moton, Family Medicine physician providing comprehensive primary care with a focus on evidence‑based medicine and compassionate patient care in Sugar Land, TX and Temperance, MI." />
     <meta name="keywords" content="Family Medicine, Primary Care, Dr Safwan Moton, Sugar Land Doctor, DO, Osteopathic Medicine, Preventive Care" />
     <meta name="author" content="Dr. Safwan Moton" />
 
@@ -20,8 +20,8 @@
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #1a3c5e; 
-            --accent-color: #6c7a89;  
+            --primary-color: #1a3c5e; /* Deep Royal Blue */
+            --accent-color: #6c7a89;  /* Sophisticated Grey */
             --bg-light: #f4f7f6;      
             --text-dark: #2c3e50;
             --font-heading: 'Cormorant Garamond', serif; 
@@ -29,6 +29,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         html { scroll-behavior: smooth; }
 
         body {
@@ -41,6 +42,8 @@
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
+        
+        /* Global Image Safety */
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
         /* --- ANIMATIONS --- */
@@ -92,9 +95,9 @@
         /* --- HERO (Parallax) --- */
         .hero {
             height: 90vh;
-            /* PARALLAX 1: Blue Stethoscope */
-            background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2940&auto=format&fit=crop');
-            background-attachment: fixed; /* This creates the effect */
+            /* Uses local file 'hero-bg.jpg' */
+            background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('hero-bg.jpg');
+            background-attachment: fixed; 
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center;
             text-align: center; color: white; padding: 0 20px;
@@ -103,7 +106,7 @@
         .hero-content {
             animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
-            margin-top: 60px; /* Lowered position */
+            margin-top: 60px; /* Lowers text from center */
         }
 
         .hero-content h1 {
@@ -157,13 +160,13 @@
         }
         .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
 
-        /* --- LOCATION SECTION (PARALLAX UPGRADE) --- */
+        /* --- LOCATION SECTION (Parallax) --- */
         .location {
             padding: 120px 5%;
             width: 100%;
-            /* PARALLAX 2: Modern Clinic Building */
-            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop');
-            background-attachment: fixed; /* This makes the background stick */
+            /* Uses local file 'clinic-bg.jpg' */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('clinic-bg.jpg');
+            background-attachment: fixed; 
             background-size: cover;
             background-position: center;
         }
@@ -195,7 +198,7 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             .split-section, .location-container { grid-template-columns: 1fr; gap: 50px; }
-            .patient-care .image-content { order: -1; }
+            .patient-care .image-content { order: -1; } /* Image on top on mobile */
         }
 
         @media (max-width: 768px) {
@@ -239,7 +242,7 @@
 
     <section id="about" class="split-section">
         <div class="image-content reveal">
-            <img src="Headshot.png" alt="Dr. Safwan Moton" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop'">
+            <img src="Headshot.png" alt="Dr. Safwan Moton">
         </div>
         <div class="text-content reveal">
             <h2>Clinical Excellence & Compassion</h2>
