@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Safwan Moton | Family Medicine</title>
     
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com;">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <meta name="description" content="Dr. Safwan Moton, Family Medicine physician providing comprehensive primary care with a focus on evidence‑based medicine and compassionate patient care in Sugar Land, TX and Temperance, MI." />
     <meta name="keywords" content="Family Medicine, Primary Care, Dr Safwan Moton, Sugar Land Doctor, DO, Osteopathic Medicine, Preventive Care" />
     <meta name="author" content="Dr. Safwan Moton" />
@@ -104,7 +108,7 @@
         #mobile-menu {
             display: none;
             position: fixed;
-            top: 70px; /* Push below nav bar */
+            top: 70px; 
             left: 0;
             width: 100%;
             background: white;
@@ -144,8 +148,7 @@
         .hero-content {
             animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
-            /* Pushes the content down from the exact center */
-            margin-top: 60px;
+            margin-top: 60px; /* Lowers text slightly */
         }
 
         .hero-content h1 {
@@ -360,214 +363,17 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            /* Collapse grids to single column */
             .split-section, .location { grid-template-columns: 1fr; gap: 50px; }
-            /* Reorder patient care section so image is on top on mobile */
+            /* Puts images on top of text on mobile for better flow */
             .patient-care .image-content { order: -1; }
+            .split-section .image-content { order: -1; }
         }
 
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.8rem; }
-            .nav-links { display: none; } /* Hide desktop links */
-            .mobile-menu-btn { display: block; } /* Show hamburger */
+            .nav-links { display: none; } 
+            .mobile-menu-btn { display: block; } 
             
             .timeline { padding-left: 25px; }
             .timeline-item::before { left: -34px; }
-            .map-container { height: 300px; }
-            /* Remove custom margin on mobile so it centers properly on small screens */
-            .hero-content { margin-top: 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">Dr. Safwan Moton</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#care">Philosophy</a>
-            <a href="#experience">Background</a>
-            <a href="#location">Practice</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
-    </nav>
-
-    <div id="mobile-menu">
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#care" onclick="toggleMenu()">Philosophy</a>
-        <a href="#experience" onclick="toggleMenu()">Background</a>
-        <a href="#location" onclick="toggleMenu()">Practice</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Expert Care for<br>Sugar Land.</h1>
-            <p>Bringing exceptional medical training, clinical excellence, and a commitment to family health to the Texas community.</p>
-            <a href="#about" class="btn">Meet Dr. Moton</a>
-        </div>
-    </section>
-
-    <section id="about" class="split-section">
-        <div class="image-content reveal">
-            <img src="headshot.png" alt="Dr. Safwan Moton" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop'">
-        </div>
-        
-        <div class="text-content reveal">
-            <h2>Clinical Excellence & Compassion</h2>
-            <p>
-                Dr. Safwan Moton is a Family Medicine physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. With years of experience managing complex health conditions in high-volume clinical settings, he is prepared to serve the growing needs of families in Sugar Land, Texas.
-            </p>
-            <p>
-                His approach combines robust scientific knowledge with a deep commitment to the community. Whether treating acute illnesses or managing chronic conditions, Dr. Moton prioritizes clear communication and personalized treatment plans that empower his patients to live healthier lives.
-            </p>
-        </div>
-    </section>
-
-    <section id="care" class="split-section patient-care">
-        <div class="text-content reveal">
-            <h2>Patient-Centered Approach</h2>
-            <p>
-                Dr. Moton believes that empowered patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident and informed about your healthcare journey.
-            </p>
-            <p>
-                Whether managing a chronic illness or visiting for a routine check-up, every appointment is a partnership centered on your long-term well-being.
-            </p>
-        </div>
-        
-        <div class="image-content reveal">
-            <img src="patient-care.png" alt="Dr. Moton consulting with patient">
-        </div>
-    </section>
-
-    <section id="experience" class="education">
-        <div class="section-header reveal">
-            <h2>Education & Experience</h2>
-        </div>
-        
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <h3>Authority Health Family Medicine</h3>
-                <span class="role">Residency Training • Affiliated with MSUCOM</span>
-                <ul>
-                    <li>Extensive training in broad-spectrum Family Medicine.</li>
-                    <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> in Temperance, MI.</li>
-                    <li>Experienced in managing diverse patient populations and complex chronic diseases.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item reveal">
-                <h3>Nova Southeastern University</h3>
-                <span class="role">Doctor of Osteopathic Medicine (DO)</span>
-                <ul>
-                    <li>Dr. Kiran C. Patel College of Osteopathic Medicine.</li>
-                    <li>Intensive medical curriculum.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item reveal">
-                <h3>University of North Texas Health Science Center</h3>
-                <span class="role">Master of Science in Medical Sciences</span>
-                <ul>
-                    <li>Advanced coursework in Research Methods and Biostatistics.</li>
-                    <li><strong>Published Researcher:</strong> Authored peer-reviewed studies in oncology and molecular biology following graduate studies.</li>
-                    <li>Developed keen analytical skills applied to evidence-based clinical practice.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item reveal">
-                <h3>University of Houston (Main Campus)</h3>
-                <span class="role">Bachelor of Science</span>
-                <ul>
-                    <li>Graduated <strong>Magna Cum Laude</strong>.</li>
-                    <li><strong>Houston Louis Stokes Scholar</strong> (H-LSAMP).</li>
-                    <li>Distinguished academic performance in the biological sciences.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="location" class="location">
-        <div class="location-info reveal">
-            <h2>Current Practice</h2>
-            <p style="margin-bottom:20px; color:#666;">
-                Dr. Moton currently sees patients at the Family Medical Center of Michigan.
-            </p>
-            <div class="location-details">
-                <p><strong>Address:</strong><br>
-                8765 Lewis Ave<br>
-                Temperance, MI 48182</p>
-                
-                <p><strong>Phone:</strong><br>
-                (734) 847-3802</p>
-                
-                <p><strong>Hours:</strong><br>
-                Mon - Fri: 8:00 AM - 5:00 PM</p>
-            </div>
-        </div>
-        <div class="map-container reveal">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.8711466035654!2d-83.5658149239162!3d41.7276329712586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b631c1c1c1c1d%3A0x1c1c1c1c1c1c1c1c!2s8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="reveal">
-            <h2>Contact Information</h2>
-            
-            <div class="contact-block">
-                <p><strong>Current Administrative Contact</strong><br>Authority Health GME Family Medicine</p>
-                <br>
-                <p><strong>Email:</strong> csmart-gme [at] authorityhealth.org</p> 
-            </div>
-        </div>
-
-        <div class="copyright">
-            © 2025 Dr. Safwan Moton. All Rights Reserved.
-        </div>
-    </footer>
-
-    <script>
-        // 1. Scroll Animation
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-
-            for(var i = 0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 50; 
-
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
-
-        // 2. Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        // 3. Smooth Scroll for Anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                // Close mobile menu if open
-                document.getElementById('mobile-menu').style.display = 'none';
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+            .
