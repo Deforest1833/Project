@@ -92,10 +92,9 @@
             color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* --- HERO (Parallax) --- */
+        /* --- HERO --- */
         .hero {
             height: 90vh;
-            /* Uses local file 'hero-bg.jpg' */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -106,7 +105,7 @@
         .hero-content {
             animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
-            margin-top: 60px; /* Lowers text from center */
+            margin-top: 60px; 
         }
 
         .hero-content h1 {
@@ -140,6 +139,16 @@
         .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
         .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
 
+        /* --- SPECIFIC FIX FOR HEADSHOT SIZE --- */
+        #about .image-content {
+            display: flex;
+            justify-content: flex-start; /* Aligns image to the left of its box */
+        }
+        #about .image-content img {
+            max-width: 380px; /* Forces the image to be smaller/reasonable */
+            width: 100%;
+        }
+
         /* --- EDUCATION --- */
         .education { background-color: var(--bg-light); padding: 100px 5%; }
         .section-header { text-align: center; margin-bottom: 70px; }
@@ -160,13 +169,12 @@
         }
         .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
 
-        /* --- LOCATION SECTION (Parallax) --- */
+        /* --- LOCATION SECTION --- */
         .location {
             padding: 120px 5%;
             width: 100%;
-            /* Uses local file 'clinic-bg.jpg' */
             background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('clinic-bg.jpg');
-            background-attachment: fixed; 
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
         }
@@ -198,7 +206,8 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             .split-section, .location-container { grid-template-columns: 1fr; gap: 50px; }
-            .patient-care .image-content { order: -1; } /* Image on top on mobile */
+            .patient-care .image-content { order: -1; }
+            #about .image-content { justify-content: center; } /* Center headshot on mobile */
         }
 
         @media (max-width: 768px) {
