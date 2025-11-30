@@ -109,10 +109,9 @@
             color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* --- HERO (Parallax) --- */
+        /* --- HERO --- */
         .hero {
             height: 90vh;
-            /* Uses local file 'hero-bg.jpg' */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -124,6 +123,21 @@
             animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
             margin-top: 60px; 
+        }
+        
+        /* Status Badge for "Coming Soon" */
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 50px;
+            color: white;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
         }
 
         .hero-content h1 {
@@ -157,7 +171,7 @@
         .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
         .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
 
-        /* HEADSHOT SIZE LIMIT */
+        /* HEADSHOT FIX */
         #about .image-content { justify-content: flex-start; }
         #about .image-content img { max-width: 380px; }
 
@@ -181,7 +195,7 @@
         }
         .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
 
-        /* --- LOCATION SECTION (Parallax) --- */
+        /* --- LOCATION SECTION --- */
         .location {
             padding: 120px 5%;
             width: 100%;
@@ -255,9 +269,10 @@
 
     <section class="hero">
         <div class="hero-content">
+            <div class="status-badge">Opening Summer 2026</div>
             <h1>Family Medicine for<br>Sugar Land</h1>
             <p>Establishing practice in Summer 2026</p>
-            <a href="#about" class="btn">Meet Dr. Moton</a>
+            <a href="#care" class="btn">Join Waitlist</a>
         </div>
     </section>
 
@@ -268,7 +283,7 @@
         <div class="text-content reveal">
             <h2>Clinical Excellence & Compassion</h2>
             <p>
-                Dr. Safwan Moton is a Family Medicine Resident Physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to establish his long-term practice in Sugar Land, Texas in August 2026.
+                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to establish his long-term practice in Sugar Land, Texas in August 2026.
             </p>
             <p>
                 As a Doctor of Osteopathic Medicine (DO), he combines rigorous medical science with a comprehensive approach that considers the whole person, prioritizing treatments backed by established clinical guidelines and evidence-based protocols.
@@ -281,9 +296,6 @@
             <h2>Patient-Centered Approach</h2>
             <p>
                 Dr. Moton believes that informed patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident about your healthcare journey.
-            </p>
-            <p>
-                Whether managing a chronic illness or visiting for a routine check-up, every appointment is a partnership designed to support your long-term health goals.
             </p>
             <p>
                 <strong>Join the Community:</strong> Sign up below to be notified when the practice opens for new patient bookings in 2026.
