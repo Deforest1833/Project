@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com https://docs.google.com;">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <meta name="description" content="Dr. Safwan Moton, Family Medicine physician providing comprehensive primary care with a focus on evidence‑based medicine. Arriving in Sugar Land, TX in 2026." />
+    <meta name="description" content="Dr. Safwan Moton is a Family Medicine Resident Physician providing comprehensive primary care. Currently practicing in Michigan, establishing practice in Sugar Land, TX in Summer 2026." />
     <meta name="keywords" content="Family Medicine, Primary Care, Dr Safwan Moton, Sugar Land Doctor, DO, Evidence-Based Medicine, Preventive Care" />
     <meta name="author" content="Dr. Safwan Moton" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Safwan Moton",
+      "medicalSpecialty": "Family Medicine",
+      "jobTitle": "Resident Physician",
+      "image": "https://drmoton.com/Headshot.png",
+      "description": "Family Medicine Resident Physician currently practicing in Michigan, establishing permanent practice in Sugar Land, Texas in 2026.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nova Southeastern University College of Osteopathic Medicine"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Sugar Land", "addressRegion": "TX" },
+        { "@type": "City", "name": "Temperance", "addressRegion": "MI" }
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,9 +109,10 @@
             color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* --- HERO --- */
+        /* --- HERO (Parallax) --- */
         .hero {
             height: 90vh;
+            /* Uses local file 'hero-bg.jpg' */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -136,7 +157,7 @@
         .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
         .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
 
-        /* HEADSHOT FIX */
+        /* HEADSHOT SIZE LIMIT */
         #about .image-content { justify-content: flex-start; }
         #about .image-content img { max-width: 380px; }
 
@@ -160,7 +181,7 @@
         }
         .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
 
-        /* --- LOCATION SECTION --- */
+        /* --- LOCATION SECTION (Parallax) --- */
         .location {
             padding: 120px 5%;
             width: 100%;
@@ -218,7 +239,7 @@
             <a href="#about">About</a>
             <a href="#care">Philosophy</a>
             <a href="#experience">Background</a>
-            <a href="#location">Current Practice</a>
+            <a href="#location">Practice</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
@@ -228,7 +249,7 @@
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#care" onclick="toggleMenu()">Philosophy</a>
         <a href="#experience" onclick="toggleMenu()">Background</a>
-        <a href="#location" onclick="toggleMenu()">Current Practice</a>
+        <a href="#location" onclick="toggleMenu()">Practice</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
@@ -264,6 +285,10 @@
             <p>
                 Whether managing a chronic illness or visiting for a routine check-up, every appointment is a partnership designed to support your long-term health goals.
             </p>
+            <p>
+                <strong>Join the Community:</strong> Sign up below to be notified when the practice opens for new patient bookings in 2026.
+            </p>
+            <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Join Patient Waitlist</a>
         </div>
         <div class="image-content reveal">
             <img src="patient-care.png" alt="Dr. Moton consulting with patient">
