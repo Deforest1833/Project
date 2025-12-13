@@ -1,423 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
-    
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com https://docs.google.com;">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <meta name="description" content="Dr. Safwan Moton is a Board-Eligible Family Medicine Resident Physician and published researcher (Top 10% Most Cited). Currently practicing in Michigan, establishing practice in Sugar Land, TX in Summer 2026." />
-    <meta name="keywords" content="Family Medicine, Primary Care, Dr Safwan Moton, Sugar Land Doctor, DO, Evidence-Based Medicine, Preventive Care, Doximity Top 10%" />
-    <meta name="author" content="Dr. Safwan Moton" />
+  <title>Dr. Safwan Moton - Family Medicine</title>
+  <meta content="Dr. Safwan Moton is a Family Medicine Physician establishing practice in Sugar Land, Texas in Summer 2026. Specializing in primary care, osteopathic manipulative medicine, and preventative health." name="description">
+  <meta content="Dr. Safwan Moton, Safwan Moton DO, Family Medicine Sugar Land, Doctor Sugar Land, Primary Care Sugar Land" name="keywords">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Safwan Moton",
-      "medicalSpecialty": "Family Medicine",
-      "jobTitle": "Resident Physician",
-      "image": "https://drmoton.com/Headshot.png",
-      "url": "https://drmoton.com",
-      "description": "Board-Eligible Family Medicine Resident Physician currently practicing in Michigan, establishing permanent practice in Sugar Land, Texas in 2026.",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Nova Southeastern University College of Osteopathic Medicine"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Sugar Land", "addressRegion": "TX" },
-        { "@type": "City", "name": "Temperance", "addressRegion": "MI" }
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/sm28524",
-        "https://www.doximity.com/pub/safwan-moton-do"
-      ]
-    }
-    </script>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-color: #1a3c5e; 
-            --accent-color: #6c7a89;  
-            --bg-light: #f4f7f6;      
-            --text-dark: #2c3e50;
-            --font-heading: 'Cormorant Garamond', serif; 
-            --font-body: 'Lato', sans-serif;             
-        }
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+  <link href="assets/css/style.css" rel="stylesheet">
 
-        body {
-            font-family: var(--font-body);
-            color: var(--text-dark);
-            line-height: 1.8;
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-        /* --- ANIMATIONS --- */
-        @keyframes heroFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0; 
-            transform: translateY(50px);
-            transition: all 1.2s ease-out; 
-        }
-
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* --- NAV --- */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px);
-            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600;
-            letter-spacing: 1px; color: var(--primary-color); text-transform: uppercase;
-        }
-
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a {
-            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px;
-            color: var(--accent-color); font-weight: 700;
-        }
-        .nav-links a:hover { color: var(--primary-color); }
-
-        /* MOBILE MENU */
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
-        #mobile-menu {
-            display: none; position: fixed; top: 70px; left: 0; width: 100%;
-            background: white; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
-        }
-        #mobile-menu a {
-            display: block; padding: 15px; font-size: 1rem; font-weight: 700;
-            color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;
-        }
-
-        /* --- HERO --- */
-        .hero {
-            height: 90vh;
-            background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.7)), url('hero-bg.jpg');
-            background-attachment: fixed; 
-            background-size: cover; background-position: center;
-            display: flex; align-items: center; justify-content: center;
-            text-align: center; color: white; padding: 0 20px;
-        }
-
-        .hero-content {
-            animation: heroFadeIn 1.5s ease-out forwards;
-            max-width: 800px;
-            margin-top: 60px; 
-        }
-
-        .status-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.4);
-            border-radius: 50px;
-            color: white;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 25px;
-            backdrop-filter: blur(5px);
-        }
-
-        .hero-content h1 {
-            font-family: var(--font-heading); font-size: 4.2rem; font-weight: 600;
-            margin-bottom: 25px; line-height: 1.1; color: white;
-        }
-
-        .hero-content p {
-            font-size: 1.4rem; font-weight: 300; color: rgba(255, 255, 255, 0.9);
-            margin: 0 auto 40px auto; max-width: 700px; text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .btn {
-            padding: 18px 45px; background: transparent; color: white;
-            text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;
-            font-weight: 700; border: 1px solid white; cursor: pointer;
-            border-radius: 2px; display: inline-block;
-        }
-        .btn:hover { background: white; color: var(--primary-color); }
-
-        /* --- SECTIONS --- */
-        .split-section {
-            padding: 100px 5%; display: grid; grid-template-columns: 1fr 1fr;
-            gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto;
-        }
-
-        .text-content h2 {
-            font-family: var(--font-heading); font-size: 3rem; color: var(--primary-color);
-            margin-bottom: 30px; line-height: 1.1;
-        }
-        .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
-        .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
-
-        /* HEADSHOT SIZE LIMIT */
-        #about .image-content { justify-content: flex-start; }
-        #about .image-content img { max-width: 380px; }
-
-        /* --- EDUCATION --- */
-        .education { background-color: var(--bg-light); padding: 100px 5%; }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-header h2 { font-family: var(--font-heading); font-size: 2.8rem; color: var(--primary-color); }
-
-        .timeline {
-            max-width: 800px; margin: 0 auto; border-left: 2px solid #cbd5e0; padding-left: 50px;
-        }
-        .timeline-item { margin-bottom: 60px; position: relative; }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -59px; top: 8px; width: 16px; height: 16px;
-            background: var(--primary-color); border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 1px #cbd5e0;
-        }
-        .timeline-item h3 { font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary-color); margin-bottom: 5px; }
-        .timeline-item .role {
-            font-weight: 700; text-transform: uppercase; font-size: 0.85rem;
-            letter-spacing: 1.5px; color: var(--accent-color); margin-bottom: 15px; display: block;
-        }
-        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
-
-        /* --- LOCATION SECTION --- */
-        .location {
-            padding: 120px 5%;
-            width: 100%;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('clinic-bg.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .location-container {
-            display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;
-            max-width: 1200px; margin: 0 auto; align-items: center;
-        }
-
-        .location-info h2 {
-            font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 25px;
-        }
-        .location-details p { font-size: 1.1rem; margin-bottom: 15px; color: #555; }
-        .location-details strong { color: var(--primary-color); }
-
-        .map-container {
-            width: 100%; height: 400px; background: #eee; border-radius: 2px;
-            overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-
-        /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 90px 5% 40px 5%; text-align: center; }
-        footer h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 40px; }
-        .contact-block { margin-bottom: 40px; font-weight: 300; font-size: 1.1rem; line-height: 2; }
-        .contact-block a { border-bottom: 1px solid rgba(255,255,255,0.3); }
-        .copyright { font-size: 0.75rem; opacity: 0.5; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; letter-spacing: 1px; }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
-            .split-section, .location-container { grid-template-columns: 1fr; gap: 50px; }
-            .patient-care .image-content { order: -1; }
-            #about .image-content { justify-content: center; }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
-            .nav-links { display: none; } .mobile-menu-btn { display: block; } 
-            .timeline { padding-left: 25px; } .timeline-item::before { left: -34px; }
-            .map-container { height: 300px; }
-            .hero-content { margin-top: 0; }
-        }
-    </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">Dr. Safwan Moton</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#care">Philosophy</a>
-            <a href="#experience">Background</a>
-            <a href="#location">Practice</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
-    </nav>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <div id="mobile-menu">
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#care" onclick="toggleMenu()">Philosophy</a>
-        <a href="#experience" onclick="toggleMenu()">Background</a>
-        <a href="#location" onclick="toggleMenu()">Practice</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/headshot.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Dr. Safwan Moton</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav></div>
+  </header><section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Dr. Safwan Moton</h1>
+      <p>I am a <span class="typed" data-typed-items="Family Medicine Physician, Osteopathic Physician, Patient Advocate"></span></p>
+      
+      <div style="margin-top: 20px; background: rgba(0,0,0,0.6); padding: 15px; border-radius: 5px; border-left: 4px solid #149ddd;">
+        <h4 style="color: #fff; margin: 0; font-size: 1.2rem;">Returning Home to Sugar Land, TX</h4>
+        <p style="color: #ddd; margin: 5px 0 0 0;">Accepting New Patients starting Summer 2026</p>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" class="btn-get-started" style="background: #149ddd; border: 0; padding: 12px 30px; color: #fff; transition: 0.4s; border-radius: 50px; font-weight: 600; text-decoration: none;">Join the Waitlist</a>
+      </div>
+
     </div>
+  </section><main id="main">
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="status-badge">Resident Physician | Establishing 2026</div>
-            <h1>Family Medicine for<br>Sugar Land</h1>
-            <p>Establishing practice in Summer 2026</p>
-            <a href="#care" class="btn">Join Waitlist</a>
-        </div>
-    </section>
+    <section id="about" class="about">
+      <div class="container">
 
-    <section id="about" class="split-section">
-        <div class="image-content reveal">
-            <img src="Headshot.png" alt="Dr. Safwan Moton">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>I am a Board-Eligible Family Medicine physician with a passion for comprehensive, whole-person care. After completing my residency training in Michigan, I am fulfilling my long-term goal of returning home to Sugar Land, Texas to serve the community that raised me.</p>
         </div>
-        <div class="text-content reveal">
-            <h2>Clinical Excellence & Compassion</h2>
-            <p>
-                Dr. Safwan Moton is a <strong>Board-Eligible</strong> Family Medicine Resident Physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to establish his long-term practice in Sugar Land, Texas in August 2026.
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/headshot.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Family Medicine &amp; Osteopathic Physician</h3>
+            <p class="fst-italic">
+              Providing compassionate, evidence-based care for the entire family.
             </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Doctor of Osteopathic Medicine (DO)</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Specialty:</strong> <span>Family Medicine</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Sugar Land, TX (Starting 2026)</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Residency:</strong> <span>Authority Health GME</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Medical School:</strong> <span>Michigan State University COM</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>drsafwanmoton@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
             <p>
-                As a Doctor of Osteopathic Medicine (DO), he combines rigorous medical science with a comprehensive approach that considers the whole person. He was recognized as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024, reflecting his dedication to treatments backed by established clinical guidelines.
+              My approach to medicine is rooted in the Osteopathic philosophy that the body is a unit of body, mind, and spirit. I believe in partnering with my patients to achieve their health goals through preventative care, lifestyle management, and advanced medical treatment.
             </p>
+          </div>
         </div>
-    </section>
 
-    <section id="care" class="split-section patient-care">
-        <div class="text-content reveal">
-            <h2>Patient-Centered Approach</h2>
-            <p>
-                Dr. Moton believes that informed patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident about your healthcare journey.
-            </p>
-            <p>
-                <strong>Join the Community:</strong> Sign up below to be notified when the practice opens for new patient bookings in 2026.
-            </p>
-            <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Join Patient Waitlist</a>
-        </div>
-        <div class="image-content reveal">
-            <img src="patient-care.png" alt="Dr. Moton consulting with patient">
-        </div>
-    </section>
+      </div>
+    </section><section id="resume" class="resume">
+      <div class="container">
 
-    <section id="experience" class="education">
-        <div class="section-header reveal">
-            <h2>Education & Experience</h2>
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>My educational background and professional training.</p>
         </div>
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <h3>Authority Health Family Medicine</h3>
-                <span class="role">Residency Training • Affiliated with MSUCOM</span>
-                <ul>
-                    <li><strong>Current Position:</strong> PGY-3 Resident Physician.</li>
-                    <li>Extensive training in broad-spectrum Family Medicine.</li>
-                    <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> (Temperance, MI).</li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <h3>Nova Southeastern University</h3>
-                <span class="role">Doctor of Osteopathic Medicine (DO)</span>
-                <ul>
-                    <li>Dr. Kiran C. Patel College of Osteopathic Medicine.</li>
-                    <li>Intensive medical curriculum.</li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <h3>University of North Texas Health Science Center</h3>
-                <span class="role">Master of Science in Medical Sciences</span>
-                <ul>
-                    <li>Advanced coursework in Research Methods and Biostatistics.</li>
-                    <li>Published Researcher in oncology and molecular biology.</li>
-                    <li><strong>Top 10% Most Cited Clinician on Doximity (2024).</strong></li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <h3>University of Houston (Main Campus)</h3>
-                <span class="role">Bachelor of Science</span>
-                <ul>
-                    <li>Graduated <strong>Magna Cum Laude</strong>.</li>
-                    <li><strong>Houston Louis Stokes Scholar</strong> (H-LSAMP).</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <section id="location" class="location">
-        <div class="location-container">
-            <div class="location-info reveal">
-                <h2>Current Residency Practice</h2>
-                <p style="margin-bottom:20px; color:#666;">
-                    Dr. Moton is currently seeing patients in Michigan until Summer 2026.
-                </p>
-                <div class="location-details">
-                    <p><strong>Address:</strong><br>
-                    8765 Lewis Ave<br>
-                    Temperance, MI 48182</p>
-                    <p><strong>Phone:</strong><br>
-                    (734) 847-3802</p>
-                    <p><strong>Hours:</strong><br>
-                    Mon - Fri: 8:00 AM - 5:00 PM</p>
-                </div>
+        <div class="row">
+          
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education & Training</h3>
+            
+            <div class="resume-item">
+              <h4>Family Medicine Resident Physician</h4>
+              <h5>2025 - Present</h5>
+              <p><em>Authority Health GME, Detroit, MI</em></p>
+              <ul>
+                <li>Serving a diverse patient population in an underserved urban setting.</li>
+                <li>Comprehensive training in adult medicine, pediatrics, women's health, and geriatrics.</li>
+                <li>Focus on social determinants of health and community advocacy.</li>
+              </ul>
             </div>
-            <div class="map-container reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378805.8968820416!2d-84.03369062343096!3d42.119868199137514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b7fbb6cba4b7f%3A0xb4260a71396332a5!2sFamily%20Medical%20Center%20of%20Michigan!5e0!3m2!1sen!2sus!4v1764511217202!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
 
-    <footer id="contact">
-        <div class="reveal">
-            <h2>Contact Information</h2>
-            <div class="contact-block">
-                <p><strong>Current Administrative Contact</strong><br>Authority Health GME Family Medicine</p>
+            <div class="resume-item">
+              <h4>Clinical Faculty</h4>
+              <h5>2023 - Present</h5>
+              <p><em>Michigan State University College of Osteopathic Medicine (MSUCOM)</em></p>
+              <ul>
+                <li>Appointed Clinical Faculty member involved in the education and mentorship of medical students.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Doctor of Osteopathic Medicine (DO)</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>Michigan State University College of Osteopathic Medicine</em></p>
+              <p>East Lansing, MI</p>
+            </div>
+
+             <div class="resume-item">
+              <h4>Bachelor of Science</h4>
+              <h5>2017 - 2021</h5>
+              <p><em>University of Houston</em></p>
+              <p>Houston, TX</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Certifications & Memberships</h3>
+            <div class="resume-item">
+              <h4>Board Eligibility</h4>
+              <h5>2028 (Anticipated)</h5>
+              <p><em>American Board of Family Medicine (ABFM)</em></p>
+              <p><em>American Osteopathic Board of Family Physicians (AOBFP)</em></p>
+            </div>
+            
+            <div class="resume-item">
+              <h4>Professional Memberships</h4>
+              <ul>
+                <li>American Academy of Family Physicians (AAFP)</li>
+                <li>American College of Osteopathic Family Physicians (ACOFP)</li>
+                <li>Texas Medical Association (TMA)</li>
+                <li>Michigan Osteopathic Association (MOA)</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Certifications</h4>
+              <ul>
+                <li>Basic Life Support (BLS)</li>
+                <li>Advanced Cardiac Life Support (ACLS)</li>
+                <li>Pediatric Advanced Life Support (PALS)</li>
+                <li>Neonatal Resuscitation Program (NRP)</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Comprehensive primary care services for patients of all ages.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-heart-pulse"></i></div>
+            <h4 class="title"><a href="">Preventative Care</a></h4>
+            <p class="description">Annual physicals, wellness exams, and health screenings to keep you healthy before illness starts.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-activity"></i></div>
+            <h4 class="title"><a href="">Chronic Disease Management</a></h4>
+            <p class="description">Expert management of diabetes, hypertension, high cholesterol, asthma, and thyroid disorders.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-person-plus"></i></div>
+            <h4 class="title"><a href="">Osteopathic Manipulation (OMT)</a></h4>
+            <p class="description">Hands-on diagnosis and treatment to diagnose injury and illness and encourage your body's natural tendency toward good health.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-people"></i></div>
+            <h4 class="title"><a href="">Pediatrics</a></h4>
+            <p class="description">Care for newborns, children, and adolescents, including well-child checks and sports physicals.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-bandaid"></i></div>
+            <h4 class="title"><a href="">Minor Procedures</a></h4>
+            <p class="description">Skin biopsies, joint injections, incision and drainage, and cryotherapy.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar-check"></i></div>
+            <h4 class="title"><a href="">Urgent Care</a></h4>
+            <p class="description">Same-day visits for acute illnesses like flu, strep throat, UTIs, and minor injuries.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>I am currently based in Michigan but will be opening my practice in Sugar Land, TX in Summer 2026. Please join the waitlist to stay updated.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Sugar Land, TX (Coming Soon)</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>drsafwanmoton@gmail.com</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110942.34861805546!2d-95.69634947668666!3d29.59850616198642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e6035616a69f%3A0x62953835f11550!2sSugar%20Land%2C%20TX!5e0!3m2!1sen!2sus!4v1709420000000!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <div class="info" style="width: 100%; text-align: center; padding: 40px;">
+                <h3>Join the Priority Waitlist</h3>
+                <p>Be the first to know when I open my practice and begin scheduling appointments.</p>
                 <br>
-                <p><strong>Email:</strong> csmart-gme [at] authorityhealth.org</p> 
+                <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" style="background: #149ddd; border: 0; padding: 15px 40px; color: #fff; transition: 0.4s; border-radius: 50px; font-weight: 600; text-decoration: none; font-size: 1.2rem;">Sign Up Now</a>
             </div>
+          </div>
+
         </div>
-        <div class="copyright">
-            © 2025 Dr. Safwan Moton. All Rights Reserved.<br>
-            <span style="font-size: 0.7rem; opacity: 0.6;">Dr. Moton is a Resident Physician currently practicing in Michigan.</span>
-        </div>
-    </footer>
 
-    <script>
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-            for(var i = 0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 50; 
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
+      </div>
+    </section></main><footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Dr. Safwan Moton</span></strong>
+      </div>
+    </div>
+  </footer><a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        }
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.getElementById('mobile-menu').style.display = 'none';
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
