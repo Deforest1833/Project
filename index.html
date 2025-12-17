@@ -17,7 +17,7 @@
         :root {
             --primary-color: #1a3c5e; 
             --accent-color: #6c7a89;  
-            --bg-cream: #f9f9f7;      
+            --bg-cream: #f2f2eb;      /* Richer Cream Color (Stationery look) */
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;   
@@ -73,7 +73,7 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(249, 249, 247, 0.98); 
+            background: rgba(242, 242, 235, 0.98); /* Matches new Cream BG */
             backdrop-filter: blur(8px);
             z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
@@ -195,57 +195,45 @@
         .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
         .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
 
-        /* --- BIO SECTION FIXES (The specific request) --- */
-        /* Dark Navy Background */
+        /* --- BIO SECTION (Fixed Layout) --- */
         #about {
             background-color: var(--primary-color);
-            /* Reset any conflicting alignments */
             text-align: left;
         }
 
-        /* Image Side */
         #about .image-content {
             display: flex;
-            justify-content: center; /* Centers image in its column */
+            justify-content: center;
         }
         #about .image-content img {
             max-width: 400px; 
-            border: 8px solid rgba(255,255,255,0.1); /* Frame effect */
+            border: 8px solid rgba(255,255,255,0.1);
         }
 
-        /* Text Side - THE FIX */
         #about .text-content {
             color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start; /* Forces strict left alignment */
+            align-items: flex-start;
         }
 
-        #about .eyebrow { 
-            color: rgba(255,255,255,0.7); 
-            margin-bottom: 15px; 
-        }
-
-        #about h2 { 
-            color: #ffffff; 
-            margin-bottom: 30px; 
-            line-height: 1.2;
-        }
-
+        #about .eyebrow { color: rgba(255,255,255,0.7); margin-bottom: 15px; }
+        #about h2 { color: #ffffff; margin-bottom: 30px; line-height: 1.2; }
+        
         #about p { 
-            color: rgba(255,255,255,0.95); /* High opacity for readability */
+            color: rgba(255,255,255,0.95); 
             margin-bottom: 25px; 
-            line-height: 1.9; /* More breathing room */
-            font-weight: 400; /* Regular weight, NOT thin (300) */
-            font-size: 1.15rem; /* Slightly larger for easier reading */
-            max-width: 600px; /* Prevents text from stretching too wide */
+            line-height: 1.9;
+            font-weight: 400; 
+            font-size: 1.15rem; 
+            max-width: 600px;
         }
 
         #about strong { 
             color: #ffffff; 
             font-weight: 700; 
-            border-bottom: 1px solid rgba(255,255,255,0.3); /* Subtle underline for emphasis */
+            border-bottom: 1px solid rgba(255,255,255,0.3);
         }
 
         /* --- EDUCATION --- */
@@ -285,7 +273,7 @@
         .location {
             padding: 140px 5%;
             width: 100%;
-            background-image: linear-gradient(rgba(249, 249, 247, 0.95), rgba(249, 249, 247, 0.95)), url('clinic-bg.jpg');
+            background-image: linear-gradient(rgba(242, 242, 235, 0.95), rgba(242, 242, 235, 0.95)), url('clinic-bg.jpg');
             background-attachment: fixed;
             background-size: cover;
         }
@@ -311,11 +299,9 @@
             #about .image-content { justify-content: center; }
             .hero-content h1 { font-size: 3.5rem; }
             
-            /* Trust Bar Mobile Fix */
             .trust-container { flex-direction: column; gap: 40px; }
             .trust-img { width: 280px; max-width: 80%; } 
             
-            /* Text alignment fix for mobile */
             #about .text-content { align-items: flex-start; text-align: left; }
         }
 
@@ -375,7 +361,7 @@
                 Dr. Safwan Moton is a <strong>Board-Eligible</strong> Family Medicine Resident Physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to establish his long-term practice in Sugar Land, Texas in August 2026.
             </p>
             <p>
-                As a Doctor of Osteopathic Medicine (DO), he combines rigorous medical science with a comprehensive approach that considers the whole person. He was recognized as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024, reflecting his dedication to treatments backed by established clinical guidelines.
+                Dr. Moton combines rigorous medical science with real-world clinical experience. He is dedicated to providing care that is rooted in established guidelines and tailored to effective outcomes. This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024.
             </p>
         </div>
     </section>
