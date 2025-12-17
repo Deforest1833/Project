@@ -13,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- CSS VARIABLES & PREMIUM RESET --- */
+        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #1a3c5e; /* Deep Navy */
+            --primary-color: #1a3c5e; 
             --accent-color: #6c7a89;  
-            --bg-cream: #f9f9f7;      /* "Stationery" Off-White */
+            --bg-cream: #f9f9f7;      
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
-            --gold-accent: #D4AF37;   /* For subtle lines/borders */
+            --gold-accent: #D4AF37;   
             
             --font-heading: 'Cormorant Garamond', serif; 
             --font-body: 'Lato', sans-serif;             
@@ -32,8 +32,8 @@
         body {
             font-family: var(--font-body);
             color: var(--text-dark);
-            line-height: 1.9; /* Increased line-height for "Breathing Room" */
-            background-color: var(--bg-cream); /* Premium Cream Background */
+            line-height: 1.8;
+            background-color: var(--bg-cream);
             overflow-x: hidden;
         }
 
@@ -41,10 +41,9 @@
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
-        /* --- TYPOGRAPHY UPGRADES --- */
+        /* --- TYPOGRAPHY --- */
         h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
         
-        /* The "Eyebrow" Text - Magazine Style */
         .eyebrow {
             font-family: var(--font-body);
             font-size: 0.75rem;
@@ -52,7 +51,7 @@
             letter-spacing: 3px;
             font-weight: 700;
             color: var(--accent-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: block;
         }
 
@@ -74,9 +73,9 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(249, 249, 247, 0.95); /* Matches Cream BG */
+            background: rgba(249, 249, 247, 0.98); 
             backdrop-filter: blur(8px);
-            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.03);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .logo {
@@ -123,7 +122,7 @@
             display: inline-block;
             padding: 8px 18px;
             border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 2px; /* Sharper corners for premium feel */
+            border-radius: 2px;
             color: white;
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -133,7 +132,7 @@
         }
 
         .hero-content h1 {
-            font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400; /* Lighter weight is more elegant */
+            font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400;
             margin-bottom: 25px; line-height: 1; color: white;
         }
 
@@ -146,15 +145,15 @@
             padding: 18px 50px; background: transparent; color: white;
             text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem;
             font-weight: 700; border: 1px solid white; cursor: pointer;
-            border-radius: 0; /* Boxy buttons look more editorial */
+            border-radius: 0;
             display: inline-block; transition: all 0.3s ease;
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- TRUST BAR --- */
+        /* --- TRUST BAR (Larger Images) --- */
         .trust-bar {
-            background-color: var(--bg-white); /* Pure white to pop against cream */
-            padding: 70px 20px;
+            background-color: var(--bg-white);
+            padding: 80px 5%;
             border-bottom: 1px solid rgba(0,0,0,0.03);
             display: flex;
             justify-content: center;
@@ -166,36 +165,46 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 80px;
-            max-width: 1200px;
+            gap: 60px;
+            max-width: 1400px;
             width: 100%;
         }
 
         .trust-img {
-            width: 200px; 
+            /* INCREASED SIZE FOR DESKTOP */
+            width: 300px; 
             height: auto;
             object-fit: contain;
             transition: transform 0.4s ease;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05)); /* Subtle, premium shadow */
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));
         }
         .trust-img:hover { transform: translateY(-5px); }
 
         /* --- SECTIONS --- */
         .split-section {
-            padding: 120px 5%; /* Increased padding */
+            padding: 120px 5%; 
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 100px; align-items: center; max-width: 1300px; margin: 0 auto;
         }
 
-        /* --- DARK MODE SECTION (The Premium "Contrast" Block) --- */
+        /* --- DARK MODE FIX --- */
         .dark-section {
             background-color: var(--primary-color);
-            color: white;
+            color: #ffffff;
+            /* Ensure text is aligned nicely */
+            text-align: left;
         }
-        .dark-section .eyebrow { color: rgba(255,255,255,0.6); }
-        .dark-section h2 { color: white; }
-        .dark-section p { color: rgba(255,255,255,0.8); }
-        .dark-section strong { color: white; }
+        
+        .dark-section .text-content {
+            /* Reset any weird margins */
+            padding: 0;
+            margin: 0;
+        }
+
+        .dark-section .eyebrow { color: rgba(255,255,255,0.7); margin-bottom: 10px; }
+        .dark-section h2 { color: #ffffff; margin-bottom: 25px; line-height: 1.2; }
+        .dark-section p { color: rgba(255,255,255,0.9); margin-bottom: 20px; line-height: 1.8; }
+        .dark-section strong { color: #ffffff; font-weight: 700; }
 
         .text-content h2 {
             font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
@@ -204,17 +213,27 @@
         .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
         
         .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
-        #about .image-content img { max-width: 400px; border: 8px solid rgba(255,255,255,0.1); } /* Photo frame effect */
+        #about .image-content img { max-width: 400px; border: 8px solid rgba(255,255,255,0.1); } 
 
-        /* --- EDUCATION --- */
-        .education { background-color: var(--bg-cream); padding: 120px 5%; }
-        .section-header { text-align: center; margin-bottom: 80px; }
+        /* --- EDUCATION (GAP FIXES) --- */
+        .education { 
+            background-color: var(--bg-cream); 
+            padding: 100px 5%; /* Adjusted top padding */
+        }
+        
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 40px; /* REDUCED GAP between header and line */
+        }
         .section-header h2 { font-size: 3rem; color: var(--primary-color); }
 
         .timeline {
-            max-width: 800px; margin: 0 auto; border-left: 1px solid #cbd5e0; padding-left: 60px;
+            max-width: 800px; margin: 0 auto; 
+            border-left: 1px solid #cbd5e0; 
+            padding-left: 60px;
+            padding-top: 10px; /* Slight top padding to align with header */
         }
-        .timeline-item { margin-bottom: 70px; position: relative; }
+        .timeline-item { margin-bottom: 60px; position: relative; }
         .timeline-item::before {
             content: ''; position: absolute; left: -65px; top: 10px; width: 9px; height: 9px;
             background: var(--bg-cream); border: 1px solid var(--primary-color); border-radius: 50%; 
@@ -226,7 +245,7 @@
         }
         .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; }
         .timeline-item ul li::before {
-            content: '—'; position: absolute; left: 0; color: var(--gold-accent); /* Gold dash bullets */
+            content: '—'; position: absolute; left: 0; color: var(--gold-accent); 
         }
 
         /* --- LOCATION SECTION --- */
@@ -258,13 +277,15 @@
             .patient-care .image-content { order: -1; }
             #about .image-content { justify-content: center; }
             .hero-content h1 { font-size: 3.5rem; }
+            
+            /* Trust Bar Mobile Fix: Stack vertically and make them large */
+            .trust-container { flex-direction: column; gap: 40px; }
+            .trust-img { width: 280px; max-width: 80%; } /* Big on mobile */
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; } 
             .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
-            .trust-container { gap: 30px; }
-            .trust-img { width: 140px; }
         }
     </style>
 </head>
@@ -342,7 +363,6 @@
 
     <section id="experience" class="education">
         <div class="section-header reveal">
-            <span class="eyebrow">Curriculum Vitae</span>
             <h2>Education & Experience</h2>
         </div>
         <div class="timeline">
