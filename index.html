@@ -6,19 +6,22 @@
     <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com http://googleusercontent.com https://docs.google.com;">
-    <meta name="description" content="Dr. Safwan Moton is a Board-Eligible Family Medicine Resident Physician and published researcher (Top 10% Most Cited). Currently practicing in Michigan, establishing practice in Sugar Land, TX in Summer 2026." />
+    <meta name="description" content="Dr. Safwan Moton is a Board-Eligible Family Medicine Resident Physician and published researcher. Currently practicing in Michigan, establishing practice in Sugar Land, TX in Summer 2026." />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- CSS VARIABLES & RESET --- */
+        /* --- CSS VARIABLES & PREMIUM RESET --- */
         :root {
-            --primary-color: #1a3c5e; 
+            --primary-color: #1a3c5e; /* Deep Navy */
             --accent-color: #6c7a89;  
-            --bg-light: #f4f7f6;      
+            --bg-cream: #f9f9f7;      /* "Stationery" Off-White */
+            --bg-white: #ffffff;
             --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;   /* For subtle lines/borders */
+            
             --font-heading: 'Cormorant Garamond', serif; 
             --font-body: 'Lato', sans-serif;             
         }
@@ -29,14 +32,29 @@
         body {
             font-family: var(--font-body);
             color: var(--text-dark);
-            line-height: 1.8;
-            background-color: #ffffff;
+            line-height: 1.9; /* Increased line-height for "Breathing Room" */
+            background-color: var(--bg-cream); /* Premium Cream Background */
             overflow-x: hidden;
         }
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* --- TYPOGRAPHY UPGRADES --- */
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
+        
+        /* The "Eyebrow" Text - Magazine Style */
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+        }
 
         /* --- ANIMATIONS --- */
         @keyframes heroFadeIn {
@@ -56,18 +74,19 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px);
-            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: rgba(249, 249, 247, 0.95); /* Matches Cream BG */
+            backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.03);
         }
 
         .logo {
-            font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600;
-            letter-spacing: 1px; color: var(--primary-color); text-transform: uppercase;
+            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
+            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
         }
 
         .nav-links { display: flex; gap: 40px; }
         .nav-links a {
-            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px;
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
             color: var(--accent-color); font-weight: 700;
         }
         .nav-links a:hover { color: var(--primary-color); }
@@ -76,17 +95,17 @@
         .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
         #mobile-menu {
             display: none; position: fixed; top: 70px; left: 0; width: 100%;
-            background: white; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
         }
         #mobile-menu a {
-            display: block; padding: 15px; font-size: 1rem; font-weight: 700;
-            color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;
+            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
+            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
         }
 
         /* --- HERO --- */
         .hero {
-            height: 90vh; /* Reverted to original height */
+            height: 90vh;
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -102,148 +121,150 @@
 
         .status-badge {
             display: inline-block;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.4);
-            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 2px; /* Sharper corners for premium feel */
             color: white;
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 25px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
             backdrop-filter: blur(5px);
         }
 
         .hero-content h1 {
-            font-family: var(--font-heading); font-size: 4.2rem; font-weight: 600;
-            margin-bottom: 25px; line-height: 1.1; color: white;
+            font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400; /* Lighter weight is more elegant */
+            margin-bottom: 25px; line-height: 1; color: white;
         }
 
         .hero-content p {
-            font-size: 1.4rem; font-weight: 300; color: rgba(255, 255, 255, 0.9);
-            margin: 0 auto 40px auto; max-width: 700px; text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.3rem; font-weight: 300; color: rgba(255, 255, 255, 0.85);
+            margin: 0 auto 40px auto; max-width: 600px;
         }
 
         .btn {
-            padding: 18px 45px; background: transparent; color: white;
-            text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;
+            padding: 18px 50px; background: transparent; color: white;
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem;
             font-weight: 700; border: 1px solid white; cursor: pointer;
-            border-radius: 2px; display: inline-block;
+            border-radius: 0; /* Boxy buttons look more editorial */
+            display: inline-block; transition: all 0.3s ease;
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- CONTENT AWARDS CONTAINER (For placement in sections) --- */
-        .section-awards-container {
+        /* --- TRUST BAR --- */
+        .trust-bar {
+            background-color: var(--bg-white); /* Pure white to pop against cream */
+            padding: 70px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
             display: flex;
-            justify-content: flex-start; /* Aligns with left-aligned text */
-            flex-wrap: wrap;
-            gap: 20px; 
-            margin-top: 40px; 
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Smaller size for placement within text columns */
-        .content-laurel-img {
-            width: 150px; 
+        .trust-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 80px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .trust-img {
+            width: 200px; 
             height: auto;
             object-fit: contain;
-            transition: transform 0.3s ease;
-            /* Filter added to give it a little pop on the white background */
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05)); /* Subtle, premium shadow */
         }
-        
-        .content-laurel-img:hover {
-            transform: scale(1.05);
-        }
+        .trust-img:hover { transform: translateY(-5px); }
 
         /* --- SECTIONS --- */
         .split-section {
-            padding: 100px 5%; display: grid; grid-template-columns: 1fr 1fr;
-            gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto;
+            padding: 120px 5%; /* Increased padding */
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 100px; align-items: center; max-width: 1300px; margin: 0 auto;
         }
+
+        /* --- DARK MODE SECTION (The Premium "Contrast" Block) --- */
+        .dark-section {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .dark-section .eyebrow { color: rgba(255,255,255,0.6); }
+        .dark-section h2 { color: white; }
+        .dark-section p { color: rgba(255,255,255,0.8); }
+        .dark-section strong { color: white; }
 
         .text-content h2 {
-            font-family: var(--font-heading); font-size: 3rem; color: var(--primary-color);
+            font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
             margin-bottom: 30px; line-height: 1.1;
         }
-        .text-content p { margin-bottom: 25px; font-size: 1.05rem; color: #555; }
-        .image-content img { width: 100%; border-radius: 2px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15); }
-
-        /* HEADSHOT SIZE LIMIT */
-        #about .image-content { justify-content: flex-start; }
-        #about .image-content img { max-width: 380px; }
+        .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
+        
+        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
+        #about .image-content img { max-width: 400px; border: 8px solid rgba(255,255,255,0.1); } /* Photo frame effect */
 
         /* --- EDUCATION --- */
-        .education { background-color: var(--bg-light); padding: 100px 5%; }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-header h2 { font-family: var(--font-heading); font-size: 2.8rem; color: var(--primary-color); }
+        .education { background-color: var(--bg-cream); padding: 120px 5%; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: 3rem; color: var(--primary-color); }
 
         .timeline {
-            max-width: 800px; margin: 0 auto; border-left: 2px solid #cbd5e0; padding-left: 50px;
+            max-width: 800px; margin: 0 auto; border-left: 1px solid #cbd5e0; padding-left: 60px;
         }
-        .timeline-item { margin-bottom: 60px; position: relative; }
+        .timeline-item { margin-bottom: 70px; position: relative; }
         .timeline-item::before {
-            content: ''; position: absolute; left: -59px; top: 8px; width: 16px; height: 16px;
-            background: var(--primary-color); border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 1px #cbd5e0;
+            content: ''; position: absolute; left: -65px; top: 10px; width: 9px; height: 9px;
+            background: var(--bg-cream); border: 1px solid var(--primary-color); border-radius: 50%; 
         }
-        .timeline-item h3 { font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary-color); margin-bottom: 5px; }
+        .timeline-item h3 { font-family: var(--font-heading); font-size: 2rem; color: var(--primary-color); margin-bottom: 5px; }
         .timeline-item .role {
-            font-weight: 700; text-transform: uppercase; font-size: 0.85rem;
-            letter-spacing: 1.5px; color: var(--accent-color); margin-bottom: 15px; display: block;
+            font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+            letter-spacing: 2px; color: var(--accent-color); margin-bottom: 20px; display: block;
         }
-        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 8px; list-style: disc; margin-left: 20px; }
+        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; }
+        .timeline-item ul li::before {
+            content: '—'; position: absolute; left: 0; color: var(--gold-accent); /* Gold dash bullets */
+        }
 
         /* --- LOCATION SECTION --- */
         .location {
-            padding: 120px 5%;
+            padding: 140px 5%;
             width: 100%;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('clinic-bg.jpg');
+            background-image: linear-gradient(rgba(249, 249, 247, 0.95), rgba(249, 249, 247, 0.95)), url('clinic-bg.jpg');
             background-attachment: fixed;
             background-size: cover;
-            background-position: center;
         }
-
         .location-container {
-            display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;
             max-width: 1200px; margin: 0 auto; align-items: center;
         }
-
-        .location-info h2 {
-            font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 25px;
-        }
-        .location-details p { font-size: 1.1rem; margin-bottom: 15px; color: #555; }
-        .location-details strong { color: var(--primary-color); }
-
         .map-container {
-            width: 100%; height: 400px; background: #eee; border-radius: 2px;
-            overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            width: 100%; height: 450px; background: #eee;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
         }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 90px 5% 40px 5%; text-align: center; }
-        footer h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 40px; }
-        .contact-block { margin-bottom: 40px; font-weight: 300; font-size: 1.1rem; line-height: 2; }
-        .contact-block a { border-bottom: 1px solid rgba(255,255,255,0.3); }
-        .copyright { font-size: 0.75rem; opacity: 0.5; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; letter-spacing: 1px; }
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
+        footer h2 { font-size: 2.8rem; margin-bottom: 40px; }
+        .contact-block { margin-bottom: 50px; font-weight: 300; font-size: 1.1rem; line-height: 2; }
+        .copyright { font-size: 0.7rem; opacity: 0.5; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; letter-spacing: 2px; text-transform: uppercase; }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            .split-section, .location-container { grid-template-columns: 1fr; gap: 50px; }
+            .split-section, .location-container { grid-template-columns: 1fr; gap: 60px; padding: 80px 5%; }
             .patient-care .image-content { order: -1; }
             #about .image-content { justify-content: center; }
-            /* Center the awards when on tablet/mobile */
-            .section-awards-container { justify-content: center; }
+            .hero-content h1 { font-size: 3.5rem; }
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
             .nav-links { display: none; } .mobile-menu-btn { display: block; } 
-            .timeline { padding-left: 25px; } .timeline-item::before { left: -34px; }
-            .map-container { height: 300px; }
-            .hero-content { margin-top: 0; }
-            
-            /* Responsive Wreaths */
-            .content-laurel-img { width: 120px; }
+            .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
+            .trust-container { gap: 30px; }
+            .trust-img { width: 140px; }
         }
     </style>
 </head>
@@ -278,11 +299,20 @@
         </div>
     </section>
 
-    <section id="about" class="split-section">
+    <section class="trust-bar">
+        <div class="trust-container reveal">
+            <img src="Laurel1.png" alt="H-LSAMP Scholar" class="trust-img">
+            <img src="Laurel2.png" alt="Appointed Clinical Faculty" class="trust-img">
+            <img src="Laurel3.png" alt="Top 10% Most Cited Clinician" class="trust-img">
+        </div>
+    </section>
+
+    <section id="about" class="split-section dark-section">
         <div class="image-content reveal">
             <img src="Headshot.png" alt="Dr. Safwan Moton">
         </div>
         <div class="text-content reveal">
+            <span class="eyebrow">Biography</span>
             <h2>Clinical Excellence & Compassion</h2>
             <p>
                 Dr. Safwan Moton is a <strong>Board-Eligible</strong> Family Medicine Resident Physician distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to establish his long-term practice in Sugar Land, Texas in August 2026.
@@ -295,6 +325,7 @@
 
     <section id="care" class="split-section patient-care">
         <div class="text-content reveal">
+            <span class="eyebrow">Philosophy</span>
             <h2>Patient-Centered Approach</h2>
             <p>
                 Dr. Moton believes that informed patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident about your healthcare journey.
@@ -303,13 +334,7 @@
                 <strong>Join the Community:</strong> Sign up below to be notified when the practice opens for new patient bookings in 2026.
             </p>
             <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Join Patient Waitlist</a>
-
-            <div class="section-awards-container">
-                <img src="Laurel1.png" alt="H-LSAMP Scholar" class="content-laurel-img">
-                <img src="Laurel2.png" alt="Appointed Clinical Faculty" class="content-laurel-img">
-                <img src="Laurel3.png" alt="Top 10% Most Cited Clinician" class="content-laurel-img">
-            </div>
-            </div>
+        </div>
         <div class="image-content reveal">
             <img src="patient-care.png" alt="Dr. Moton consulting with patient">
         </div>
@@ -317,6 +342,7 @@
 
     <section id="experience" class="education">
         <div class="section-header reveal">
+            <span class="eyebrow">Curriculum Vitae</span>
             <h2>Education & Experience</h2>
         </div>
         <div class="timeline">
@@ -335,7 +361,7 @@
                 <h3>Michigan State University COM</h3>
                 <span class="role">Appointed Clinical Faculty</span>
                 <ul>
-                    <li>Involved in the education and mentorship of medical students.</li>
+                    <li>Designated Clinical Faculty member within the Statewide Campus System.</li>
                 </ul>
             </div>
 
@@ -354,7 +380,6 @@
                 <ul>
                     <li>Advanced coursework in Research Methods and Biostatistics.</li>
                     <li>Published Researcher in oncology and molecular biology.</li>
-                    <li><strong>Top 10% Most Cited Clinician on Doximity (2024).</strong></li>
                 </ul>
             </div>
 
@@ -373,6 +398,7 @@
     <section id="location" class="location">
         <div class="location-container">
             <div class="location-info reveal">
+                <span class="eyebrow">Location</span>
                 <h2>Current Residency Practice</h2>
                 <p style="margin-bottom:20px; color:#666;">
                     Dr. Moton is currently seeing patients in Michigan until Summer 2026.
@@ -404,7 +430,7 @@
         </div>
         <div class="copyright">
             © 2025 Dr. Safwan Moton. All Rights Reserved.<br>
-            <span style="font-size: 0.7rem; opacity: 0.6;">Dr. Moton is a Resident Physician currently practicing in Michigan.</span>
+            Dr. Moton is a Resident Physician currently practicing in Michigan.
         </div>
     </footer>
 
