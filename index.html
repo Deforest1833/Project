@@ -150,7 +150,7 @@
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- TRUST BAR (Larger Images) --- */
+        /* --- TRUST BAR --- */
         .trust-bar {
             background-color: var(--bg-white);
             padding: 80px 5%;
@@ -171,7 +171,6 @@
         }
 
         .trust-img {
-            /* INCREASED SIZE FOR DESKTOP */
             width: 300px; 
             height: auto;
             object-fit: contain;
@@ -180,50 +179,84 @@
         }
         .trust-img:hover { transform: translateY(-5px); }
 
-        /* --- SECTIONS --- */
+        /* --- SECTIONS (Shared) --- */
         .split-section {
             padding: 120px 5%; 
             display: grid; grid-template-columns: 1fr 1fr;
-            gap: 100px; align-items: center; max-width: 1300px; margin: 0 auto;
+            gap: 100px; 
+            align-items: center; 
+            max-width: 1300px; margin: 0 auto;
         }
-
-        /* --- DARK MODE FIX --- */
-        .dark-section {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            /* Ensure text is aligned nicely */
-            text-align: left;
-        }
-        
-        .dark-section .text-content {
-            /* Reset any weird margins */
-            padding: 0;
-            margin: 0;
-        }
-
-        .dark-section .eyebrow { color: rgba(255,255,255,0.7); margin-bottom: 10px; }
-        .dark-section h2 { color: #ffffff; margin-bottom: 25px; line-height: 1.2; }
-        .dark-section p { color: rgba(255,255,255,0.9); margin-bottom: 20px; line-height: 1.8; }
-        .dark-section strong { color: #ffffff; font-weight: 700; }
 
         .text-content h2 {
             font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
             margin-bottom: 30px; line-height: 1.1;
         }
         .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
-        
         .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
-        #about .image-content img { max-width: 400px; border: 8px solid rgba(255,255,255,0.1); } 
 
-        /* --- EDUCATION (GAP FIXES) --- */
+        /* --- BIO SECTION FIXES (The specific request) --- */
+        /* Dark Navy Background */
+        #about {
+            background-color: var(--primary-color);
+            /* Reset any conflicting alignments */
+            text-align: left;
+        }
+
+        /* Image Side */
+        #about .image-content {
+            display: flex;
+            justify-content: center; /* Centers image in its column */
+        }
+        #about .image-content img {
+            max-width: 400px; 
+            border: 8px solid rgba(255,255,255,0.1); /* Frame effect */
+        }
+
+        /* Text Side - THE FIX */
+        #about .text-content {
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Forces strict left alignment */
+        }
+
+        #about .eyebrow { 
+            color: rgba(255,255,255,0.7); 
+            margin-bottom: 15px; 
+        }
+
+        #about h2 { 
+            color: #ffffff; 
+            margin-bottom: 30px; 
+            line-height: 1.2;
+        }
+
+        #about p { 
+            color: rgba(255,255,255,0.95); /* High opacity for readability */
+            margin-bottom: 25px; 
+            line-height: 1.9; /* More breathing room */
+            font-weight: 400; /* Regular weight, NOT thin (300) */
+            font-size: 1.15rem; /* Slightly larger for easier reading */
+            max-width: 600px; /* Prevents text from stretching too wide */
+        }
+
+        #about strong { 
+            color: #ffffff; 
+            font-weight: 700; 
+            border-bottom: 1px solid rgba(255,255,255,0.3); /* Subtle underline for emphasis */
+        }
+
+        /* --- EDUCATION --- */
         .education { 
             background-color: var(--bg-cream); 
-            padding: 100px 5%; /* Adjusted top padding */
+            padding: 100px 5%; 
         }
         
         .section-header { 
             text-align: center; 
-            margin-bottom: 40px; /* REDUCED GAP between header and line */
+            margin-bottom: 40px; 
         }
         .section-header h2 { font-size: 3rem; color: var(--primary-color); }
 
@@ -231,7 +264,7 @@
             max-width: 800px; margin: 0 auto; 
             border-left: 1px solid #cbd5e0; 
             padding-left: 60px;
-            padding-top: 10px; /* Slight top padding to align with header */
+            padding-top: 10px; 
         }
         .timeline-item { margin-bottom: 60px; position: relative; }
         .timeline-item::before {
@@ -278,9 +311,12 @@
             #about .image-content { justify-content: center; }
             .hero-content h1 { font-size: 3.5rem; }
             
-            /* Trust Bar Mobile Fix: Stack vertically and make them large */
+            /* Trust Bar Mobile Fix */
             .trust-container { flex-direction: column; gap: 40px; }
-            .trust-img { width: 280px; max-width: 80%; } /* Big on mobile */
+            .trust-img { width: 280px; max-width: 80%; } 
+            
+            /* Text alignment fix for mobile */
+            #about .text-content { align-items: flex-start; text-align: left; }
         }
 
         @media (max-width: 768px) {
@@ -328,7 +364,7 @@
         </div>
     </section>
 
-    <section id="about" class="split-section dark-section">
+    <section id="about" class="split-section">
         <div class="image-content reveal">
             <img src="Headshot.png" alt="Dr. Safwan Moton">
         </div>
