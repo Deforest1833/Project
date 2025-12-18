@@ -10,14 +10,14 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #1a3c5e; /* Navy */
+            --primary-color: #1a3c5e; 
             --accent-color: #6c7a89;  
-            --bg-cream: #f2f2eb;      /* Premium Stationery Cream */
+            --bg-cream: #f2f2eb;      
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;   
@@ -44,12 +44,18 @@
         /* --- TYPOGRAPHY --- */
         h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
         
+        /* Updated Body Text to be Bolder (500 weight) */
+        p, li {
+            font-weight: 500; /* Medium/Semi-Bold for readability */
+            color: #2c3e50;
+        }
+
         .eyebrow {
             font-family: var(--font-body);
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-weight: 700;
+            font-weight: 800; /* Extra bold for small text */
             color: var(--accent-color);
             margin-bottom: 15px;
             display: block;
@@ -105,7 +111,6 @@
         /* --- HERO --- */
         .hero {
             height: 90vh;
-            /* Default Desktop Style */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -130,6 +135,7 @@
             letter-spacing: 2px;
             margin-bottom: 30px;
             backdrop-filter: blur(5px);
+            font-weight: 600;
         }
 
         .hero-content h1 {
@@ -138,7 +144,8 @@
         }
 
         .hero-content p {
-            font-size: 1.3rem; font-weight: 300; color: rgba(255, 255, 255, 0.85);
+            font-size: 1.3rem; font-weight: 400; /* Increased weight */
+            color: rgba(255, 255, 255, 0.9);
             margin: 0 auto 40px auto; max-width: 600px;
         }
 
@@ -151,14 +158,18 @@
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- TRUST BAR --- */
+        /* --- TRUST BAR (Added Inner Shadow for Depth) --- */
         .trust-bar {
-            background-color: var(--primary-color); /* Navy Background */
+            background-color: var(--primary-color);
             padding: 80px 5%;
             border-bottom: 1px solid rgba(0,0,0,0.03);
             display: flex;
             justify-content: center;
             align-items: center;
+            
+            /* The "Depth" Effect: Inset Shadow on Top and Bottom */
+            box-shadow: inset 0 15px 20px -10px rgba(0, 0, 0, 0.4), 
+                        inset 0 -15px 20px -10px rgba(0, 0, 0, 0.4);
         }
 
         .trust-container {
@@ -180,7 +191,7 @@
         }
         .trust-img:hover { transform: translateY(-5px); }
 
-        /* --- SECTIONS (Unified Styling) --- */
+        /* --- SECTIONS --- */
         .split-section {
             padding: 120px 5%; 
             display: grid; grid-template-columns: 1fr 1fr;
@@ -193,10 +204,14 @@
             font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
             margin-bottom: 30px; line-height: 1.1;
         }
-        .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
-        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
+        .text-content p { 
+            margin-bottom: 25px; 
+            font-size: 1.15rem; 
+            font-weight: 500; /* BOLDED */
+            color: #2c3e50; 
+        }
         
-        /* Specific image styling for consistency */
+        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
         #about .image-content { justify-content: flex-start; }
         #about .image-content img { max-width: 400px; border-radius: 2px; }
 
@@ -228,7 +243,15 @@
             font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
             letter-spacing: 2px; color: var(--accent-color); margin-bottom: 20px; display: block;
         }
-        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; }
+        .timeline-item ul li { 
+            font-size: 1rem; 
+            color: #4a5568; 
+            margin-bottom: 10px; 
+            list-style: none; 
+            position: relative; 
+            padding-left: 20px;
+            font-weight: 500; /* BOLDED */
+        }
         .timeline-item ul li::before {
             content: '—'; position: absolute; left: 0; color: var(--gold-accent); 
         }
@@ -237,7 +260,6 @@
         .location {
             padding: 140px 5%;
             width: 100%;
-            /* Default Desktop Style */
             background-image: linear-gradient(rgba(242, 242, 235, 0.95), rgba(242, 242, 235, 0.95)), url('clinic-bg.jpg');
             background-attachment: fixed;
             background-size: cover;
@@ -260,16 +282,16 @@
         }
 
         .location-info { width: 100%; overflow-wrap: break-word; }
+        .location-info p { font-weight: 500; } /* BOLDED */
         
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; }
-        .contact-block { margin-bottom: 50px; font-weight: 300; font-size: 1.1rem; line-height: 2; }
-        .copyright { font-size: 0.7rem; opacity: 0.5; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; letter-spacing: 2px; text-transform: uppercase; }
+        .contact-block { margin-bottom: 50px; font-weight: 400; font-size: 1.1rem; line-height: 2; }
+        .copyright { font-size: 0.7rem; opacity: 0.5; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            /* 1. Fix Background Images on Mobile (Disable Parallax) */
             .hero, .location {
                 background-attachment: scroll; 
                 background-position: center top;
