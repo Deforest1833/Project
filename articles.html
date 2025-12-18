@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Articles | Dr. Safwan Moton</title>
+    
+    <meta name="description" content="Evidence-based health insights and medical articles for Sugar Land residents by Dr. Safwan Moton." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- COPYING THE MAIN THEME --- */
+        :root {
+            --primary-color: #1a3c5e; 
+            --accent-color: #6c7a89;  
+            --bg-cream: #f2f2eb;      
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;   
+            
+            --font-heading: 'Cormorant Garamond', serif; 
+            --font-body: 'Lato', sans-serif;             
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        p, li { font-weight: 500; color: #2c3e50; }
+
+        /* --- NAV (Identical to Index) --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; position: fixed; width: 100%; top: 0;
+            background: rgba(242, 242, 235, 0.98); 
+            backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
+            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); font-weight: 700;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        
+        #mobile-menu {
+            display: none; position: fixed; top: 70px; left: 0; width: 100%;
+            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
+        }
+        #mobile-menu a {
+            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
+            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            padding: 160px 5% 60px 5%;
+            text-align: center;
+            background-color: var(--bg-cream);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .page-header h1 {
+            font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); }
+
+        /* --- ARTICLE LIST --- */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 2px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .article-meta {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); margin-bottom: 15px; font-weight: 700;
+        }
+
+        .article-title {
+            font-family: var(--font-heading); font-size: 2.2rem;
+            color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #2c3e50;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem; color: var(--primary-color);
+            margin-top: 30px; margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--primary-color); color: white; padding: 80px 5%; text-align: center; }
+        footer p, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; }
+        .copyright { 
+            font-size: 0.7rem; color: rgba(255, 255, 255, 0.5) !important; 
+            margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; 
+            text-transform: uppercase; 
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } .mobile-menu-btn { display: block; }
+            .page-header h1 { font-size: 2.5rem; }
+            .article-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Dr. Safwan Moton</div>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#care">Philosophy</a>
+            <a href="index.html#experience">Background</a>
+            <a href="articles.html" style="color: var(--primary-color);">Articles</a>
+            <a href="index.html#location">Practice</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div id="mobile-menu">
+        <a href="index.html#about">About</a>
+        <a href="index.html#care">Philosophy</a>
+        <a href="index.html#experience">Background</a>
+        <a href="articles.html">Articles</a>
+        <a href="index.html#location">Practice</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <header class="page-header">
+        <h1>Health Insights</h1>
+        <p>Evidence-based medical articles and updates for the Sugar Land community.</p>
+    </header>
+
+    <div class="article-container">
+        
+        <article class="article-card" id="allergy-post">
+            <div class="article-meta">February 2025 • Health & Wellness</div>
+            <h2 class="article-title">Evidence-Based Allergy Relief for Sugar Land Residents</h2>
+            
+            <div class="article-content">
+                <p>
+                    For residents of Fort Bend County, "allergy season" often feels like a year-round event. From the Cedar fever of January to the heavy Oak pollen in spring and Ragweed in the fall, Sugar Land consistently ranks among the most challenging environments for allergy sufferers.
+                </p>
+                <p>
+                    However, modern evidence-based medicine offers better solutions than just suffering through the "Sugar Land Sneeze."
+                </p>
+
+                <h3>Understanding the Local Triggers</h3>
+                <p>
+                    The unique climate of the Texas Gulf Coast creates a perfect storm for mold spores and tree pollen. Humidity keeps allergens low to the ground, while our mild winters mean pollination seasons start earlier and last longer. Managing these symptoms requires a proactive approach rather than a reactive one.
+                </p>
+
+                <h3>The Evidence-Based Protocol</h3>
+                <p>
+                    Current clinical guidelines emphasize "pre-loading" your defense. This means starting intranasal corticosteroids weeks <em>before</em> the peak pollen season begins. This reduces inflammation in the nasal passages before it has a chance to flare up.
+                </p>
+                <p>
+                    Furthermore, relying solely on first-generation antihistamines (like Diphenhydramine) is often discouraged for daily use due to sedation and cognitive effects. Newer therapeutic options provide targeted relief without impacting your daily productivity or driving safety.
+                </p>
+
+                <h3>Looking Ahead</h3>
+                <p>
+                    As we prepare to open our practice in 2026, our focus will be on personalized immunotherapy and environmental management strategies. By combining local knowledge with the latest clinical research, we aim to help you reclaim your outdoors.
+                </p>
+            </div>
+        </article>
+
+        </div>
+
+    <footer>
+        <p><strong>Dr. Safwan Moton | Family Medicine</strong></p>
+        <p>Establishing Practice in Sugar Land, TX | Summer 2026</p>
+        <div class="copyright">
+            © 2025 Dr. Safwan Moton. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
