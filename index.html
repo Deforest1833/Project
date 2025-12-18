@@ -17,7 +17,7 @@
         :root {
             --primary-color: #1a3c5e; 
             --accent-color: #6c7a89;  
-            --bg-cream: #f2f2eb;      /* Richer Cream Color (Stationery look) */
+            --bg-cream: #f2f2eb;      
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;   
@@ -73,7 +73,7 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(242, 242, 235, 0.98); /* Matches new Cream BG */
+            background: rgba(242, 242, 235, 0.98); 
             backdrop-filter: blur(8px);
             z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
@@ -150,9 +150,9 @@
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- TRUST BAR --- */
+        /* --- TRUST BAR (UPDATED: Navy Background for Contrast) --- */
         .trust-bar {
-            background-color: var(--bg-white);
+            background-color: var(--primary-color); /* Navy Blue Background */
             padding: 80px 5%;
             border-bottom: 1px solid rgba(0,0,0,0.03);
             display: flex;
@@ -175,7 +175,8 @@
             height: auto;
             object-fit: contain;
             transition: transform 0.4s ease;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));
+            /* Light drop shadow to separate gold from navy */
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); 
         }
         .trust-img:hover { transform: translateY(-5px); }
 
@@ -281,11 +282,26 @@
             display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;
             max-width: 1200px; margin: 0 auto; align-items: center;
         }
+        
+        /* Map Container Fix */
         .map-container {
-            width: 100%; height: 450px; background: #eee;
+            width: 100%; 
+            height: 450px; 
+            background: #eee;
             box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
         }
+        .map-container iframe {
+            width: 100% !important; /* Force width */
+            height: 100% !important;
+            border: 0;
+        }
 
+        /* Location Text Container Fix */
+        .location-info {
+            width: 100%;
+            overflow-wrap: break-word; /* Prevents long text from breaking layout */
+        }
+        
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; }
@@ -303,11 +319,20 @@
             .trust-img { width: 280px; max-width: 80%; } 
             
             #about .text-content { align-items: flex-start; text-align: left; }
+            
+            /* Responsive Text for Location */
+            .location-info p {
+                max-width: 100%; /* Ensures text doesn't overflow */
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; } 
             .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
+            
+            /* Map mobile height adjustment */
+            .map-container { height: 300px; }
         }
     </style>
 </head>
