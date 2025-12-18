@@ -15,9 +15,9 @@
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #1a3c5e; 
+            --primary-color: #1a3c5e; /* Navy */
             --accent-color: #6c7a89;  
-            --bg-cream: #f2f2eb;      
+            --bg-cream: #f2f2eb;      /* Premium Stationery Cream */
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;   
@@ -105,6 +105,7 @@
         /* --- HERO --- */
         .hero {
             height: 90vh;
+            /* Default Desktop Style */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.jpg');
             background-attachment: fixed; 
             background-size: cover; background-position: center;
@@ -150,9 +151,9 @@
         }
         .btn:hover { background: white; color: var(--primary-color); }
 
-        /* --- TRUST BAR (UPDATED: Navy Background for Contrast) --- */
+        /* --- TRUST BAR --- */
         .trust-bar {
-            background-color: var(--primary-color); /* Navy Blue Background */
+            background-color: var(--primary-color); /* Navy Background */
             padding: 80px 5%;
             border-bottom: 1px solid rgba(0,0,0,0.03);
             display: flex;
@@ -175,12 +176,11 @@
             height: auto;
             object-fit: contain;
             transition: transform 0.4s ease;
-            /* Light drop shadow to separate gold from navy */
             filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); 
         }
         .trust-img:hover { transform: translateY(-5px); }
 
-        /* --- SECTIONS (Shared) --- */
+        /* --- SECTIONS (Unified Styling) --- */
         .split-section {
             padding: 120px 5%; 
             display: grid; grid-template-columns: 1fr 1fr;
@@ -195,47 +195,10 @@
         }
         .text-content p { margin-bottom: 25px; font-size: 1.1rem; font-weight: 300; color: #4a5568; }
         .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
-
-        /* --- BIO SECTION (Fixed Layout) --- */
-        #about {
-            background-color: var(--primary-color);
-            text-align: left;
-        }
-
-        #about .image-content {
-            display: flex;
-            justify-content: center;
-        }
-        #about .image-content img {
-            max-width: 400px; 
-            border: 8px solid rgba(255,255,255,0.1);
-        }
-
-        #about .text-content {
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        #about .eyebrow { color: rgba(255,255,255,0.7); margin-bottom: 15px; }
-        #about h2 { color: #ffffff; margin-bottom: 30px; line-height: 1.2; }
         
-        #about p { 
-            color: rgba(255,255,255,0.95); 
-            margin-bottom: 25px; 
-            line-height: 1.9;
-            font-weight: 400; 
-            font-size: 1.15rem; 
-            max-width: 600px;
-        }
-
-        #about strong { 
-            color: #ffffff; 
-            font-weight: 700; 
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
+        /* Specific image styling for consistency */
+        #about .image-content { justify-content: flex-start; }
+        #about .image-content img { max-width: 400px; border-radius: 2px; }
 
         /* --- EDUCATION --- */
         .education { 
@@ -274,6 +237,7 @@
         .location {
             padding: 140px 5%;
             width: 100%;
+            /* Default Desktop Style */
             background-image: linear-gradient(rgba(242, 242, 235, 0.95), rgba(242, 242, 235, 0.95)), url('clinic-bg.jpg');
             background-attachment: fixed;
             background-size: cover;
@@ -283,7 +247,6 @@
             max-width: 1200px; margin: 0 auto; align-items: center;
         }
         
-        /* Map Container Fix */
         .map-container {
             width: 100%; 
             height: 450px; 
@@ -291,16 +254,12 @@
             box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
         }
         .map-container iframe {
-            width: 100% !important; /* Force width */
+            width: 100% !important;
             height: 100% !important;
             border: 0;
         }
 
-        /* Location Text Container Fix */
-        .location-info {
-            width: 100%;
-            overflow-wrap: break-word; /* Prevents long text from breaking layout */
-        }
+        .location-info { width: 100%; overflow-wrap: break-word; }
         
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
@@ -310,6 +269,12 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
+            /* 1. Fix Background Images on Mobile (Disable Parallax) */
+            .hero, .location {
+                background-attachment: scroll; 
+                background-position: center top;
+            }
+
             .split-section, .location-container { grid-template-columns: 1fr; gap: 60px; padding: 80px 5%; }
             .patient-care .image-content { order: -1; }
             #about .image-content { justify-content: center; }
@@ -318,20 +283,12 @@
             .trust-container { flex-direction: column; gap: 40px; }
             .trust-img { width: 280px; max-width: 80%; } 
             
-            #about .text-content { align-items: flex-start; text-align: left; }
-            
-            /* Responsive Text for Location */
-            .location-info p {
-                max-width: 100%; /* Ensures text doesn't overflow */
-                font-size: 1rem;
-            }
+            .location-info p { max-width: 100%; font-size: 1rem; }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; } 
             .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
-            
-            /* Map mobile height adjustment */
             .map-container { height: 300px; }
         }
     </style>
