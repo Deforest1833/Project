@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Articles | Dr. Safwan Moton</title>
+    <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
-    <meta name="description" content="Evidence-based health insights and medical articles for Sugar Land residents by Dr. Safwan Moton." />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com https://www.google.com http://googleusercontent.com https://docs.google.com;">
+    <meta name="description" content="Dr. Safwan Moton is a Family Medicine Resident Physician and published researcher. Currently practicing in Michigan, joining the Sugar Land, TX medical community in Summer 2026." />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* --- COPYING THE MAIN THEME --- */
+        /* --- CSS VARIABLES & RESET --- */
         :root {
             --primary-color: #1a3c5e; 
             --accent-color: #6c7a89;  
@@ -38,9 +39,25 @@
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
+        
         p, li { font-weight: 500; color: #2c3e50; }
 
-        /* --- NAV (Identical to Index) --- */
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800; 
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* --- NAV --- */
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 5%; position: fixed; width: 100%; top: 0;
@@ -48,18 +65,21 @@
             backdrop-filter: blur(8px);
             z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
+
         .logo {
             font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
             letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
         }
+
         .nav-links { display: flex; gap: 40px; }
         .nav-links a {
             font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
             color: var(--accent-color); font-weight: 700;
         }
         .nav-links a:hover { color: var(--primary-color); }
+
+        /* MOBILE MENU */
         .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
-        
         #mobile-menu {
             display: none; position: fixed; top: 70px; left: 0; width: 100%;
             background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -70,69 +90,199 @@
             color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
         }
 
-        /* --- PAGE HEADER --- */
-        .page-header {
-            padding: 160px 5% 60px 5%;
-            text-align: center;
-            background-color: var(--bg-cream);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        /* --- HERO --- */
+        .hero {
+            height: 90vh;
+            background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.jpg');
+            background-attachment: fixed; 
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 0 20px;
         }
-        .page-header h1 {
-            font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); }
 
-        /* --- ARTICLE LIST --- */
-        .article-container {
+        .hero-content {
+            animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 20px;
+            margin-top: 60px; 
         }
 
-        .article-card {
-            background: #ffffff;
-            padding: 40px;
+        .status-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.3);
             border-radius: 2px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            color: white;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(5px);
+            font-weight: 600;
         }
 
-        .article-meta {
+        .hero-content h1 {
+            font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400;
+            margin-bottom: 25px; line-height: 1; color: white;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem; font-weight: 400; 
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 40px auto; max-width: 600px;
+        }
+
+        .btn {
+            padding: 18px 50px; background: transparent; color: white;
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem;
+            font-weight: 700; border: 1px solid white; cursor: pointer;
+            border-radius: 0;
+            display: inline-block; transition: all 0.3s ease;
+        }
+        .btn:hover { background: white; color: var(--primary-color); }
+
+        /* --- TRUST BAR --- */
+        .trust-bar {
+            background-color: var(--primary-color);
+            padding: 80px 5%;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 15px 20px -10px rgba(0, 0, 0, 0.4), 
+                        inset 0 -15px 20px -10px rgba(0, 0, 0, 0.4);
+        }
+        .trust-container {
+            display: flex; justify-content: center; align-items: center;
+            flex-wrap: wrap; gap: 60px; max-width: 1400px; width: 100%;
+        }
+        .trust-img {
+            width: 300px; height: auto; object-fit: contain;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); 
+        }
+        .trust-img:hover { transform: translateY(-5px); }
+
+        /* --- SECTIONS --- */
+        .split-section {
+            padding: 120px 5%; 
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 100px; align-items: center; max-width: 1300px; margin: 0 auto;
+        }
+
+        .text-content h2 {
+            font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
+            margin-bottom: 30px; line-height: 1.1;
+        }
+        .text-content p { margin-bottom: 25px; font-size: 1.15rem; font-weight: 500; color: #2c3e50; }
+        
+        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
+        #about .image-content { justify-content: flex-start; }
+        #about .image-content img { max-width: 400px; border-radius: 2px; }
+
+        /* --- EDUCATION --- */
+        .education { background-color: var(--bg-cream); padding: 100px 5% 60px 5%; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 3rem; color: var(--primary-color); }
+
+        .timeline {
+            max-width: 800px; margin: 0 auto; border-left: 1px solid #cbd5e0; 
+            padding-left: 60px; padding-top: 10px; 
+        }
+        .timeline-item { margin-bottom: 60px; position: relative; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -65px; top: 10px; width: 9px; height: 9px;
+            background: var(--bg-cream); border: 1px solid var(--primary-color); border-radius: 50%; 
+        }
+        .timeline-item h3 { font-family: var(--font-heading); font-size: 2rem; color: var(--primary-color); margin-bottom: 5px; }
+        .timeline-item .role {
+            font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+            letter-spacing: 2px; color: var(--accent-color); margin-bottom: 20px; display: block;
+        }
+        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; font-weight: 500; }
+        .timeline-item ul li::before {
+            content: '—'; position: absolute; left: 0; color: var(--gold-accent); 
+        }
+
+        /* --- FEATURED INSIGHT (HOMEPAGE TEASER) --- */
+        .featured-insight {
+            background-color: #ffffff; padding: 100px 5%;
+            border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .insight-container { max-width: 800px; margin: 0 auto; }
+        .insight-meta {
             font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--accent-color); margin-bottom: 15px; font-weight: 700;
+            color: var(--accent-color); margin-bottom: 20px; font-weight: 700;
         }
+        .insight-title {
+            font-family: var(--font-heading); font-size: 2.5rem;
+            color: var(--primary-color); margin-bottom: 30px; line-height: 1.2;
+        }
+        .insight-body { font-size: 1.1rem; color: #2c3e50; margin-bottom: 30px; }
+        
+        .read-more-btn {
+            background: none; border: none; color: var(--primary-color);
+            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+            font-size: 0.8rem; cursor: pointer; padding: 0;
+            border-bottom: 1px solid var(--primary-color); transition: all 0.3s;
+        }
+        .read-more-btn:hover { opacity: 0.7; }
 
-        .article-title {
-            font-family: var(--font-heading); font-size: 2.2rem;
-            color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;
+        /* --- LOCATION --- */
+        .location {
+            padding: 80px 5% 140px 5%; width: 100%;
+            background-image: linear-gradient(rgba(242, 242, 235, 0.95), rgba(242, 242, 235, 0.95)), url('clinic-bg.jpg');
+            background-attachment: fixed; background-size: cover;
         }
-
-        .article-content {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #2c3e50;
+        .location-container {
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;
+            max-width: 1200px; margin: 0 auto; align-items: center;
         }
-
-        .article-content h3 {
-            font-size: 1.5rem; color: var(--primary-color);
-            margin-top: 30px; margin-bottom: 15px;
+        .map-container {
+            width: 100%; height: 450px; background: #eee;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
         }
+        .map-container iframe { width: 100% !important; height: 100% !important; border: 0; }
+        .location-info { width: 100%; overflow-wrap: break-word; }
+        .location-info p { font-weight: 500; }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 80px 5%; text-align: center; }
-        footer p, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; }
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
+        footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
+        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; }
+        .contact-block { margin-bottom: 50px; font-size: 1.1rem; line-height: 2; }
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.5) !important; 
-            margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; 
-            text-transform: uppercase; 
+            margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; 
         }
 
-        /* RESPONSIVE */
+        /* --- ANIMATIONS --- */
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1.2s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .hero, .location { background-attachment: scroll; background-position: center top; }
+            .split-section, .location-container { grid-template-columns: 1fr; gap: 60px; padding: 80px 5%; }
+            .patient-care .image-content { order: -1; }
+            #about .image-content { justify-content: center; }
+            .hero-content h1 { font-size: 3.5rem; }
+            .trust-container { flex-direction: column; gap: 40px; }
+            .trust-img { width: 280px; max-width: 80%; } 
+            .location-info p { max-width: 100%; font-size: 1rem; }
+            .education { padding-bottom: 60px; }
+            .location { padding-top: 60px; }
+            .featured-insight { padding: 80px 5%; }
+        }
         @media (max-width: 768px) {
-            .nav-links { display: none; } .mobile-menu-btn { display: block; }
-            .page-header h1 { font-size: 2.5rem; }
-            .article-card { padding: 30px 20px; }
+            .nav-links { display: none; } .mobile-menu-btn { display: block; } 
+            .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
+            .map-container { height: 300px; }
         }
     </style>
 </head>
@@ -141,156 +291,202 @@
     <nav>
         <div class="logo">Dr. Safwan Moton</div>
         <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="index.html#care">Philosophy</a>
-            <a href="index.html#experience">Background</a>
-            <a href="articles.html" style="color: var(--primary-color);">Articles</a>
-            <a href="index.html#location">Practice</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#care">Philosophy</a>
+            <a href="#experience">Background</a>
+            <a href="articles.html">Articles</a> <a href="#location">Practice</a>
+            <a href="#contact">Contact</a>
         </div>
-        <div class="mobile-menu-btn" onclick="toggleMenu()"> ☰ </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
     </nav>
 
     <div id="mobile-menu">
-        <a href="index.html#about">About</a>
-        <a href="index.html#care">Philosophy</a>
-        <a href="index.html#experience">Background</a>
-        <a href="articles.html">Articles</a>
-        <a href="index.html#location">Practice</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#care" onclick="toggleMenu()">Philosophy</a>
+        <a href="#experience" onclick="toggleMenu()">Background</a>
+        <a href="articles.html" onclick="toggleMenu()">Articles</a>
+        <a href="#location" onclick="toggleMenu()">Practice</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
-    <header class="page-header">
-        <h1>Health Insights</h1>
-        <p>Evidence-based medical articles and updates for the Sugar Land community.</p>
-    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="status-badge">Resident Physician | Arriving Summer 2026</div>
+            <h1>Family Medicine for<br>Sugar Land</h1>
+            <p>Joining the Sugar Land medical community in Summer 2026</p>
+            <a href="#care" class="btn">Get 2026 Updates</a>
+        </div>
+    </section>
 
-    <div class="article-container">
+    <section class="trust-bar">
+        <div class="trust-container reveal">
+            <img src="Laurel1.png" alt="H-LSAMP Scholar" class="trust-img">
+            <img src="Laurel2.png" alt="Appointed Clinical Faculty" class="trust-img">
+            <img src="Laurel3.png" alt="Top 10% Most Cited Clinician" class="trust-img">
+        </div>
+    </section>
 
-        <article class="article-card" id="new-homeowner">
-            <div class="article-meta">May 2025 • Community Health</div>
-            <h2 class="article-title">New to Rosenberg? How to Establish a 'Medical Home' Before You Get Sick</h2>
-            
-            <div class="article-content">
-                <p>
-                    Rosenberg is one of the fastest-growing communities in Fort Bend County, with new subdivisions breaking ground every month. 
-                    If you have just moved here, finding a doctor is likely low on your to-do list—until you wake up with a sore throat or a twisted ankle.
-                </p>
+    <section id="about" class="split-section">
+        <div class="image-content reveal">
+            <img src="Headshot.png" alt="Dr. Safwan Moton">
+        </div>
+        <div class="text-content reveal">
+            <span class="eyebrow">Biography</span>
+            <h2>Clinical Excellence & Compassion</h2>
+            <p>
+                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to begin practicing in Sugar Land, Texas in July/August 2026.
+            </p>
+            <p>
+                Dr. Moton combines rigorous medical science with real-world clinical experience. He is dedicated to providing care that is rooted in established guidelines and tailored to effective outcomes. This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024.
+            </p>
+        </div>
+    </section>
 
-                <h3>The "Medical Home" Advantage</h3>
+    <section id="care" class="split-section patient-care">
+        <div class="text-content reveal">
+            <span class="eyebrow">Philosophy</span>
+            <h2>Patient-Centered Approach</h2>
+            <p>
+                Dr. Moton believes that informed patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident about your healthcare journey.
+            </p>
+            <p>
+                <strong>Join the Community:</strong> Sign up below to be notified when Dr. Moton begins seeing patients in 2026.
+            </p>
+            <a href="https://forms.gle/LQwz8XucDqvHsNTu9" target="_blank" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Join 2026 Notification List</a>
+        </div>
+        <div class="image-content reveal">
+            <img src="patient-care.png" alt="Dr. Moton consulting with patient">
+        </div>
+    </section>
+
+    <section id="experience" class="education">
+        <div class="section-header reveal">
+            <h2>Education & Experience</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <h3>Authority Health Family Medicine</h3>
+                <span class="role">Residency Training • Affiliated with MSUCOM</span>
+                <ul>
+                    <li><strong>Current Position:</strong> PGY-3 Resident Physician.</li>
+                    <li>Extensive training in broad-spectrum Family Medicine.</li>
+                    <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> (Temperance, MI).</li>
+                </ul>
+            </div>
+            <div class="timeline-item reveal">
+                <h3>Michigan State University COM</h3>
+                <span class="role">Appointed Clinical Faculty</span>
+                <ul>
+                    <li>Designated Clinical Faculty member within the Statewide Campus System.</li>
+                </ul>
+            </div>
+            <div class="timeline-item reveal">
+                <h3>Nova Southeastern University</h3>
+                <span class="role">Doctor of Osteopathic Medicine (DO)</span>
+                <ul>
+                    <li>Dr. Kiran C. Patel College of Osteopathic Medicine.</li>
+                    <li>Intensive medical curriculum.</li>
+                </ul>
+            </div>
+            <div class="timeline-item reveal">
+                <h3>University of North Texas Health Science Center</h3>
+                <span class="role">Master of Science in Medical Sciences</span>
+                <ul>
+                    <li>Advanced coursework in Research Methods and Biostatistics.</li>
+                    <li>Published Researcher in oncology and molecular biology.</li>
+                </ul>
+            </div>
+            <div class="timeline-item reveal">
+                <h3>University of Houston (Main Campus)</h3>
+                <span class="role">Bachelor of Science</span>
+                <ul>
+                    <li>Graduated <strong>Magna Cum Laude</strong>.</li>
+                    <li><strong>Houston Louis Stokes Scholar</strong> (H-LSAMP).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-insight">
+        <div class="insight-container reveal">
+            <div class="insight-meta">Featured Health Insight</div>
+            <h2 class="insight-title">New to Rosenberg? How to Establish a 'Medical Home' Before You Get Sick</h2>
+            <div class="insight-body">
                 <p>
-                    In Family Medicine, we use the term "Medical Home" to describe a partnership between you and a physician who knows your history. 
-                    Unlike urgent care centers, which treat you as a transaction, a Medical Home treats you as a person. 
-                    We have your baseline labs on file, we know your family history, and we can often treat minor issues over the phone because we know <em>you</em>.
-                </p>
-                <p>
-                    Establishing care when you are healthy is the best insurance policy for when you are sick. 
-                    It ensures you have an advocate ready to coordinate your care the moment you need it.
+                    Rosenberg is growing fast, and finding a doctor is often the last thing on a new resident's mind—until illness strikes.
+                    Dr. Moton explains why establishing a "Medical Home" when you are healthy is the best insurance policy for your family's future.
                 </p>
             </div>
-        </article>
+            <a href="articles.html" class="read-more-btn">Read Full Article</a>
+        </div>
+    </section>
 
-        <article class="article-card" id="mens-health">
-            <div class="article-meta">April 2025 • Men's Health</div>
-            <h2 class="article-title">Men's Health in Rosenberg: 3 Numbers Every Dad Needs to Know</h2>
-            
-            <div class="article-content">
-                <p>
-                    It is a statistical fact: men are far less likely to visit the doctor than women. 
-                    In Rosenberg's busy industrial and trade sectors, taking time off work for a checkup often feels like a luxury. 
-                    However, maintaining your health doesn't require monthly visits—it just requires knowing your numbers.
+    <section id="location" class="location">
+        <div class="location-container">
+            <div class="location-info reveal">
+                <span class="eyebrow">Location</span>
+                <h2>Current Residency Practice</h2>
+                <p style="margin-bottom:20px; color:#666;">
+                    Dr. Moton is currently seeing patients in Michigan until Summer 2026.
                 </p>
-
-                <h3>The Big Three</h3>
-                <p>
-                    <strong>1. Blood Pressure:</strong> The "Silent Killer." You can walk around with 160/100 and feel fine, until the damage is done. <br>
-                    <strong>2. Lipid Panel:</strong> Not just "Cholesterol," but the ratio of good (HDL) to bad (LDL) fats that predicts heart risk. <br>
-                    <strong>3. Testosterone:</strong> Fatigue and brain fog aren't always just "aging." Low T is a treatable medical condition, not a character flaw.
-                </p>
-                <p>
-                    An annual 30-minute visit to review these labs can add years to your life. It is the highest ROI investment you can make for your family.
-                </p>
+                <div class="location-details">
+                    <p><strong>Address:</strong><br>
+                    8765 Lewis Ave<br>
+                    Temperance, MI 48182</p>
+                    <p><strong>Phone:</strong><br>
+                    (734) 847-3802</p>
+                    <p><strong>Hours:</strong><br>
+                    Mon - Fri: 8:00 AM - 5:00 PM</p>
+                </div>
             </div>
-        </article>
-
-        <article class="article-card" id="lamar-cisd">
-            <div class="article-meta">April 2025 • Sports Medicine</div>
-            <h2 class="article-title">Lamar CISD Athletes: Why a 'Real' Physical Beats Urgent Care</h2>
-            
-            <div class="article-content">
-                <p>
-                    Every August, parents across Rosenberg scramble to get the mandatory UIL Pre-Participation Physical Evaluation form signed. 
-                    It is tempting to pop into a retail clinic for a $20 signature, but your young athlete deserves more than a rubber stamp.
-                </p>
-
-                <h3>More Than Just a Signature</h3>
-                <p>
-                    A comprehensive sports physical is often the <em>only</em> time a teenager sees a doctor all year. 
-                    This is our chance to screen for silent cardiac issues (like Hypertrophic Cardiomyopathy), assess concussion history, and discuss nutrition.
-                </p>
-                <p>
-                    At our clinic, we view the sports physical as a performance review. 
-                    We ensure your student-athlete isn't just cleared to play, but physically prepared to compete safely.
-                </p>
+            <div class="map-container reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.7027584126485!2d-83.56845348821956!3d41.73872297113171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b7f113a3754e3%3A0xe536d7732a398363!2sFamily%20Medical%20Center%20of%20MI!5e0!3m2!1sen!2sus!4v1714500000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </article>
+        </div>
+    </section>
 
-        <article class="article-card" id="peds-fever">
-            <div class="article-meta">March 2025 • Pediatrics & Family Health</div>
-            <h2 class="article-title">Pediatric Fevers: When to Visit the ER vs. Your Family Doctor</h2>
-            <div class="article-content">
-                <p>
-                    For parents, few things are as stressful as a sudden late-night fever. 
-                    When your child feels warm, the instinct is often to rush to the nearest Urgent Care or ER. 
-                    However, for most otherwise healthy children, the "fever" itself is not the enemy—it is the body's immune system doing its job.
-                </p>
-                <h3>The "100.4 Rule" and Medical Homes</h3>
-                <p>
-                    In evidence-based Family Medicine, we define a true fever as a temperature of <strong>100.4°F (38°C)</strong> or higher. 
-                    For infants under 3 months, this always requires immediate medical attention. 
-                    But for older children, the <em>behavior</em> of the child often matters more than the number on the thermometer.
-                </p>
-                <h3>Why Continuity Matters</h3>
-                <p>
-                    Unlike a rotating provider at an Urgent Care, a Family Physician knows your child's history. 
-                    We know if they are prone to ear infections or if they have a history of wheezing. 
-                    This context allows us to treat the patient, not just the temperature.
-                </p>
+    <footer id="contact">
+        <div class="reveal">
+            <h2>Contact Information</h2>
+            <div class="contact-block">
+                <p><strong>Current Administrative Contact</strong><br>Authority Health GME Family Medicine</p>
+                <br>
+                <p><strong>Email:</strong> csmart-gme [at] authorityhealth.org</p> 
             </div>
-        </article>
-        
-        <article class="article-card" id="allergy-post">
-            <div class="article-meta">February 2025 • Health & Wellness</div>
-            <h2 class="article-title">Evidence-Based Allergy Relief for Sugar Land Residents</h2>
-            <div class="article-content">
-                <p>
-                    For residents of Fort Bend County, "allergy season" often feels like a year-round event. 
-                    From the Cedar fever of January to the heavy Oak pollen in spring, Sugar Land ranks among the most challenging environments for allergy sufferers.
-                </p>
-                <h3>The Evidence-Based Protocol</h3>
-                <p>
-                    Current clinical guidelines emphasize "pre-loading" your defense. This means starting intranasal corticosteroids weeks <em>before</em> the peak pollen season begins. 
-                    This reduces inflammation in the nasal passages before it has a chance to flare up.
-                </p>
-            </div>
-        </article>
-
-    </div>
-
-    <footer>
-        <p><strong>Dr. Safwan Moton | Family Medicine</strong></p>
-        <p>Joining the Sugar Land Medical Community | Summer 2026</p>
+        </div>
         <div class="copyright">
-            © 2025 Dr. Safwan Moton. All Rights Reserved.
+            © 2025 Dr. Safwan Moton. All Rights Reserved.<br>
+            Dr. Moton is a Resident Physician currently practicing in Michigan.
         </div>
     </footer>
 
     <script>
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 50; 
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
-    </script>
 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('mobile-menu').style.display = 'none';
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
