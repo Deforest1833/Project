@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com https://www.google.com http://googleusercontent.com https://docs.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com https://www.google.com http://googleusercontent.com https://docs.google.com https://www.youtube.com;">
     <meta name="description" content="Dr. Safwan Moton is a Family Medicine Resident Physician and published researcher. Currently practicing in Michigan, joining the Sugar Land, TX medical community in Summer 2026." />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,10 +204,12 @@
             content: '—'; position: absolute; left: 0; color: var(--gold-accent); 
         }
 
-        /* --- PREMIUM FEATURED CAROUSEL --- */
+        /* --- PREMIUM FEATURED CAROUSEL (BLUE VERSION) --- */
         .featured-insight {
-            background-color: #ffffff; padding: 100px 5%; position: relative;
+            background-color: var(--primary-color); /* Updated to Navy Blue */
+            padding: 100px 5%; position: relative;
             border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: white; /* Text is now white */
         }
         .carousel-container {
             max-width: 900px; margin: 0 auto; overflow: hidden; position: relative;
@@ -221,30 +223,31 @@
         }
         .carousel-slide.active { opacity: 1; transform: scale(1); }
         
-        .insight-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: 700; margin-bottom: 15px; }
-        .insight-title { font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1.1; }
-        .insight-body { font-size: 1.1rem; color: #2c3e50; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        /* Updated colors for Blue background */
+        .insight-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); font-weight: 700; margin-bottom: 15px; }
+        .insight-title { font-family: var(--font-heading); font-size: 2.5rem; color: white; margin-bottom: 20px; line-height: 1.1; }
+        .insight-body { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
         
-        /* View All Slide */
+        /* View All Slide (Blue Version) */
         .view-all-slide {
             display: flex; flex-direction: column; justify-content: center; align-items: center; height: 300px;
-            background: var(--bg-cream); border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
         }
         
         .read-more-btn {
-            background: none; border: none; color: var(--primary-color);
+            background: none; border: none; color: var(--gold-accent);
             font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
             font-size: 0.8rem; cursor: pointer; padding: 0;
-            border-bottom: 1px solid var(--primary-color); transition: all 0.3s;
+            border-bottom: 1px solid var(--gold-accent); transition: all 0.3s;
         }
-        .read-more-btn:hover { opacity: 0.7; }
+        .read-more-btn:hover { opacity: 0.8; color: white; border-color: white; }
         
         .carousel-dots { text-align: center; margin-top: 40px; }
         .dot {
-            height: 10px; width: 10px; margin: 0 5px; background-color: #ddd; border-radius: 50%;
+            height: 10px; width: 10px; margin: 0 5px; background-color: rgba(255, 255, 255, 0.3); border-radius: 50%;
             display: inline-block; cursor: pointer; transition: background-color 0.3s;
         }
-        .dot.active { background-color: var(--primary-color); }
+        .dot.active { background-color: var(--gold-accent); }
 
         /* --- LOCATION --- */
         .location {
@@ -456,7 +459,7 @@
                     <div class="view-all-slide">
                         <h2 class="insight-title">Explore the Library</h2>
                         <p style="margin-bottom:30px;">Read insights on Pediatrics, Allergies, and Travel Medicine.</p>
-                        <a href="articles.html" class="btn" style="color:var(--primary-color); border-color:var(--primary-color);">View All Articles</a>
+                        <a href="articles.html" class="btn" style="color:white; border-color:white;">View All Articles</a>
                     </div>
                 </div>
 
@@ -521,10 +524,10 @@
             <div>
                 <h4>Educational Videos</h4>
                 <ul>
-                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">The Best Medicine (Walking)</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">23 and 1/2 Hours (Dr. Evans)</a></li>
                     <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank">Understanding Pain</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">Managing Stress</a></li>
-                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=8PTVNkh5b8RUavWD" target="_blank">The Best Diet for Humans</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">The Single Most Important Thing for Stress</a></li>
+                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=8PTVNkh5b8RUavWD" target="_blank">The Best Diet For Humans</a></li>
                 </ul>
             </div>
         </div>
