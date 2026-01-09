@@ -265,13 +265,18 @@
         .location-info p { font-weight: 500; }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; }
+        footer h4 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; }
+        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
+        footer li { margin-bottom: 10px; }
+        
+        .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
+        
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.5) !important; 
             margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
-            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
 
         /* --- ANIMATIONS --- */
@@ -295,6 +300,7 @@
             .education { padding-bottom: 60px; }
             .location { padding-top: 60px; }
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
+            footer { text-align: center; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; } 
@@ -351,10 +357,10 @@
             <span class="eyebrow">Biography</span>
             <h2>Clinical Excellence & Compassion</h2>
             <p>
-                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan, with plans to begin practicing in Sugar Land, Texas in July/August 2026.
+                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. He is currently completing his advanced training in Michigan and plans to begin practicing in Sugar Land, Texas in July/August 2026.
             </p>
             <p>
-                Dr. Moton combines rigorous medical science with real-world clinical experience. He is dedicated to providing care that is rooted in established guidelines and tailored to effective outcomes. This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024.
+                Dr. Moton combines rigorous medical science with real-world clinical experience. He provides care rooted in established guidelines and tailored to effective outcomes. This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity in 2024.
             </p>
         </div>
     </section>
@@ -414,7 +420,7 @@
                 </ul>
             </div>
             <div class="timeline-item reveal">
-                <h3>University of Houston (Main Campus)</h3>
+                <h3>University of Houston</h3>
                 <span class="role">Bachelor of Science</span>
                 <ul>
                     <li>Graduated <strong>Magna Cum Laude</strong>.</li>
@@ -432,7 +438,7 @@
                     <div class="insight-meta">Latest Article • May 2025</div>
                     <h2 class="insight-title">New to Rosenberg? Establishing a 'Medical Home'</h2>
                     <div class="insight-body">
-                        <p>Finding a doctor is the last thing on a new resident's list—until illness strikes. Dr. Moton explains why establishing care early is your best insurance policy.</p>
+                        <p>Finding a doctor is the last thing on a new resident's list until illness strikes. Dr. Moton explains why establishing care early is your best insurance policy.</p>
                     </div>
                     <a href="articles.html#new-homeowner" class="read-more-btn">Read Full Article</a>
                 </div>
@@ -482,13 +488,13 @@
                 </div>
             </div>
             <div class="map-container reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.867746536976!2d-83.57790292329713!3d41.70183397126131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c8aa3a73645b3%3A0xc665798b049280d4!2sFamily%20Medical%20Center%20of%20Michigan!5e0!3m2!1sen!2sus!4v1704770000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?q=8765+Lewis+Ave,+Temperance,+MI+48182&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <div class="footer-content reveal" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; text-align:left;">
+        <div class="footer-content reveal">
             
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
@@ -496,23 +502,30 @@
                     Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
+                <div style="margin-top:20px;">
+                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
+                    <p><strong>Email:</strong><br>csmart-gme [at] authorityhealth.org</p>
+                </div>
             </div>
 
             <div>
-                <h4 style="color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem;">Quick Links</h4>
-                <ul style="opacity:0.9;">
-                    <li style="margin-bottom:10px;"><a href="#about">About Dr. Moton</a></li>
-                    <li style="margin-bottom:10px;"><a href="#care">Care Philosophy</a></li>
-                    <li style="margin-bottom:10px;"><a href="articles.html">Health Articles</a></li>
-                    <li style="margin-bottom:10px;"><a href="https://www.tmb.state.tx.us/page/look-up-a-licensee" target="_blank">Verify License (TMB)</a></li>
+                <h4>Patient Resources</h4>
+                <ul>
+                    <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank">AAFP Vaccine Schedules</a></li>
+                    <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank">Heart Healthy Plate (AHA)</a></li>
+                    <li><a href="https://www.myplate.gov/myplate-plan" target="_blank">USDA MyPlate Plan</a></li>
+                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 style="color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem;">Contact</h4>
-                <p style="font-size:0.9rem; margin-bottom:10px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                <p style="font-size:0.9rem; margin-bottom:10px;"><strong>Email:</strong><br>csmart-gme [at] authorityhealth.org</p>
-                <p style="font-size:0.9rem;"><strong>Arriving:</strong><br>Summer 2026</p>
+                <h4>Educational Videos</h4>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">The Best Medicine (Walking)</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank">Understanding Pain</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">Managing Stress</a></li>
+                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=8PTVNkh5b8RUavWD" target="_blank">The Best Diet for Humans</a></li>
+                </ul>
             </div>
         </div>
 
