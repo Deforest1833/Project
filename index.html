@@ -206,10 +206,10 @@
 
         /* --- PREMIUM FEATURED CAROUSEL (BLUE VERSION) --- */
         .featured-insight {
-            background-color: var(--primary-color); /* Updated to Navy Blue */
+            background-color: var(--primary-color);
             padding: 100px 5%; position: relative;
             border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);
-            color: white; /* Text is now white */
+            color: white; 
         }
         .carousel-container {
             max-width: 900px; margin: 0 auto; overflow: hidden; position: relative;
@@ -223,12 +223,16 @@
         }
         .carousel-slide.active { opacity: 1; transform: scale(1); }
         
-        /* Updated colors for Blue background */
         .insight-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); font-weight: 700; margin-bottom: 15px; }
         .insight-title { font-family: var(--font-heading); font-size: 2.5rem; color: white; margin-bottom: 20px; line-height: 1.1; }
-        .insight-body { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .insight-body { font-size: 1.1rem; color: white !important; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
         
-        /* View All Slide (Blue Version) */
+        /* Force White Text Override */
+        .featured-insight p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* View All Slide */
         .view-all-slide {
             display: flex; flex-direction: column; justify-content: center; align-items: center; height: 300px;
             background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
@@ -497,7 +501,7 @@
     </section>
 
     <footer id="contact">
-        <div class="footer-content reveal">
+        <div class="footer-content">
             
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
@@ -524,10 +528,10 @@
             <div>
                 <h4>Educational Videos</h4>
                 <ul>
-                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">23 and 1/2 Hours (Dr. Evans)</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank">Understanding Pain</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">The Single Most Important Thing for Stress</a></li>
-                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=8PTVNkh5b8RUavWD" target="_blank">The Best Diet For Humans</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">The Side Effects of Vaccines - How High is the Risk?</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank">Homeopathy Explained</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">Vaping Is Too Good To Be True</a></li>
+                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=SGF3cr9YMF5dyxiD" target="_blank">We Have To Talk About Weed</a></li>
                 </ul>
             </div>
         </div>
