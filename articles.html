@@ -120,19 +120,27 @@
         }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 80px 5%; text-align: center; }
-        footer p, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; }
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
+        footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
+        footer h4 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; }
+        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
+        footer li { margin-bottom: 10px; }
+        
+        .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
+        
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.5) !important; 
-            margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; 
-            text-transform: uppercase; 
+            margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
             .page-header h1 { font-size: 2.5rem; }
             .article-card { padding: 30px 20px; }
+            .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
+            footer { text-align: center; }
         }
     </style>
 </head>
@@ -173,19 +181,15 @@
             
             <div class="article-content">
                 <p>
-                    Rosenberg is one of the fastest-growing communities in Fort Bend County, with new subdivisions breaking ground every month. 
-                    If you have just moved here, finding a doctor is likely low on your to-do list—until you wake up with a sore throat or a twisted ankle.
+                    Rosenberg is one of the fastest-growing communities in Fort Bend County, with new subdivisions breaking ground every month. If you have just moved here, finding a doctor is likely low on your to-do list until you wake up with a sore throat or a twisted ankle.
                 </p>
 
                 <h3>The "Medical Home" Advantage</h3>
                 <p>
-                    In Family Medicine, we use the term "Medical Home" to describe a partnership between you and a physician who knows your history. 
-                    Unlike urgent care centers, which treat you as a transaction, a Medical Home treats you as a person. 
-                    We have your baseline labs on file, we know your family history, and we can often treat minor issues over the phone because we know <em>you</em>.
+                    In Family Medicine, we use the term "Medical Home" to describe a partnership between you and a physician who knows your history. Unlike urgent care centers which treat you as a transaction, a Medical Home treats you as a person. We have your baseline labs on file, we know your family history, and we can often treat minor issues over the phone because we know <em>you</em>.
                 </p>
                 <p>
-                    Establishing care when you are healthy is the best insurance policy for when you are sick. 
-                    It ensures you have an advocate ready to coordinate your care the moment you need it.
+                    Establishing care when you are healthy is the best insurance policy for when you are sick. It ensures you have an advocate ready to coordinate your care the moment you need it.
                 </p>
             </div>
         </article>
@@ -196,14 +200,12 @@
             
             <div class="article-content">
                 <p>
-                    It is a statistical fact: men are far less likely to visit the doctor than women. 
-                    In Rosenberg's busy industrial and trade sectors, taking time off work for a checkup often feels like a luxury. 
-                    However, maintaining your health doesn't require monthly visits—it just requires knowing your numbers.
+                    It is a statistical fact: men are far less likely to visit the doctor than women. In Rosenberg's busy industrial and trade sectors, taking time off work for a checkup often feels like a luxury. However, maintaining your health doesn't require monthly visits. It just requires knowing your numbers.
                 </p>
 
                 <h3>The Big Three</h3>
                 <p>
-                    <strong>1. Blood Pressure:</strong> The "Silent Killer." You can walk around with 160/100 and feel fine, until the damage is done. <br>
+                    <strong>1. Blood Pressure:</strong> The "Silent Killer." You can walk around with 160/100 and feel fine until the damage is done. <br>
                     <strong>2. Lipid Panel:</strong> Not just "Cholesterol," but the ratio of good (HDL) to bad (LDL) fats that predicts heart risk. <br>
                     <strong>3. Testosterone:</strong> Fatigue and brain fog aren't always just "aging." Low T is a treatable medical condition, not a character flaw.
                 </p>
@@ -219,18 +221,15 @@
             
             <div class="article-content">
                 <p>
-                    Every August, parents across Rosenberg scramble to get the mandatory UIL Pre-Participation Physical Evaluation form signed. 
-                    It is tempting to pop into a retail clinic for a $20 signature, but your young athlete deserves more than a rubber stamp.
+                    Every August, parents across Rosenberg scramble to get the mandatory UIL Pre-Participation Physical Evaluation form signed. It is tempting to pop into a retail clinic for a $20 signature, but your young athlete deserves more than a rubber stamp.
                 </p>
 
                 <h3>More Than Just a Signature</h3>
                 <p>
-                    A comprehensive sports physical is often the <em>only</em> time a teenager sees a doctor all year. 
-                    This is our chance to screen for silent cardiac issues (like Hypertrophic Cardiomyopathy), assess concussion history, and discuss nutrition.
+                    A comprehensive sports physical is often the <em>only</em> time a teenager sees a doctor all year. This is our chance to screen for silent cardiac issues (like Hypertrophic Cardiomyopathy), assess concussion history, and discuss nutrition.
                 </p>
                 <p>
-                    At our clinic, we view the sports physical as a performance review. 
-                    We ensure your student-athlete isn't just cleared to play, but physically prepared to compete safely.
+                    At our clinic, we view the sports physical as a performance review. We ensure your student-athlete isn't just cleared to play, but physically prepared to compete safely.
                 </p>
             </div>
         </article>
@@ -240,21 +239,15 @@
             <h2 class="article-title">Pediatric Fevers: When to Visit the ER vs. Your Family Doctor</h2>
             <div class="article-content">
                 <p>
-                    For parents, few things are as stressful as a sudden late-night fever. 
-                    When your child feels warm, the instinct is often to rush to the nearest Urgent Care or ER. 
-                    However, for most otherwise healthy children, the "fever" itself is not the enemy—it is the body's immune system doing its job.
+                    For parents, few things are as stressful as a sudden late-night fever. When your child feels warm, the instinct is often to rush to the nearest Urgent Care or ER. However, for most otherwise healthy children, the "fever" itself is not the enemy. It is the body's immune system doing its job.
                 </p>
                 <h3>The "100.4 Rule" and Medical Homes</h3>
                 <p>
-                    In evidence-based Family Medicine, we define a true fever as a temperature of <strong>100.4°F (38°C)</strong> or higher. 
-                    For infants under 3 months, this always requires immediate medical attention. 
-                    But for older children, the <em>behavior</em> of the child often matters more than the number on the thermometer.
+                    In evidence-based Family Medicine, we define a true fever as a temperature of <strong>100.4°F (38°C)</strong> or higher. For infants under 3 months, this always requires immediate medical attention. But for older children, the <em>behavior</em> of the child often matters more than the number on the thermometer.
                 </p>
                 <h3>Why Continuity Matters</h3>
                 <p>
-                    Unlike a rotating provider at an Urgent Care, a Family Physician knows your child's history. 
-                    We know if they are prone to ear infections or if they have a history of wheezing. 
-                    This context allows us to treat the patient, not just the temperature.
+                    Unlike a rotating provider at an Urgent Care, a Family Physician knows your child's history. We know if they are prone to ear infections or if they have a history of wheezing. This context allows us to treat the patient, not just the temperature.
                 </p>
             </div>
         </article>
@@ -264,24 +257,56 @@
             <h2 class="article-title">Evidence-Based Allergy Relief for Sugar Land Residents</h2>
             <div class="article-content">
                 <p>
-                    For residents of Fort Bend County, "allergy season" often feels like a year-round event. 
-                    From the Cedar fever of January to the heavy Oak pollen in spring, Sugar Land ranks among the most challenging environments for allergy sufferers.
+                    For residents of Fort Bend County, "allergy season" often feels like a year-round event. From the Cedar fever of January to the heavy Oak pollen in spring, Sugar Land ranks among the most challenging environments for allergy sufferers.
                 </p>
                 <h3>The Evidence-Based Protocol</h3>
                 <p>
-                    Current clinical guidelines emphasize "pre-loading" your defense. This means starting intranasal corticosteroids weeks <em>before</em> the peak pollen season begins. 
-                    This reduces inflammation in the nasal passages before it has a chance to flare up.
+                    Current clinical guidelines emphasize "pre-loading" your defense. This means starting intranasal corticosteroids weeks <em>before</em> the peak pollen season begins. This reduces inflammation in the nasal passages before it has a chance to flare up.
                 </p>
             </div>
         </article>
 
     </div>
 
-    <footer>
-        <p><strong>Dr. Safwan Moton | Family Medicine</strong></p>
-        <p>Joining the Sugar Land Medical Community | Summer 2026</p>
+    <footer id="contact">
+        <div class="footer-content">
+            
+            <div>
+                <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
+                <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
+                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
+                    Dedicated to continuity of care and long-term health outcomes.
+                </p>
+                <div style="margin-top:20px;">
+                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
+                    <p><strong>Email:</strong><br>csmart-gme [at] authorityhealth.org</p>
+                </div>
+            </div>
+
+            <div>
+                <h4>Patient Resources</h4>
+                <ul>
+                    <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank">AAFP Vaccine Schedules</a></li>
+                    <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank">Heart Healthy Plate (AHA)</a></li>
+                    <li><a href="https://www.myplate.gov/myplate-plan" target="_blank">USDA MyPlate Plan</a></li>
+                    <li><a href="articles.html">Health Articles</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Educational Videos</h4>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank">The Best Medicine (Walking)</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank">Understanding Pain</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank">Managing Stress</a></li>
+                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=8PTVNkh5b8RUavWD" target="_blank">The Best Diet for Humans</a></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="copyright">
-            © 2025 Dr. Safwan Moton. All Rights Reserved.
+            © 2025 Dr. Safwan Moton. All Rights Reserved. <br>
+            <span style="font-size:0.6rem; opacity:0.5;">Not medical advice. In an emergency, dial 911.</span>
         </div>
     </footer>
 
