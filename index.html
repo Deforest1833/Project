@@ -100,7 +100,8 @@
         }
 
         .hero-content {
-            /* Removed animation dependency to ensure visibility */
+            /* Basic fade in for Hero only */
+            animation: heroFadeIn 1.5s ease-out forwards;
             max-width: 800px;
             margin-top: 60px; 
         }
@@ -203,7 +204,7 @@
             content: '—'; position: absolute; left: 0; color: var(--gold-accent); 
         }
 
-        /* --- PREMIUM FEATURED CAROUSEL (BLUE VERSION) --- */
+        /* --- PREMIUM FEATURED CAROUSEL --- */
         .featured-insight {
             background-color: var(--primary-color);
             padding: 100px 5%; position: relative;
@@ -287,10 +288,23 @@
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
 
-        /* --- ANIMATIONS (SAFETY FIX) --- */
-        /* Default state is now VISIBLE to prevent "blank page" bugs */
-        .reveal { opacity: 1; transform: translateY(0); transition: all 1.2s ease-out; }
-        /* Only apply hidden start state if JS works (we handle this via logic, but this safety ensures display) */
+        /* --- ANIMATIONS RESTORED --- */
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Elements start invisible and slightly lower */
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(50px); 
+            transition: all 1.2s ease-out; 
+        }
+        /* When JS adds 'active', they become visible and slide up */
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
@@ -503,9 +517,7 @@
                 </div>
             </div>
             <div class="map-container reveal">
-                <div style="width:100%; height:100%; background:#e0e0e0; display:flex; align-items:center; justify-content:center; color:#666;">
-                    <p style="text-align:center; padding:20px;">Map Loading...<br><span style="font-size:0.8rem;">(Please paste your Google Maps Embed code here)</span></p>
-                </div>
+                <iframe src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=8765%20Lewis%20Ave,%20Temperance,%20MI%2048182&t=&z=14&ie=UTF8&iwloc=B&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -561,14 +573,16 @@
                 var windowheight = window.innerHeight;
                 var revealtop = reveals[i].getBoundingClientRect().top;
                 var revealpoint = 50; 
+                
+                // If element is near viewport, animate it
                 if(revealtop < windowheight - revealpoint){
                     reveals[i].classList.add('active');
                 }
             }
         }
         window.addEventListener('scroll', reveal);
-        // We trigger it once on load to ensure visible content
-        reveal();
+        // Force run once on load to show initial content
+        window.onload = reveal;
 
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
