@@ -236,7 +236,7 @@
         .view-all-slide {
             display: flex; flex-direction: column; justify-content: center; align-items: center; height: 300px;
             background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
-            padding: 30px; /* Added padding to fix mobile spacing issue */
+            padding: 30px; 
             text-align: center;
         }
         
@@ -444,21 +444,30 @@
             <div class="carousel-track" id="track">
                 
                 <div class="carousel-slide active">
-                    <div class="insight-meta">Latest Article • May 2025</div>
-                    <h2 class="insight-title">New to Rosenberg? Establishing a 'Medical Home'</h2>
+                    <div class="insight-meta">Latest Article • Dec 2025</div>
+                    <h2 class="insight-title">Eczema and Psoriasis: Skin Care for the Gulf Coast</h2>
                     <div class="insight-body">
-                        <p>Finding a doctor is the last thing on a new resident's list until illness strikes. Dr. Moton explains why establishing care early is your best insurance policy.</p>
+                        <p>Living in high humidity and heat presents unique challenges for chronic skin conditions. Dr. Moton explains how to manage flare-ups and find relief in the Texas climate.</p>
                     </div>
-                    <a href="articles.html#new-homeowner" class="read-more-btn">Read Full Article</a>
+                    <a href="articles.html#eczema" class="read-more-btn">Read Full Article</a>
                 </div>
 
                 <div class="carousel-slide">
-                    <div class="insight-meta">Men's Health • April 2025</div>
-                    <h2 class="insight-title">3 Numbers Every Dad Needs to Know</h2>
+                    <div class="insight-meta">Preventive Care • Nov 2025</div>
+                    <h2 class="insight-title">Colon Cancer Screening: Cologuard vs. Colonoscopy</h2>
                     <div class="insight-body">
-                        <p>Hypertension, Lipids, and Testosterone. A quick 30-minute review of these labs can add years to your life. Are you ignoring the warning signs?</p>
+                        <p>The screening age has lowered to 45. Understand the differences between home tests and the gold standard colonoscopy to make the right choice for your health.</p>
                     </div>
-                    <a href="articles.html#mens-health" class="read-more-btn">Read Full Article</a>
+                    <a href="articles.html#colon-cancer" class="read-more-btn">Read Full Article</a>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="insight-meta">Men's Health • Oct 2025</div>
+                    <h2 class="insight-title">Kidney Stones: Prevention Tips for the Texas Heat</h2>
+                    <div class="insight-body">
+                        <p>Dehydration is the enemy. Learn why the "Stone Belt" exists and simple lifestyle adjustments you can make to avoid this painful condition.</p>
+                    </div>
+                    <a href="articles.html#kidney-stones" class="read-more-btn">Read Full Article</a>
                 </div>
 
                 <div class="carousel-slide">
@@ -475,6 +484,7 @@
                 <span class="dot active" onclick="goToSlide(0)"></span>
                 <span class="dot" onclick="goToSlide(1)"></span>
                 <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
             </div>
         </div>
     </section>
@@ -546,20 +556,6 @@
     </footer>
 
     <script>
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-            for(var i = 0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 50; 
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
-
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
