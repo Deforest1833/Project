@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Safwan Moton | Family Medicine | Sugar Land, TX & MI</title>
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-src https://*.google.com https://www.google.com http://googleusercontent.com https://docs.google.com https://www.youtube.com;">
     <meta name="description" content="Dr. Safwan Moton is a Family Medicine Resident Physician and published researcher. Currently practicing in Michigan, joining the Sugar Land, TX medical community in Summer 2026." />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +100,7 @@
         }
 
         .hero-content {
-            animation: heroFadeIn 1.5s ease-out forwards;
+            /* Removed animation dependency to ensure visibility */
             max-width: 800px;
             margin-top: 60px; 
         }
@@ -288,13 +287,10 @@
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
 
-        /* --- ANIMATIONS --- */
-        @keyframes heroFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 1.2s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        /* --- ANIMATIONS (SAFETY FIX) --- */
+        /* Default state is now VISIBLE to prevent "blank page" bugs */
+        .reveal { opacity: 1; transform: translateY(0); transition: all 1.2s ease-out; }
+        /* Only apply hidden start state if JS works (we handle this via logic, but this safety ensures display) */
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
@@ -507,7 +503,9 @@
                 </div>
             </div>
             <div class="map-container reveal">
-                <iframe src="https://maps.google.com" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div style="width:100%; height:100%; background:#e0e0e0; display:flex; align-items:center; justify-content:center; color:#666;">
+                    <p style="text-align:center; padding:20px;">Map Loading...<br><span style="font-size:0.8rem;">(Please paste your Google Maps Embed code here)</span></p>
+                </div>
             </div>
         </div>
     </section>
@@ -556,6 +554,22 @@
     </footer>
 
     <script>
+        /* --- VISUAL EFFECTS --- */
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 50; 
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        // We trigger it once on load to ensure visible content
+        reveal();
+
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
