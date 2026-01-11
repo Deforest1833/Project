@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Dr. Safwan Moton</title>
+    <meta name="description" content="Frequently asked questions about Dr. Safwan Moton's future medical practice in Sugar Land and Rosenberg, TX. Arriving Summer 2026." />
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1a3c5e; 
+            --accent-color: #6c7a89;  
+            --bg-cream: #f2f2eb;      
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;   
+            
+            --font-heading: 'Cormorant Garamond', serif; 
+            --font-body: 'Lato', sans-serif;             
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--text-dark); line-height: 1.8; background-color: var(--bg-cream); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; position: fixed; width: 100%; top: 0; background: rgba(242, 242, 235, 0.98); backdrop-filter: blur(8px); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600; letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: 700; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        #mobile-menu { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: var(--bg-cream); padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee; }
+        #mobile-menu a { display: block; padding: 15px; font-size: 0.9rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+
+        /* HEADER */
+        .page-header { padding: 160px 5% 60px 5%; text-align: center; }
+        .page-header h1 { font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color); margin-bottom: 10px; }
+        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
+
+        /* FAQ CONTAINER */
+        .faq-container { max-width: 800px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+        .faq-item { background: white; padding: 30px; margin-bottom: 20px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .faq-question { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 600; }
+        .faq-answer { font-size: 1.1rem; color: #4a5568; }
+
+        /* FOOTER */
+        footer { background-color: var(--primary-color); color: white; padding: 80px 5%; text-align: center; }
+        .copyright { font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-transform: uppercase; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Dr. Safwan Moton</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="faq.html" style="color: var(--primary-color);">FAQ</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()"> ☰ </div>
+    </nav>
+
+    <div id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <header class="page-header">
+        <h1>Common Questions</h1>
+        <p>Information regarding future practice plans for 2026.</p>
+    </header>
+
+    <div class="faq-container">
+        
+        <div class="faq-item">
+            <div class="faq-question">Are you currently accepting new patients in Sugar Land or Rosenberg?</div>
+            <div class="faq-answer">
+                <strong>No.</strong> I am currently a Resident Physician completing my training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the <strong>Summer of 2026</strong>. I am not currently soliciting patients or practicing medicine in the state of Texas.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you treat children and adults?</div>
+            <div class="faq-answer">
+                Yes. As a Family Medicine physician, I am trained to treat patients of all ages, from newborns to seniors. I provide comprehensive care for the whole family.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you provide Obstetrics (OB) care?</div>
+            <div class="faq-answer">
+                No. While I treat women's health issues and provide gynecological care, I do not deliver babies or provide obstetrical management for pregnancy.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What insurance plans will you accept?</div>
+            <div class="faq-answer">
+                Insurance credentialing will occur closer to my start date in 2026. Once I have established a practice location, I will update this website with a full list of accepted insurance providers.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I transfer my medical records to you?</div>
+            <div class="faq-answer">
+                Please do not attempt to send records at this time. Once a clinic location is finalized in 2026, I will provide specific instructions and HIPAA-compliant forms to safely transfer your medical history.
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>Dr. Safwan Moton | Resident Physician</strong></p>
+        <p>Anticipated Start: Summer 2026</p>
+        <div class="copyright">
+            © 2026 Dr. Safwan Moton. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
