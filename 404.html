@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,13 +11,187 @@
   gtag('config', 'G-S06WN265PK');
 </script>
 
-    <meta http-equiv="refresh" content="0; url=index.html">
-    <script type="text/javascript">
-        window.location.href = "index.html"
-    </script>
-    <title>Page Not Found</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="robots" content="noindex">
+    
+    <title>Page Not Found | Dr. Safwan Moton</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- COPYING THE MAIN THEME --- */
+        :root {
+            --primary-color: #1a3c5e; 
+            --accent-color: #6c7a89;  
+            --bg-cream: #f2f2eb;      
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;   
+            
+            --font-heading: 'Cormorant Garamond', serif; 
+            --font-body: 'Lato', sans-serif;             
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { height: 100%; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--bg-cream);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- NAV --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; position: fixed; width: 100%; top: 0;
+            background: rgba(242, 242, 235, 0.98); 
+            backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
+            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); font-weight: 700;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        
+        #mobile-menu {
+            display: none; position: fixed; top: 70px; left: 0; width: 100%;
+            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
+        }
+        #mobile-menu a {
+            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
+            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* --- 404 CONTENT --- */
+        .error-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px 20px;
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: 8rem;
+            color: var(--primary-color);
+            line-height: 1;
+            opacity: 0.2;
+            margin-bottom: -20px;
+        }
+
+        .error-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .error-text {
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid var(--primary-color);
+            cursor: pointer;
+            border-radius: 0;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--primary-color); color: white; padding: 60px 5%; text-align: center; margin-top: auto; }
+        .copyright { 
+            font-size: 0.7rem; color: rgba(255, 255, 255, 0.5) !important; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; 
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .nav-links { display: none; } .mobile-menu-btn { display: block; }
+            .error-code { font-size: 5rem; margin-bottom: -10px; }
+            .error-title { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
-    <p>Page not found. <a href="index.html">Click here to go home.</a></p>
+
+    <nav>
+        <div class="logo">Dr. Safwan Moton</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="faq.html">FAQ</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()"> ☰ </div>
+    </nav>
+
+    <div id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-text">
+            We couldn't find the page you were looking for. It may have been moved, deleted, or the URL may be incorrect.
+        </p>
+        <a href="index.html" class="btn">Return Home</a>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Dr. Safwan Moton. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
 </body>
 </html>
