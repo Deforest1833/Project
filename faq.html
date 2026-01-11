@@ -20,6 +20,7 @@
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;   
+            --alert-red: #8B0000;
             
             --font-heading: 'Cormorant Garamond', serif; 
             --font-body: 'Lato', sans-serif;             
@@ -44,8 +45,19 @@
         .page-header h1 { font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color); margin-bottom: 10px; }
         .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
 
+        /* DISCLAIMER BOX */
+        .legal-notice {
+            background-color: #fff0f0;
+            border-left: 5px solid var(--alert-red);
+            padding: 20px;
+            margin: 0 auto 40px auto;
+            max-width: 800px;
+            font-size: 0.9rem;
+            color: var(--alert-red);
+        }
+
         /* FAQ CONTAINER */
-        .faq-container { max-width: 800px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+        .faq-container { max-width: 800px; margin: 0 auto; padding: 0 20px 100px 20px; }
         .faq-item { background: white; padding: 30px; margin-bottom: 20px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .faq-question { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 600; }
         .faq-answer { font-size: 1.1rem; color: #4a5568; }
@@ -82,54 +94,51 @@
         <p>Information regarding future practice plans for 2026.</p>
     </header>
 
+    <div class="legal-notice">
+        <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan. He is <strong>not</strong> currently licensed to practice medicine in Texas and is <strong>not</strong> soliciting patients for current medical care. The information below reflects <strong>future intentions</strong> for his practice upon completion of residency and Texas licensure in Summer 2026.
+    </div>
+
     <div class="faq-container">
         
         <div class="faq-item">
             <div class="faq-question">Are you currently accepting new patients in Sugar Land or Rosenberg?</div>
             <div class="faq-answer">
-                <strong>No.</strong> I am currently a Resident Physician completing my training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the <strong>Summer of 2026</strong>. I am not currently soliciting patients or practicing medicine in the state of Texas.
+                <strong>No.</strong> I am currently completing my residency training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the <strong>Summer of 2026</strong>. I am not currently practicing medicine in the state of Texas.
             </div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Do you manage chronic conditions like Diabetes and High Blood Pressure?</div>
+            <div class="faq-question">What services will your future practice offer?</div>
             <div class="faq-answer">
-                Yes. Chronic disease management is the cornerstone of Family Medicine. I provide comprehensive care for Type 2 Diabetes, Hypertension (High Blood Pressure), High Cholesterol, and Thyroid disorders, focusing on lifestyle changes first and medication when necessary.
+                My future practice is being designed to provide comprehensive primary care for the whole family (children and adults). This will include chronic disease management (Diabetes, Hypertension), preventive screenings, and acute care for minor illnesses.
             </div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Will you offer Telemedicine or Virtual Visits?</div>
+            <div class="faq-question">Will you provide Telemedicine or Virtual Visits?</div>
             <div class="faq-answer">
-                Yes. I plan to offer secure video visits for follow-ups, lab reviews, and minor acute issues for established patients in Texas. This provides a convenient option for busy professionals and parents in Sugar Land and surrounding areas.
+                Upon establishing my Texas practice, I plan to offer secure telemedicine options for appropriate follow-up visits and lab reviews to provide convenience for patients in the Greater Houston area.
             </div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Will you offer same-day or walk-in appointments?</div>
+            <div class="faq-question">Will you perform Sports Physicals?</div>
             <div class="faq-answer">
-                My future practice aims to prioritize accessibility. While I will primarily operate by appointment to respect patients' time, I intend to keep daily slots open for sick visits so established patients can avoid costly Urgent Care fees for minor illnesses.
+                Yes. I intend to offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD and Fort Bend ISD once my practice is open in 2026.
             </div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Do you perform Sports Physicals?</div>
+            <div class="faq-question">What is a "Medical Home"?</div>
             <div class="faq-answer">
-                Yes. I perform comprehensive pre-participation physical evaluations for UIL athletics (middle school and high school) in Lamar CISD and Fort Bend ISD. These exams screen for cardiac risks and ensure students are safe to compete.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Do you treat children and adults?</div>
-            <div class="faq-answer">
-                Yes. As a Family Medicine physician, I am trained to treat patients of all ages, from newborns to seniors. I provide comprehensive care for the whole family.
+                A "Medical Home" is a model of care where your primary physician leads a team that cares for you. It means having a doctor who knows your history, coordinates your specialist care, and helps you navigate the healthcare system, rather than just treating you when you are sick.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Do you provide Obstetrics (OB) care?</div>
             <div class="faq-answer">
-                No. While I treat women's health issues and provide gynecological care, I do not deliver babies or provide obstetrical management for pregnancy.
+                No. While I will provide general women's health and gynecological care, I do not intend to practice obstetrics or deliver babies.
             </div>
         </div>
 
@@ -137,13 +146,6 @@
             <div class="faq-question">What insurance plans will you accept?</div>
             <div class="faq-answer">
                 Insurance credentialing will occur closer to my start date in 2026. Once I have established a practice location, I will update this website with a full list of accepted insurance providers.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">How do I transfer my medical records to you?</div>
-            <div class="faq-answer">
-                Please do not attempt to send records at this time. Once a clinic location is finalized in 2026, I will provide specific instructions and HIPAA-compliant forms to safely transfer your medical history.
             </div>
         </div>
 
