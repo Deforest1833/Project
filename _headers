@@ -1,0 +1,11 @@
+/*
+  # 1. Prevent your site from being framed by others (Stops Clickjacking)
+  X-Frame-Options: SAMEORIGIN
+
+  # 2. Disable access to sensitive features (Camera, Mic, etc.)
+  # This aligns with your goal of strict privacy and minimizing data exposure.
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+
+  # 3. Content Security Policy (The "Allow List")
+  # UPDATED: Now includes permissions for Google Analytics (G-S06WN265PK)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com;
