@@ -305,10 +305,10 @@
         
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
-        /* UPDATED CONTRAST: Opacity changed from 0.5 to 0.8 */
+        /* UPDATED CONTRAST: Opacity 0.8 */
         .copyright { 
             font-size: 0.7rem; 
-            color: rgba(255, 255, 255, 0.8) !important; /* FIXED */
+            color: rgba(255, 255, 255, 0.8) !important; 
             margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
@@ -317,7 +317,7 @@
         .legal-footer {
             margin-top: 20px;
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.8); /* FIXED */
+            color: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 15px;
             text-align: center;
@@ -618,7 +618,7 @@
 
         <div class="copyright">
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
-            <span style="font-size:0.6rem; opacity:0.5;">Not medical advice. In an emergency, dial 911.</span>
+            <span style="font-size:0.6rem; opacity:0.8;">Not medical advice. In an emergency, dial 911.</span>
         </div>
     </footer>
 
@@ -670,6 +670,7 @@
     </script>
 
     <script>
+        /* --- VISUAL EFFECTS --- */
         function reveal(){
             var reveals = document.querySelectorAll('.reveal');
             for(var i = 0; i < reveals.length; i++){
@@ -677,12 +678,14 @@
                 var revealtop = reveals[i].getBoundingClientRect().top;
                 var revealpoint = 50; 
                 
+                // If element is near viewport, animate it
                 if(revealtop < windowheight - revealpoint){
                     reveals[i].classList.add('active');
                 }
             }
         }
         window.addEventListener('scroll', reveal);
+        // Force run once on load to show initial content
         window.onload = reveal;
 
         function toggleMenu() {
@@ -698,6 +701,7 @@
             });
         });
 
+        /* --- CAROUSEL LOGIC --- */
         let currentSlide = 0;
         const track = document.getElementById('track');
         const slides = document.querySelectorAll('.carousel-slide');
@@ -723,6 +727,7 @@
             updateCarousel();
         }
 
+        // Auto-advance every 6 seconds
         setInterval(nextSlide, 6000);
     </script>
 </body>
