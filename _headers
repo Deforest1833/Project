@@ -6,5 +6,5 @@
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
 
   # 3. Content Security Policy (The "Allow List")
-  # UPDATED: Changed map permission to 'maps.google.com/66' to match the index.html embed.
+  # UPDATED: Changed map permission to 'https://maps.google.com/maps?q=8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182&z=15&output=embed' to match the index.html embed.
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com; frame-src 'self' https://www.google.com https://maps.google.com/maps?q=8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182&z=15&output=embed; base-uri 'self'; object-src 'none'; form-action 'self';
