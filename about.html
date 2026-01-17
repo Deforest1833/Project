@@ -13,20 +13,21 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Dr. Safwan Moton | Resident Physician</title>
-    <meta name="description" content="Meet Dr. Safwan Moton, a Family Medicine Resident Physician returning to serve the Sugar Land and Fort Bend County community in 2026." />
+    <title>Medical Articles & Health Insights | Sugar Land Family Medicine</title>
     
-    <link rel="canonical" href="https://drmoton.com/about.html">
+    <meta name="description" content="Evidence-based health insights and medical articles for Sugar Land, Rosenberg, Richmond, and Stafford residents by Dr. Safwan Moton." />
+    
+    <link rel="canonical" href="https://drmoton.com/articles.html">
 
-    <meta property="og:title" content="About Dr. Safwan Moton">
-    <meta property="og:description" content="Resident Physician serving Sugar Land starting Summer 2026. Evidence-based care with a personal connection to Fort Bend County.">
+    <meta property="og:title" content="Medical Articles | Dr. Safwan Moton">
+    <meta property="og:description" content="Evidence-based health insights on Eczema, Diabetes, and Preventive Care for the Sugar Land community.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
-    <meta property="og:url" content="https://drmoton.com/about.html">
-    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://drmoton.com/articles.html">
+    <meta property="og:type" content="website">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -60,8 +61,6 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         p, li { font-weight: 500; color: #2c3e50; }
-        
-        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
         /* --- NAV --- */
         nav {
@@ -104,58 +103,7 @@
             font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
             margin-bottom: 10px;
         }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
-
-        /* --- CONTENT SECTIONS --- */
-        .content-section {
-            padding: 80px 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .bio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-            align-items: start;
-            margin-bottom: 80px;
-        }
-        
-        .bio-text h2 {
-            font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color);
-            margin-bottom: 20px; line-height: 1.2;
-        }
-        
-        .bio-text p { margin-bottom: 20px; font-size: 1.1rem; }
-
-        .credentials-box {
-            background: white;
-            padding: 40px;
-            border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .credentials-box h3 {
-            font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary-color);
-            margin-bottom: 25px;
-        }
-        
-        .credential-list {
-            list-style: none;
-        }
-        .credential-list li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .credential-list li::before {
-            content: '•'; position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;
-        }
-        .credential-year {
-            font-size: 0.85rem; color: var(--accent-color); font-weight: 700; display: block;
-            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;
-        }
+        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); }
 
         /* --- LEGAL DISCLAIMER BOX --- */
         .legal-notice {
@@ -168,6 +116,97 @@
             color: var(--alert-red);
         }
 
+        /* --- FILTER BAR --- */
+        .filter-container {
+            max-width: 800px; margin: 0 auto 40px auto; 
+            display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+        }
+        .filter-btn {
+            padding: 8px 16px; border: 1px solid var(--accent-color);
+            background: transparent; color: var(--accent-color);
+            border-radius: 20px; cursor: pointer; font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color); color: white; border-color: var(--primary-color);
+        }
+
+        /* --- ARTICLE LIST --- */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 2px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: opacity 0.4s ease; /* For filtering animation */
+        }
+
+        .article-meta {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); margin-bottom: 15px; font-weight: 700;
+        }
+
+        .tag-pill {
+            display: inline-block; background: #eef2f5; color: var(--primary-color);
+            padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .article-title {
+            font-family: var(--font-heading); font-size: 2.2rem;
+            color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #2c3e50;
+        }
+        
+        /* Internal Linking Style */
+        .article-content a {
+            color: var(--primary-color);
+            font-weight: 700;
+            border-bottom: 1px solid rgba(26, 60, 94, 0.3);
+        }
+        .article-content a:hover {
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem; color: var(--primary-color);
+            margin-top: 30px; margin-bottom: 15px;
+        }
+
+        /* KEY TAKEAWAYS BOX */
+        .takeaways-box {
+            background-color: #f8fbfd;
+            border-left: 4px solid var(--gold-accent);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .takeaways-box h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--primary-color); margin-bottom: 15px; font-weight: 800;
+        }
+        .takeaways-box ul {
+            list-style: none; padding: 0;
+        }
+        .takeaways-box li {
+            position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 1rem;
+        }
+        .takeaways-box li::before {
+            content: '•'; position: absolute; left: 0; color: var(--gold-accent); font-size: 1.2rem;
+        }
+
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
@@ -177,12 +216,14 @@
         
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
+        /* UPDATED CONTRAST: Opacity 0.8 */
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.8) !important; 
             margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
         
+        /* UPDATED CONTRAST: Opacity 0.8 */
         .legal-footer {
             margin-top: 20px;
             font-size: 0.75rem;
@@ -194,10 +235,42 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        .source-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        .source-box h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .source-box ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .source-box li {
+            margin-bottom: 5px;
+        }
+        .source-box a {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        .source-box a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
 
+        /* RESPONSIVE */
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
-            .bio-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2.5rem; }
+            .article-card { padding: 30px 20px; }
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
             footer { text-align: center; }
         }
@@ -209,8 +282,9 @@
         <div class="logo">Dr. Safwan Moton</div>
         <div class="nav-links">
             <a href="https://drmoton.com">Home</a>
-            <a href="about.html" style="color: var(--primary-color);">About</a>
-            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="index.html#experience">Background</a>
+            <a href="articles.html" style="color: var(--primary-color);">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="index.html#contact">Contact</a>
@@ -221,6 +295,7 @@
     <div id="mobile-menu">
         <a href="https://drmoton.com">Home</a>
         <a href="about.html">About</a>
+        <a href="index.html#experience">Background</a>
         <a href="articles.html">Articles</a>
         <a href="faq.html">FAQ</a>
         <a href="index.html#location">Location</a>
@@ -228,68 +303,186 @@
     </div>
 
     <header class="page-header">
-        <h1>About Dr. Moton</h1>
-        <p>A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land.</p>
+        <h1>Health Insights</h1>
+        <p>Evidence-based medical articles and updates for the Sugar Land community.</p>
     </header>
 
-    <div class="content-section">
+    <div class="article-container">
         
         <div class="legal-notice">
-            <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan. He is <strong>not</strong> currently licensed to practice medicine in Texas. The information below reflects <strong>future intentions</strong> for his medical services in Summer 2026.
+            <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan. He is <strong>not</strong> currently licensed to practice medicine in Texas. The information below reflects <strong>future intentions</strong> for his medical services in Summer 2026 and is for educational purposes only.
         </div>
 
-        <div class="bio-grid">
-            <div class="bio-image">
-                <img src="Headshot.jpg" alt="Dr. Safwan Moton" width="400" height="500" loading="lazy" style="border-radius: 2px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);">
-            </div>
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterArticles('all')">All</button>
+            <button class="filter-btn" onclick="filterArticles('dermatology')">Dermatology</button>
+            <button class="filter-btn" onclick="filterArticles('preventive')">Preventive</button>
+            <button class="filter-btn" onclick="filterArticles('men')">Men's Health</button>
+            <button class="filter-btn" onclick="filterArticles('occupational')">Occupational</button>
+        </div>
+
+        <article class="article-card category-dermatology" id="eczema">
+            <div class="article-meta">December 2025 • By Dr. Safwan Moton <span class="tag-pill">#Dermatology</span></div>
+            <h2 class="article-title">Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast</h2>
             
-            <div class="bio-text">
-                <h2>The Journey Home</h2>
-                <p>
-                    Medicine has always been about community for me. My journey began right here in the greater Houston area, where I earned my Bachelor of Science from the University of Houston, graduating Magna Cum Laude. That early foundation as a Houston Louis Stokes Scholar (H-LSAMP) instilled in me a deep respect for scientific inquiry and research.
-                </p>
-                <p>
-                    I pursued my medical training at Nova Southeastern University's Dr. Kiran C. Patel College of Osteopathic Medicine, followed by rigorous residency training with Authority Health in Michigan. While my training has taken me across the country, my goal has always been to return to Fort Bend County.
-                </p>
-                <p>
-                    I am building my future practice in Sugar Land on a simple premise: <strong>Primary Care should be proactive, not reactive.</strong> Whether managing chronic conditions like diabetes or navigating the acute challenges of seasonal allergies, I believe in empowering patients with the knowledge they need to take control of their health.
-                </p>
+            <div class="takeaways-box">
+                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <ul>
+                    <li><strong>Humidity helps, heat hurts:</strong> While Gulf Coast humidity aids moisture retention, sweat is a major trigger for eczema flares.</li>
+                    <li><strong>Chlorine is a double-edged sword:</strong> Swimming can dry out skin, but diluted bleach baths (per medical instruction) can actually reduce bacterial load on eczematous skin.</li>
+                    <li><strong>Steroid sparing:</strong> Long-term management should focus on non-steroidal topicals to prevent skin thinning.</li>
+                </ul>
             </div>
-        </div>
 
-        <div class="credentials-box">
-            <h3>Education & Credentials</h3>
-            <ul class="credential-list">
-                <li>
-                    <span class="credential-year">Current (2026 Completion)</span>
-                    <strong>Family Medicine Residency</strong><br>
-                    Authority Health GME (Affiliated with Michigan State University COM)<br>
-                    <em>Appointed Clinical Faculty, Statewide Campus System</em>
-                </li>
-                <li>
-                    <span class="credential-year">Doctor of Osteopathic Medicine (DO)</span>
-                    <strong>Nova Southeastern University</strong><br>
-                    Dr. Kiran C. Patel College of Osteopathic Medicine
-                </li>
-                <li>
-                    <span class="credential-year">Master of Science</span>
-                    <strong>University of North Texas Health Science Center</strong><br>
-                    Medical Sciences (Research & Biostatistics Focus)
-                </li>
-                <li>
-                    <span class="credential-year">Bachelor of Science</span>
-                    <strong>University of Houston</strong><br>
-                    Magna Cum Laude • H-LSAMP Scholar
-                </li>
-            </ul>
-        </div>
+            <div class="article-content">
+                <p>
+                    Living on the Gulf Coast presents a unique paradox for my patients with chronic skin conditions like eczema (atopic dermatitis) and psoriasis. On one hand, the naturally high humidity we experience in Sugar Land and Rosenberg helps retain skin moisture, which is often beneficial. On the other hand, the intense heat and subsequent sweating act as potent irritants that trigger severe flare-ups.
+                </p>
+                <p>
+                    In my clinical experience, I often see patients who believe they just have "dry skin" or "heat rash," when in reality they are dealing with a chronic autoimmune or inflammatory condition. Distinguishing between the two is critical because the treatments are fundamentally different.
+                </p>
+                <h3>Why "Just Lotion" Isn't Enough</h3>
+                <p>
+                    Eczema is essentially a barrier defect. Think of your skin like a brick wall; in eczema, the "mortar" holding the cells together is crumbly, allowing moisture to escape and irritants (like pollen or chemicals) to enter. Psoriasis, conversely, is an autoimmune condition where the skin cells grow too fast, piling up into thick, silvery scales.
+                </p>
+                <p>
+                    For my patients in industrial roles or outdoor professions in Fort Bend County (who often also suffer from <a href="#plantar-fasciitis">occupational foot pain</a>), "just putting on lotion" rarely solves the problem. We often need a two-pronged approach:
+                </p>
+                <ul>
+                    <li><strong>Acute Phase:</strong> Using topical corticosteroids to extinguish the "fire" of inflammation quickly.</li>
+                    <li><strong>Maintenance Phase:</strong> Transitioning to non-steroidal agents (like calcineurin inhibitors) to keep the skin calm without the risk of thinning the skin that comes with long-term steroid use.</li>
+                </ul>
+                <h3>Local Triggers to Watch</h3>
+                <p>
+                    Specific to our area, I advise patients to be wary of chlorinated pools and heavy sweating. Immediately rinsing off sweat and pool water, followed by applying a thick emollient (cream or ointment, not thin lotion), is the single most effective preventive step you can take during the Texas summer.
+                </p>
+                <div class="source-box">
+                    <h4>Sources & Further Reading</h4>
+                    <ul>
+                        <li>NIAMS (NIH): <a href="https://www.niams.nih.gov/health-topics/atopic-dermatitis" target="_blank" rel="noopener noreferrer">Atopic Dermatitis (Eczema)</a></li>
+                        <li>National Psoriasis Foundation: <a href="https://www.psoriasis.org/about-psoriasis/" target="_blank" rel="noopener noreferrer">About Psoriasis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
 
-        <div style="margin-top: 60px;">
-            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px;">Philosophy of Care</h2>
-            <p style="font-size: 1.1rem; line-height: 1.9;">
-                "Evidence-based medicine" is more than a buzzword; it is a commitment to safety and efficacy. In an era of medical misinformation, I strive to be a trusted filter for my patients. I combine the latest clinical guidelines from major bodies (like the CDC and AAFP) with the osteopathic philosophy of treating the whole person, not just the symptom. When I open my doors in Sugar Land in Summer 2026, my practice will be a true 'Medical Home'—a place where you are known, heard, and cared for.
-            </p>
-        </div>
+        <article class="article-card category-preventive" id="colon-cancer">
+            <div class="article-meta">November 2025 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+            <h2 class="article-title">Colon Cancer Screening: Cologuard vs. Colonoscopy</h2>
+            
+            <div class="takeaways-box">
+                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <ul>
+                    <li><strong>45 is the new 50:</strong> Screening now begins at age 45 due to rising cancer rates in younger adults.</li>
+                    <li><strong>The "Gold Standard" is preventive:</strong> A colonoscopy is the only test that can actually <em>prevent</em> cancer by removing polyps before they turn malignant.</li>
+                    <li><strong>Home tests have limits:</strong> A positive Cologuard test essentially commits you to a diagnostic colonoscopy anyway.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <p>
+                    One of the most significant shifts in preventive medicine recently has been the lowering of the colorectal cancer screening age from 50 to 45. This wasn't done lightly; epidemiological data showed a concerning rise in colon cancer diagnoses among younger adults. For residents in Fort Bend County, understanding your screening options is critical.
+                </p>
+                <p>
+                    I often hear patients ask, "Can't I just do the box test at home?" The answer is yes, but with significant caveats. Understanding the difference between a <strong>screening</strong> test and a <strong>diagnostic</strong> test is vital for your health (and your wallet).
+                </p>
+                <h3>Why I Still Lean Toward Colonoscopy</h3>
+                <p>
+                    A colonoscopy is unique in the medical world because it is both diagnostic and therapeutic. If a gastroenterologist finds a pre-cancerous polyp during the exam, they remove it right then and there. By removing the polyp, they have effectively prevented cancer from ever developing. That is a powerful tool.
+                </p>
+                <p>
+                    Stool-based DNA tests like Cologuard are non-invasive and excellent for detecting existing cancer, but they cannot remove polyps. Furthermore, if you get a positive result on a home test, you must follow up with a colonoscopy. At that point, the colonoscopy is often coded as "diagnostic" rather than "screening" by insurance companies, which can sometimes change your out-of-pocket costs.
+                </p>
+                <h3>The Best Test is the One You Complete</h3>
+                <p>
+                    Ultimately, if the thought of a colonoscopy preparation prevents you from getting screened at all, then the home test is infinitely better than nothing. My goal as a physician is to help you choose the method you will actually follow through with. This philosophy of early screening is similar to the importance of hydration for <a href="#kidney-stones">preventing kidney stones</a>—prevention is always better than a cure.
+                </p>
+                <div class="source-box">
+                    <h4>Sources & Further Reading</h4>
+                    <ul>
+                        <li>CDC: <a href="https://www.cdc.gov/colorectal-cancer/screening/" target="_blank" rel="noopener noreferrer">Colorectal Cancer Screening Tests</a></li>
+                        <li>USPSTF: <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening" target="_blank" rel="noopener noreferrer">Screening Recommendations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="article-card category-men" id="kidney-stones">
+            <div class="article-meta">October 2025 • By Dr. Safwan Moton <span class="tag-pill">#Men's Health</span></div>
+            <h2 class="article-title">Kidney Stones: Prevention Tips for the Texas Heat</h2>
+            
+            <div class="takeaways-box">
+                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <ul>
+                    <li><strong>The "Stone Belt" is real:</strong> High heat leads to chronic low-level dehydration, the #1 cause of stones.</li>
+                    <li><strong>Citrate is your friend:</strong> Adding lemon or lime to your water naturally inhibits stone formation.</li>
+                    <li><strong>Dietary Calcium is actually good:</strong> Contrary to popular belief, cutting dietary calcium can <em>increase</em> stone risk. It binds oxalate in the gut before it reaches the kidneys.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <p>
+                    Urologists often refer to the southern United States as the "Stone Belt." In Sugar Land, the combination of high heat and humidity creates a perfect storm for dehydration. When you don't drink enough water, your urine becomes concentrated, allowing minerals like calcium and oxalate to crystallize and form stones.
+                </p>
+                <p>
+                    If you have ever passed a kidney stone, you know it is an experience you never want to repeat. The pain is often described as worse than childbirth. The good news is that for most patients, stones are largely preventable with specific lifestyle adjustments. Men, in particular, should prioritize this preventive care, just as they should stay current on <a href="#colon-cancer">colon cancer screenings</a>.
+                </p>
+                <h3>Hydration: The 2.5 Liter Rule</h3>
+                <p>
+                    The most common advice is "drink more water," but that is too vague. My clinical recommendation is to drink enough water to <strong>produce</strong> at least 2.5 liters of urine per day. If your urine is dark yellow, you are already behind. In the Texas summer, this might mean drinking significantly more than the standard "8 glasses a day."
+                </p>
+                <h3>The Calcium Myth</h3>
+                <p>
+                    A common misconception I encounter is patients cutting out milk or yogurt because their stones are made of calcium. This is actually counterproductive. Dietary calcium binds with oxalate in your stomach and leaves the body through digestion. If you cut out calcium, the oxalate has nothing to bind to, so it travels to your kidneys and forms stones. Continue eating normal amounts of calcium-rich foods, but ask your doctor before taking calcium <em>supplements</em>.
+                </p>
+                <div class="source-box">
+                    <h4>Sources & Further Reading</h4>
+                    <ul>
+                        <li>NIDDK (NIH): <a href="https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones" target="_blank" rel="noopener noreferrer">Kidney Stones Overview</a></li>
+                        <li>National Kidney Foundation: <a href="https://www.kidney.org/atoz/content/kidneystones" target="_blank" rel="noopener noreferrer">Kidney Stones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="article-card category-occupational" id="plantar-fasciitis">
+            <div class="article-meta">September 2025 • By Dr. Safwan Moton <span class="tag-pill">#Occupational</span></div>
+            <h2 class="article-title">Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce</h2>
+            
+            <div class="takeaways-box">
+                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <ul>
+                    <li><strong>First steps matter:</strong> Pain with the first steps in the morning is the hallmark sign of plantar fasciitis.</li>
+                    <li><strong>Don't go barefoot:</strong> Even at home, wearing supportive footwear prevents the fascia from re-tightening.</li>
+                    <li><strong>Stretch the calf, fix the foot:</strong> Tight calf muscles pull on the heel bone, increasing tension on the foot. Stretching the calves is often the cure.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <p>
+                    For workers in Rosenberg's industrial and warehouse sectors, heel pain is more than a nuisance—it is an occupational hazard. Plantar fasciitis is caused by inflammation of the thick band of tissue that runs across the bottom of your foot. It typically presents as a sharp, stabbing pain with your first steps in the morning or after long periods of standing.
+                </p>
+                <p>
+                    In my practice, I often see patients who have "pushed through" the pain for months, leading to chronic inflammation that is much harder to treat. Industrial workers in our region often face multiple challenges, from joint pain to <a href="#eczema">chronic skin conditions aggravated by heat</a>. The earlier we intervene, the faster you get back to full function.
+                </p>
+                <h3>Treatment Without Surgery</h3>
+                <p>
+                    The vast majority of plantar fasciitis cases resolve without surgery. The cornerstone of treatment is mechanical: we must relieve the tension on the fascia. This involves three steps:
+                </p>
+                <ol>
+                    <li><strong>Support:</strong> Replace worn-out work boots. I often recommend insoles that support the arch and cushion the heel.</li>
+                    <li><strong>Stretching:</strong> Most people focus on the foot, but the <em>calf muscle</em> is usually the culprit. A tight calf pulls on the heel bone, which pulls on the fascia. Stretching your calves against a wall 3 times a day can work wonders.</li>
+                    <li><strong>Night Splints:</strong> These devices keep your foot flexed while you sleep, preventing the fascia from tightening up overnight. This helps eliminate that dreaded "morning pain."</li>
+                </ol>
+                <div class="source-box">
+                    <h4>Sources & Further Reading</h4>
+                    <ul>
+                        <li>OrthoInfo (AAOS): <a href="https://orthoinfo.aaos.org/en/diseases--conditions/plantar-fasciitis-and-bone-spurs" target="_blank" rel="noopener noreferrer">Plantar Fasciitis and Bone Spurs</a></li>
+                        <li>MedlinePlus: <a href="https://medlineplus.gov/ency/article/007021.htm" target="_blank" rel="noopener noreferrer">Plantar Fasciitis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
 
     </div>
 
@@ -345,25 +538,82 @@
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
+
+        // --- FILTER FUNCTIONALITY ---
+        function filterArticles(category) {
+            const articles = document.querySelectorAll('.article-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update Active Button State
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            articles.forEach(article => {
+                if (category === 'all') {
+                    article.style.display = 'block';
+                    setTimeout(() => article.style.opacity = '1', 50); 
+                } else {
+                    if (article.classList.contains('category-' + category)) {
+                        article.style.display = 'block';
+                        setTimeout(() => article.style.opacity = '1', 50);
+                    } else {
+                        article.style.opacity = '0';
+                        setTimeout(() => article.style.display = 'none', 400);
+                    }
+                }
+            });
+        }
     </script>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
+      "@type": "MedicalWebPage",
       "mainEntity": {
-        "@type": "Physician",
-        "name": "Dr. Safwan Moton",
-        "medicalSpecialty": "Family Medicine",
-        "openingDate": "2026-07-01",
-        "alumniOf": [
-            { "@type": "CollegeOrUniversity", "name": "Nova Southeastern University" },
-            { "@type": "CollegeOrUniversity", "name": "University of Houston" }
-        ],
-        "affiliation": [
-            { "@type": "Organization", "name": "Authority Health GME" }
-        ],
-        "url": "https://drmoton.com/about.html"
+        "@type": "CollectionPage",
+        "headline": "Medical Articles & Health Insights",
+        "description": "Evidence-based medical articles on Family Medicine topics.",
+        "author": {
+          "@type": "Physician",
+          "name": "Dr. Safwan Moton",
+          "medicalSpecialty": "Family Medicine",
+          "affiliation": [
+            {
+              "@type": "Organization",
+              "name": "Authority Health GME"
+            },
+            {
+              "@type": "Organization",
+              "name": "Michigan State University College of Osteopathic Medicine"
+            }
+          ]
+        },
+        "hasPart": [
+          {
+            "@type": "MedicalScholarlyArticle",
+            "headline": "Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast",
+            "datePublished": "2025-12-01",
+            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+          },
+          {
+            "@type": "MedicalScholarlyArticle",
+            "headline": "Colon Cancer Screening: Cologuard vs. Colonoscopy for Fort Bend Residents",
+            "datePublished": "2025-11-01",
+            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+          },
+          {
+            "@type": "MedicalScholarlyArticle",
+            "headline": "Kidney Stones: Prevention Tips for the Texas Heat",
+            "datePublished": "2025-10-01",
+            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+          },
+          {
+            "@type": "MedicalScholarlyArticle",
+            "headline": "Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce",
+            "datePublished": "2025-09-01",
+            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+          }
+        ]
       }
     }
     </script>
