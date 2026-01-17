@@ -13,6 +13,12 @@
       <priority>1.0</priority>
    </url>
    <url>
+      <loc>https://drmoton.com/about.html</loc>
+      <lastmod>2026-01-16</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
       <loc>https://drmoton.com/articles.html</loc>
       <lastmod>2026-01-16</lastmod>
       <changefreq>weekly</changefreq>
