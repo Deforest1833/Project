@@ -207,62 +207,18 @@
             content: '•'; position: absolute; left: 0; color: var(--gold-accent); font-size: 1.2rem;
         }
 
-        /* --- VIDEO FACADE (LITE EMBED) STYLES --- */
-        .video-container {
+        /* --- RESPONSIVE VIDEO (NATIVE) --- */
+        .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
-            background-color: #000;
             border-radius: 4px;
-            margin: 30px 0;
-            cursor: pointer;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 30px 0;
+            background-color: #000;
         }
-        
-        .video-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
-        
-        .video-container:hover img {
-            opacity: 1;
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 68px;
-            height: 48px;
-            background-color: rgba(33, 33, 33, 0.8);
-            border-radius: 12px;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-        
-        .play-button::before {
-            content: '';
-            border-style: solid;
-            border-width: 10px 0 10px 20px;
-            border-color: transparent transparent transparent #fff;
-        }
-        
-        .video-container:hover .play-button {
-            background-color: #f00;
-        }
-        
-        .video-container iframe {
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -405,9 +361,8 @@
                     <strong>I highly recommend this educational video by Kurzgesagt.</strong> It brilliantly explains exactly how the vaccine works, why the "stomach flu" isn't actually the flu, and why vaccination is an act of service to your community.
                 </p>
 
-                <div class="video-container" onclick="loadVideo(this, 'uOHG0u-WKXM')">
-                    <img src="https://img.youtube.com/vi/uOHG0u-WKXM/hqdefault.jpg" alt="Kurzgesagt - Flu Shot Explained" width="480" height="360" loading="lazy">
-                    <div class="play-button"></div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uOHG0u-WKXM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </div>
 
                 <h3>Protecting Our Neighbors</h3>
@@ -669,19 +624,6 @@
                     }
                 }
             });
-        }
-
-        // --- VIDEO FACADE LOADER ---
-        function loadVideo(container, videoId) {
-            const iframe = document.createElement("iframe");
-            iframe.setAttribute("src", "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0");
-            iframe.setAttribute("frameborder", "0");
-            iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-            iframe.setAttribute("allowfullscreen", "true");
-            
-            // Clear current content and append iframe
-            container.innerHTML = "";
-            container.appendChild(iframe);
         }
     </script>
 
