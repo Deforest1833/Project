@@ -306,7 +306,8 @@
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        footer h4 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; }
+        /* CHANGED H4 TO H3 FOR SEO HIERARCHY */
+        footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
         footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
         footer li { margin-bottom: 10px; }
         
@@ -607,7 +608,7 @@
             </div>
 
             <div>
-                <h4>Patient Resources</h4>
+                <h3>Patient Resources</h3>
                 <ul>
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
@@ -617,7 +618,7 @@
             </div>
 
             <div>
-                <h4>Educational Videos</h4>
+                <h3>Educational Videos</h3>
                 <ul>
                     <li><a href="https://www.youtube.com/watch?v=uOHG0u-WKXM" target="_blank" rel="noopener noreferrer">Do You REALLY Need a Flu Shot?</a></li>
                     <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank" rel="noopener noreferrer">The Side Effects of Vaccines - How High is the Risk?</a></li>
@@ -630,6 +631,8 @@
 
         <div class="legal-footer">
             <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <br><br>
+            <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
 
         <div class="copyright">
@@ -641,49 +644,62 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Safwan Moton",
-      "image": "https://drmoton.com/Headshot.jpg",
-      "description": "Family Medicine Resident Physician providing evidence-based care.",
-      "medicalSpecialty": "Family Medicine",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "8765 Lewis Ave",
-        "addressLocality": "Temperance",
-        "addressRegion": "MI",
-        "postalCode": "48182",
-        "addressCountry": "US"
-      },
-      "telephone": "+17348473802",
-      "openingDate": "2026-07-01",
-      "url": "https://drmoton.com",
-      "sameAs": [
-        "https://www.doximity.com/pub/safwan-moton-do", 
-        "https://scholar.google.com/citations?hl=en&user=4uD3_SIAAAAJ", 
-        "https://www.linkedin.com/in/sm28524",
-        "https://www.researchgate.net/profile/Safwan-Moton"
-      ],
-      "alumniOf": [
+      "@graph": [
         {
-          "@type": "CollegeOrUniversity",
-          "name": "Nova Southeastern University"
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drmoton.com"
+          }]
         },
         {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Houston"
+          "@type": "Physician",
+          "name": "Dr. Safwan Moton",
+          "image": "https://drmoton.com/Headshot.jpg",
+          "description": "Family Medicine Resident Physician providing evidence-based care.",
+          "medicalSpecialty": "Family Medicine",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8765 Lewis Ave",
+            "addressLocality": "Temperance",
+            "addressRegion": "MI",
+            "postalCode": "48182",
+            "addressCountry": "US"
+          },
+          "telephone": "+17348473802",
+          "openingDate": "2026-07-01",
+          "url": "https://drmoton.com",
+          "sameAs": [
+            "https://www.doximity.com/pub/safwan-moton-do", 
+            "https://scholar.google.com/citations?hl=en&user=4uD3_SIAAAAJ", 
+            "https://www.linkedin.com/in/sm28524",
+            "https://www.researchgate.net/profile/Safwan-Moton"
+          ],
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Nova Southeastern University"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Houston"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Temperance, Michigan"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Fort Bend County, Texas (Future)"
+            }
+          ],
+          "knowsAbout": ["Primary Care", "Preventive Medicine", "Chronic Disease Management"]
         }
-      ],
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Temperance, Michigan"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Fort Bend County, Texas (Future)"
-        }
-      ],
-      "knowsAbout": ["Primary Care", "Preventive Medicine", "Chronic Disease Management"]
+      ]
     }
     </script>
 
