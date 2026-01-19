@@ -643,7 +643,7 @@
         </div>
     </footer>
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -670,7 +670,7 @@
             "postalCode": "48182",
             "addressCountry": "US"
           },
-          "telephone": "+17348473802",
+          "telephone": "+13138713751",
           "openingDate": "2026-07-01",
           "url": "https://drmoton.com",
           "sameAs": [
@@ -682,24 +682,44 @@
           "alumniOf": [
             {
               "@type": "CollegeOrUniversity",
-              "name": "Nova Southeastern University"
+              "name": "Nova Southeastern University",
+              "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University"
             },
             {
               "@type": "CollegeOrUniversity",
-              "name": "University of Houston"
+              "name": "University of Houston",
+              "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
             }
           ],
           "areaServed": [
             {
               "@type": "AdministrativeArea",
-              "name": "Temperance, Michigan"
+              "name": "Temperance, Michigan",
+              "sameAs": "https://en.wikipedia.org/wiki/Temperance,_Michigan"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Fort Bend County, Texas (Future)"
+              "name": "Fort Bend County, Texas (Future)",
+              "sameAs": "https://en.wikipedia.org/wiki/Fort_Bend_County,_Texas"
             }
           ],
-          "knowsAbout": ["Primary Care", "Preventive Medicine", "Chronic Disease Management"]
+          "knowsAbout": [
+            {
+                "@type": "MedicalSpecialty",
+                "name": "Primary Care",
+                "sameAs": "https://en.wikipedia.org/wiki/Primary_care"
+            },
+            {
+                "@type": "MedicalSpecialty",
+                "name": "Preventive Medicine",
+                "sameAs": "https://en.wikipedia.org/wiki/Preventive_healthcare"
+            },
+            {
+                "@type": "MedicalSpecialty",
+                "name": "Chronic Care Management",
+                "sameAs": "https://en.wikipedia.org/wiki/Chronic_care_management"
+            }
+          ]
         }
       ]
     }
