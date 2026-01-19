@@ -376,8 +376,9 @@
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Dr. Safwan Moton</div>
+<nav>
+        <a href="https://drmoton.com" class="logo" style="color:var(--primary-color); text-decoration:none;">Dr. Safwan Moton</a>
+        
         <div class="nav-links">
             <a href="https://drmoton.com">Home</a>
             <a href="about.html">About</a>
@@ -387,7 +388,8 @@
             <a href="#location">Location</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        
+        <div class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">☰</div>
     </nav>
 
     <div id="mobile-menu">
