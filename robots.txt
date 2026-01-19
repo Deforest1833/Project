@@ -1,6 +1,3 @@
-User-agent: Seobility
-Allow: /
-
 User-agent: *
 Allow: /
 
