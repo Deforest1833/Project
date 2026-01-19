@@ -18,14 +18,14 @@
     
     <link rel="canonical" href="https://drmoton.com/faq.html">
 
-<meta property="og:title" content="About Dr. Safwan Moton">
+    <meta property="og:title" content="Patient FAQ | Dr. Safwan Moton">
     <meta property="og:description" content="Resident Physician serving Sugar Land starting Summer 2026. Evidence-based care with a personal connection to Fort Bend County.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dr. Safwan Moton - Sugar Land Family Medicine">
-    <meta property="og:url" content="https://drmoton.com/about.html">
-    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://drmoton.com/faq.html">
+    <meta property="og:type" content="website">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -103,14 +103,12 @@
         
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
-        /* UPDATED CONTRAST: Opacity 0.8 */
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.8) !important; 
             margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
         
-        /* UPDATED CONTRAST: Opacity 0.8 */
         .legal-footer {
             margin-top: 20px;
             font-size: 0.75rem;
@@ -133,7 +131,7 @@
 </head>
 <body>
 
-<nav>
+    <nav>
         <div class="logo">Dr. Safwan Moton</div>
         <div class="nav-links">
             <a href="https://drmoton.com">Home</a>
@@ -259,6 +257,8 @@
 
         <div class="legal-footer">
             <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <br><br>
+            <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
 
         <div class="copyright">
@@ -274,48 +274,66 @@
         }
     </script>
     
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Are you currently accepting new patients in Sugar Land or Rosenberg?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. I am currently completing my residency training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the Summer of 2026."
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drmoton.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ",
+            "item": "https://drmoton.com/faq.html"
+          }]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Are you currently accepting new patients in Sugar Land or Rosenberg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. I am currently completing my residency training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the Summer of 2026."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What services will you provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I intend to provide comprehensive primary care for the whole family (children and adults), including chronic disease management, preventive screenings, and acute care."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Will you provide Telemedicine or Virtual Visits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Upon beginning my clinical work in Texas, I plan to offer secure telemedicine options for appropriate follow-up visits and lab reviews."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Will you perform Sports Physicals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I intend to offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD and Fort Bend ISD starting in Summer 2026."
+            }
+          }],
+          "datePublished": "2025-01-01",
+          "dateModified": "2026-01-16",
+          "author": {
+            "@type": "Physician",
+            "name": "Dr. Safwan Moton",
+            "openingDate": "2026-07-01"
+          }
+        }
+      ]
     }
-  }, {
-    "@type": "Question",
-    "name": "What services will you provide?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "I intend to provide comprehensive primary care for the whole family (children and adults), including chronic disease management, preventive screenings, and acute care."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Will you provide Telemedicine or Virtual Visits?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. Upon beginning my clinical work in Texas, I plan to offer secure telemedicine options for appropriate follow-up visits and lab reviews."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Will you perform Sports Physicals?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. I intend to offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD and Fort Bend ISD starting in Summer 2026."
-    }
-  }],
-  "datePublished": "2025-01-01",
-  "dateModified": "2026-01-16",
-  "author": {
-    "@type": "Physician",
-    "name": "Dr. Safwan Moton",
-    "openingDate": "2026-07-01"
-  }
-}
-</script>
+    </script>
     
 </body>
 </html>
