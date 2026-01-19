@@ -366,7 +366,7 @@
         }
     </script>
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -392,8 +392,16 @@
             "medicalSpecialty": "Family Medicine",
             "openingDate": "2026-07-01",
             "alumniOf": [
-                { "@type": "CollegeOrUniversity", "name": "Nova Southeastern University" },
-                { "@type": "CollegeOrUniversity", "name": "University of Houston" }
+                { 
+                    "@type": "CollegeOrUniversity", 
+                    "name": "Nova Southeastern University",
+                    "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University"
+                },
+                { 
+                    "@type": "CollegeOrUniversity", 
+                    "name": "University of Houston",
+                    "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
+                }
             ],
             "affiliation": [
                 { "@type": "Organization", "name": "Authority Health GME" }
