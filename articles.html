@@ -183,22 +183,25 @@
             border-bottom: 2px solid var(--gold-accent);
         }
 
+        /* Regular Article H3s */
         .article-content h3 {
             font-size: 1.5rem; color: var(--primary-color);
             margin-top: 30px; margin-bottom: 15px;
         }
 
-        /* KEY TAKEAWAYS BOX */
+        /* KEY TAKEAWAYS BOX (UPDATED HIERARCHY) */
         .takeaways-box {
             background-color: #f8fbfd;
             border-left: 4px solid var(--gold-accent);
             padding: 25px;
             margin-bottom: 30px;
         }
-        .takeaways-box h4 {
+        /* Changed from H4 to H3 in CSS to match HTML update */
+        .takeaways-box h3 {
             font-family: var(--font-body);
             font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
             color: var(--primary-color); margin-bottom: 15px; font-weight: 800;
+            margin-top: 0; /* Override default H3 margin */
         }
         .takeaways-box ul {
             list-style: none; padding: 0;
@@ -238,14 +241,12 @@
         
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
-        /* UPDATED CONTRAST: Opacity 0.8 */
         .copyright { 
             font-size: 0.7rem; color: rgba(255, 255, 255, 0.8) !important; 
             margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
         
-        /* UPDATED CONTRAST: Opacity 0.8 */
         .legal-footer {
             margin-top: 20px;
             font-size: 0.75rem;
@@ -348,7 +349,7 @@
             <h2 class="article-title">Do You REALLY Need a Flu Shot? (Video)</h2>
             
             <div class="takeaways-box">
-                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <h3>Clinical Pearls (Key Takeaways)</h3>
                 <ul>
                     <li><strong>Community Immunity:</strong> Even if you are young and healthy, getting vaccinated protects the vulnerable elders in Fort Bend's multi-generational households.</li>
                     <li><strong>It's not just a cold:</strong> Influenza can lead to hospitalization and pneumonia. It is a serious respiratory virus.</li>
@@ -391,7 +392,7 @@
             <h2 class="article-title">Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast</h2>
             
             <div class="takeaways-box">
-                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <h3>Clinical Pearls (Key Takeaways)</h3>
                 <ul>
                     <li><strong>Humidity helps, heat hurts:</strong> While Gulf Coast humidity aids moisture retention, sweat is a major trigger for eczema flares.</li>
                     <li><strong>Chlorine is a double-edged sword:</strong> Swimming can dry out skin, but diluted bleach baths (per medical instruction) can actually reduce bacterial load on eczematous skin.</li>
@@ -436,7 +437,7 @@
             <h2 class="article-title">Colon Cancer Screening: Cologuard vs. Colonoscopy</h2>
             
             <div class="takeaways-box">
-                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <h3>Clinical Pearls (Key Takeaways)</h3>
                 <ul>
                     <li><strong>45 is the new 50:</strong> Screening now begins at age 45 due to rising cancer rates in younger adults.</li>
                     <li><strong>The "Gold Standard" is preventive:</strong> A colonoscopy is the only test that can actually <em>prevent</em> cancer by removing polyps before they turn malignant.</li>
@@ -477,7 +478,7 @@
             <h2 class="article-title">Kidney Stones: Prevention Tips for the Texas Heat</h2>
             
             <div class="takeaways-box">
-                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <h3>Clinical Pearls (Key Takeaways)</h3>
                 <ul>
                     <li><strong>The "Stone Belt" is real:</strong> High heat leads to chronic low-level dehydration, the #1 cause of stones.</li>
                     <li><strong>Citrate is your friend:</strong> Adding lemon or lime to your water naturally inhibits stone formation.</li>
@@ -515,7 +516,7 @@
             <h2 class="article-title">Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce</h2>
             
             <div class="takeaways-box">
-                <h4>Clinical Pearls (Key Takeaways)</h4>
+                <h3>Clinical Pearls (Key Takeaways)</h3>
                 <ul>
                     <li><strong>First steps matter:</strong> Pain with the first steps in the morning is the hallmark sign of plantar fasciitis.</li>
                     <li><strong>Don't go barefoot:</strong> Even at home, wearing supportive footwear prevents the fascia from re-tightening.</li>
@@ -590,6 +591,8 @@
 
         <div class="legal-footer">
             <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <br><br>
+            <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
 
         <div class="copyright">
@@ -633,68 +636,80 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "mainEntity": {
-        "@type": "CollectionPage",
-        "headline": "Medical Articles & Health Insights",
-        "description": "Evidence-based medical articles on Family Medicine topics.",
-        "author": {
-          "@type": "Physician",
-          "name": "Dr. Safwan Moton",
-          "medicalSpecialty": "Family Medicine",
-          "affiliation": [
-            {
-              "@type": "Organization",
-              "name": "Authority Health GME"
-            },
-            {
-              "@type": "Organization",
-              "name": "Michigan State University College of Osteopathic Medicine"
-            }
-          ]
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drmoton.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Medical Articles",
+            "item": "https://drmoton.com/articles.html"
+          }]
         },
-        "hasPart": [
-          {
-            "@type": "MedicalScholarlyArticle",
-            "headline": "Do You REALLY Need a Flu Shot? (Video)",
-            "datePublished": "2026-01-16",
-            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-            "video": {
-              "@type": "VideoObject",
-              "name": "Do You REALLY Need a Flu Shot?",
-              "description": "Dr. Safwan Moton recommends this video by Dr. Mikhail Varshavski DO explaining the importance of the flu vaccine for community health.",
-              "thumbnailUrl": "https://img.youtube.com/vi/uOHG0u-WKXM/hqdefault.jpg",
-              "uploadDate": "2023-11-01",
-              "contentUrl": "https://www.youtube.com/watch?v=uOHG0u-WKXM",
-              "embedUrl": "https://www.youtube.com/embed/uOHG0u-WKXM"
-            }
-          },
-          {
-            "@type": "MedicalScholarlyArticle",
-            "headline": "Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast",
-            "datePublished": "2025-12-01",
-            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-          },
-          {
-            "@type": "MedicalScholarlyArticle",
-            "headline": "Colon Cancer Screening: Cologuard vs. Colonoscopy for Fort Bend Residents",
-            "datePublished": "2025-11-01",
-            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-          },
-          {
-            "@type": "MedicalScholarlyArticle",
-            "headline": "Kidney Stones: Prevention Tips for the Texas Heat",
-            "datePublished": "2025-10-01",
-            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-          },
-          {
-            "@type": "MedicalScholarlyArticle",
-            "headline": "Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce",
-            "datePublished": "2025-09-01",
-            "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+        {
+          "@type": "MedicalWebPage",
+          "mainEntity": {
+            "@type": "CollectionPage",
+            "headline": "Medical Articles & Health Insights",
+            "description": "Evidence-based medical articles on Family Medicine topics.",
+            "author": {
+              "@type": "Physician",
+              "name": "Dr. Safwan Moton",
+              "medicalSpecialty": "Family Medicine",
+              "affiliation": [
+                { "@type": "Organization", "name": "Authority Health GME" },
+                { "@type": "Organization", "name": "Michigan State University College of Osteopathic Medicine" }
+              ]
+            },
+            "hasPart": [
+              {
+                "@type": "MedicalScholarlyArticle",
+                "headline": "Do You REALLY Need a Flu Shot? (Video)",
+                "datePublished": "2026-01-16",
+                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
+                "video": {
+                  "@type": "VideoObject",
+                  "name": "Do You REALLY Need a Flu Shot?",
+                  "description": "Dr. Safwan Moton recommends this video by Dr. Mikhail Varshavski DO explaining the importance of the flu vaccine for community health.",
+                  "thumbnailUrl": "https://img.youtube.com/vi/uOHG0u-WKXM/hqdefault.jpg",
+                  "uploadDate": "2023-11-01",
+                  "contentUrl": "https://www.youtube.com/watch?v=uOHG0u-WKXM",
+                  "embedUrl": "https://www.youtube.com/embed/uOHG0u-WKXM"
+                }
+              },
+              {
+                "@type": "MedicalScholarlyArticle",
+                "headline": "Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast",
+                "datePublished": "2025-12-01",
+                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+              },
+              {
+                "@type": "MedicalScholarlyArticle",
+                "headline": "Colon Cancer Screening: Cologuard vs. Colonoscopy for Fort Bend Residents",
+                "datePublished": "2025-11-01",
+                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+              },
+              {
+                "@type": "MedicalScholarlyArticle",
+                "headline": "Kidney Stones: Prevention Tips for the Texas Heat",
+                "datePublished": "2025-10-01",
+                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+              },
+              {
+                "@type": "MedicalScholarlyArticle",
+                "headline": "Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce",
+                "datePublished": "2025-09-01",
+                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" }
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     }
     </script>
 
