@@ -1,58 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S06WN265PK');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S06WN265PK');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Page Not Found | Dr. Safwan Moton</title>
     
     <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles.css">
+    
     <style>
-        :root {
-            --primary-color: #1a3c5e; 
-            --accent-color: #6c7a89;  
-            --bg-cream: #f2f2eb;      
-            --font-heading: 'Cormorant Garamond', serif; 
-            --font-body: 'Lato', sans-serif;             
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); color: #2c3e50; line-height: 1.8; background-color: var(--bg-cream); text-align: center; }
-        
-        .container {
-            min-height: 80vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            padding: 20px;
-        }
-        h1 { font-family: var(--font-heading); font-size: 4rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1; }
-        p { margin-bottom: 30px; font-size: 1.2rem; color: var(--accent-color); max-width: 500px; }
-        
-        .btn {
-            padding: 15px 40px; background-color: var(--primary-color); color: white;
-            text-transform: uppercase; letter-spacing: 2px; font-weight: 700; text-decoration: none;
-            border-radius: 2px; transition: 0.3s;
-        }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        /* Keep page-specific 404 styling minimal if needed, or rely on global styles */
+        body { text-align: center; }
+        .container { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>404</h1>
-        <p>The page you are looking for does not exist or has been moved.</p>
+        <p style="margin-bottom:30px; font-size:1.2rem; color:var(--accent-color);">The page you are looking for does not exist.</p>
         <a href="https://drmoton.com" class="btn">Return Home</a>
         
         <div style="margin-top: 40px; font-size: 0.9rem;">
