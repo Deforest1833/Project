@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -18,7 +19,6 @@
 
     <link rel="canonical" href="https://drmoton.com/">
     <link rel="preload" as="image" href="hero-bg.webp">
-    
     <meta property="og:title" content="Sugar Land Family Medicine | Dr. Safwan Moton, DO">
     <meta property="og:description" content="Compassionate, evidence-based primary care. Currently in Michigan, serving Sugar Land, TX starting Summer 2026.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
@@ -31,15 +31,321 @@
     <meta name="twitter:title" content="Sugar Land Family Medicine | Dr. Safwan Moton, DO">
     <meta name="twitter:description" content="Compassionate, evidence-based primary care. Currently in Michigan, serving Sugar Land, TX starting Summer 2026.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
-    
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #1a3c5e;
+            --accent-color: #6c7a89;
+            --bg-cream: #f2f2eb;
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;
+
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; }
+
+        p, li { font-weight: 500; color: #2c3e50; }
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        /* --- NAV --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; position: fixed; width: 100%; top: 0;
+            background: rgba(242, 242, 235, 0.98);
+            backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
+            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); font-weight: 700;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        /* MOBILE MENU */
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        #mobile-menu {
+            display: none; position: fixed; top: 70px; left: 0; width: 100%;
+            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
+        }
+        #mobile-menu a {
+            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
+            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
+        }
+        /* --- HERO --- */
+        .hero {
+            height: 90vh;
+            /* UPDATED TO WEBP */
+            background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.webp');
+            background-attachment: fixed;
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 0 20px;
+        }
+        .hero-content {
+            animation: heroFadeIn 1.5s ease-out forwards;
+            max-width: 900px;
+            margin-top: 80px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 2px;
+            color: white;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(5px);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        .hero-content h1 {
+            font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400;
+            margin-bottom: 25px; line-height: 1.1;
+            color: white;
+        }
+        .hero-content p {
+            font-size: 1.3rem; font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 40px auto; max-width: 600px;
+        }
+        .btn {
+            padding: 18px 50px; background: transparent; color: white;
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem;
+            font-weight: 700; border: 1px solid white; cursor: pointer;
+            border-radius: 0;
+            display: inline-block; transition: all 0.3s ease;
+        }
+        .btn:hover { background: white; color: var(--primary-color); }
+        /* --- TRUST BAR --- */
+        .trust-bar {
+            background-color: var(--primary-color);
+            padding: 80px 5%;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 15px 20px -10px rgba(0, 0, 0, 0.4),
+                        inset 0 -15px 20px -10px rgba(0, 0, 0, 0.4);
+        }
+        .trust-container {
+            display: flex; justify-content: center; align-items: center;
+            flex-wrap: wrap; gap: 60px; max-width: 1400px; width: 100%;
+        }
+        .trust-img {
+            width: 300px; height: auto; object-fit: contain;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        }
+        .trust-img:hover { transform: translateY(-5px); }
+        /* --- SECTIONS --- */
+        .split-section {
+            padding: 120px 5%;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 100px; align-items: center; max-width: 1300px; margin: 0 auto;
+        }
+        .text-content h2 {
+            font-family: var(--font-heading); font-size: 3.2rem; color: var(--primary-color);
+            margin-bottom: 30px; line-height: 1.1;
+        }
+        .text-content p { margin-bottom: 25px; font-size: 1.15rem; font-weight: 500; color: #2c3e50; }
+
+        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
+        #about .image-content { justify-content: flex-start; }
+        #about .image-content img { max-width: 400px; border-radius: 2px; }
+        /* --- EDUCATION --- */
+        .education { background-color: var(--bg-cream); padding: 100px 5% 60px 5%; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 3rem; color: var(--primary-color); }
+        .timeline {
+            max-width: 800px; margin: 0 auto; border-left: 1px solid #cbd5e0;
+            padding-left: 60px; padding-top: 10px;
+        }
+        .timeline-item { margin-bottom: 60px; position: relative; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -65px; top: 10px; width: 9px; height: 9px;
+            background: var(--bg-cream); border: 1px solid var(--primary-color); border-radius: 50%;
+        }
+        .timeline-item h3 { font-family: var(--font-heading); font-size: 2rem; color: var(--primary-color); margin-bottom: 5px; }
+        .timeline-item .role {
+            font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+            letter-spacing: 2px; color: var(--accent-color); margin-bottom: 20px; display: block;
+        }
+        .timeline-item ul li { font-size: 1rem; color: #4a5568; margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; font-weight: 500; }
+        .timeline-item ul li::before {
+            content: '—'; position: absolute; left: 0; color: var(--gold-accent);
+        }
+        /* --- PREMIUM FEATURED CAROUSEL --- */
+        .featured-insight {
+            background-color: var(--primary-color);
+            padding: 100px 5%; position: relative;
+            border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: white;
+        }
+        .carousel-container {
+            max-width: 900px; margin: 0 auto; overflow: hidden; position: relative;
+        }
+        .carousel-track {
+            display: flex; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .carousel-slide {
+            min-width: 100%; box-sizing: border-box; padding: 0 20px;
+            opacity: 0; transform: scale(0.95); transition: all 0.8s ease;
+        }
+        .carousel-slide.active { opacity: 1; transform: scale(1); }
+
+        .insight-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); font-weight: 700; margin-bottom: 15px; }
+        .insight-title { font-family: var(--font-heading); font-size: 2.5rem; color: white; margin-bottom: 20px; line-height: 1.1; }
+        .insight-body { font-size: 1.1rem; color: white !important; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        /* Force White Text Override */
+        .featured-insight p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        /* View All Slide */
+        .view-all-slide {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; height: 300px;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .read-more-btn {
+            background: none; border: none; color: var(--gold-accent);
+            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+            font-size: 0.8rem; cursor: pointer; padding: 0;
+            border-bottom: 1px solid var(--gold-accent); transition: all 0.3s;
+        }
+        .read-more-btn:hover { opacity: 0.8; color: white; border-color: white; }
+
+        .carousel-dots { text-align: center; margin-top: 40px; }
+        .dot {
+            height: 10px; width: 10px; margin: 0 5px; background-color: rgba(255, 255, 255, 0.3); border-radius: 50%;
+            display: inline-block; cursor: pointer; transition: background-color 0.3s;
+        }
+        .dot.active { background-color: var(--gold-accent); }
+        /* --- LOCATION --- */
+        .location {
+            padding: 80px 5% 140px 5%; width: 100%;
+            background-image: linear-gradient(rgba(242, 242, 235, 0.95), rgba(242, 242, 235, 0.95)), url('clinic-bg.jpg');
+            background-attachment: fixed; background-size: cover;
+        }
+        .location-container {
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;
+            max-width: 1200px; margin: 0 auto; align-items: center;
+        }
+        .map-container {
+            width: 100%; height: 450px; background: #eee;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
+        }
+        /* ADDED LOADING=LAZY FOR PERFORMANCE */
+        .map-container iframe { width: 100% !important; height: 100% !important; border: 0; }
+        .location-info { width: 100%; overflow-wrap: break-word; }
+        .location-info p { font-weight: 500; }
+        /* --- FOOTER --- */
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
+        footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
+        /* CHANGED H4 TO H3 FOR SEO HIERARCHY */
+        footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
+        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
+        footer li { margin-bottom: 10px; }
+
+        .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
+
+        /* UPDATED CONTRAST: Opacity 0.8 */
+        .copyright {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
+        }
+
+        /* LEGAL DISCLAIMER STYLING - INCREASED CONTRAST */
+        .legal-footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* --- ANIMATIONS RESTORED --- */
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Elements start invisible and slightly lower */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s ease-out;
+        }
+        /* When JS adds 'active', they become visible and slide up */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .hero, .location { background-attachment: scroll; background-position: center top; }
+            .split-section, .location-container { grid-template-columns: 1fr; gap: 60px; padding: 80px 5%; }
+            .patient-care .image-content { order: -1; }
+            #about .image-content { justify-content: center; }
+            .hero-content h1 { font-size: 3.5rem; }
+            .trust-container { flex-direction: column; gap: 40px; }
+            .trust-img { width: 280px; max-width: 80%; }
+            .location-info p { max-width: 100%; font-size: 1rem; }
+            .education { padding-bottom: 60px; }
+            .location { padding-top: 60px; }
+            .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
+            footer { text-align: center; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; } .mobile-menu-btn { display: block; }
+            .timeline { padding-left: 30px; } .timeline-item::before { left: -35px; }
+            .map-container { height: 300px; }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -66,7 +372,6 @@
         <a href="#location" onclick="toggleMenu()">Location</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
-
     <section class="hero">
         <div class="hero-content">
             <div class="status-badge">Not currently licensed in Texas <br> Not currently soliciting patients or advertising medical services in Texas</div>
@@ -75,7 +380,6 @@
             <a href="#care" class="btn">Get 2026 Updates</a>
         </div>
     </section>
-
     <section class="trust-bar">
         <div class="trust-container reveal">
             <img src="Laurel1.png" alt="Award badge for Houston Louis Stokes Scholar (H-LSAMP)" class="trust-img" width="300" height="300" loading="lazy">
@@ -83,7 +387,6 @@
             <img src="Laurel3.png" alt="Award badge for Top 10% Most Cited Clinician on Doximity" class="trust-img" width="300" height="300" loading="lazy">
         </div>
     </section>
-
     <section id="about" class="split-section">
         <div class="image-content reveal">
             <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy">
@@ -92,17 +395,16 @@
             <span class="eyebrow">Biography</span>
             <h2>Clinical Excellence & Compassion</h2>
             <p>
-                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. 
+                Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care.
                 He is currently completing his advanced training in Michigan and plans to begin practicing in Sugar Land, Texas in July/August 2026.
             </p>
             <p>
-                Dr. Moton combines rigorous medical science with real-world clinical experience. 
-                He provides care rooted in established guidelines and tailored to effective outcomes. 
+                Dr. Moton combines rigorous medical science with real-world clinical experience.
+                He provides care rooted in established guidelines and tailored to effective outcomes.
                 This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity.
             </p>
         </div>
     </section>
-
     <section id="care" class="split-section patient-care">
         <div class="text-content reveal">
             <span class="eyebrow">Philosophy</span>
@@ -119,7 +421,6 @@
             <img src="patient-care.webp" alt="Dr. Safwan Moton consulting with a patient in a clinical setting" width="600" height="400" loading="lazy">
         </div>
     </section>
-
     <section id="experience" class="education">
         <div class="section-header reveal">
             <h2>Education & Experience</h2>
@@ -167,7 +468,6 @@
             </div>
         </div>
     </section>
-
     <section class="featured-insight">
         <div class="carousel-container reveal">
             <div class="carousel-track" id="track">
@@ -185,7 +485,7 @@
                     <div class="insight-meta">Dermatology • Dec 2025 • #Dermatology</div>
                     <h2 class="insight-title">Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast</h2>
                     <div class="insight-body">
-                        <p>Living in high humidity and heat presents unique challenges for chronic skin conditions. 
+                        <p>Living in high humidity and heat presents unique challenges for chronic skin conditions.
                         Dr. Moton explains how to manage flare-ups and find relief in the Texas climate.</p>
                     </div>
                     <a href="articles.html#eczema" class="read-more-btn">Read Full Article</a>
@@ -214,17 +514,16 @@
             </div>
         </div>
     </section>
-
     <section id="location" class="location">
         <div class="location-container">
             <div class="location-info reveal">
                 <span class="eyebrow">Location</span>
                 <h2>Current Residency Practice</h2>
                 <p style="margin-bottom:20px; color:#666;">
-                    Dr. Moton is currently seeing patients in Michigan until Summer 2026. 
+                    Dr. Moton is currently seeing patients in Michigan until Summer 2026.
                 </p>
                 <p style="margin-bottom:20px; color:#1a3c5e; font-weight:700; border-left:3px solid #D4AF37; padding-left:15px;">
-                    Beginning Summer 2026, Dr. Moton plans to practice Family Medicine in Sugar Land, TX, serving Fort Bend County including Rosenberg and Richmond. 
+                    Beginning Summer 2026, Dr. Moton plans to practice Family Medicine in Sugar Land, TX, serving Fort Bend County including Rosenberg and Richmond.
                     This information is provided for informational purposes only.
                 </p>
                 <div class="location-details">
@@ -238,28 +537,27 @@
                 </div>
             </div>
             <div class="map-container reveal">
-                <iframe 
+                <iframe
                     title="Map of Family Medical Center of Michigan in Temperance, MI"
-                    width="100%" 
-                    height="450" 
-                    frameborder="0" 
-                    style="border:0" 
-                    src="https://maps.google.com/maps?q=8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182&z=15&output=embed" 
-                    loading="lazy" 
+                    width="100%"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    src="https://maps.google.com/maps?q=8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182&z=15&output=embed"
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     allowfullscreen>
                 </iframe>
             </div>
         </div>
     </section>
-
     <footer id="contact">
         <div class="footer-content">
 
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
+                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
@@ -295,8 +593,8 @@
             </div>
         </div>
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. 
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. 
+            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
+            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
             All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
@@ -304,14 +602,11 @@
         <div class="copyright">
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
-                Not medical advice. In an emergency, dial 911. | 
+                Not medical advice. In an emergency, dial 911. |
                 <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
             </span>
         </div>
     </footer>
-
-    <script src="scripts.js" defer></script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -392,6 +687,61 @@
         }
       ]
     }
+    </script>
+    <script>
+        /* --- VISUAL EFFECTS --- */
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 50;
+
+                // If element is near viewport, animate it
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        // Force run once on load to show initial content
+        window.onload = reveal;
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('mobile-menu').style.display = 'none';
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        /* --- CAROUSEL LOGIC --- */
+        let currentSlide = 0;
+        const track = document.getElementById('track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        function goToSlide(n) {
+            currentSlide = n;
+            updateCarousel();
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+        // Auto-advance every 15 seconds (UPDATED FROM 6s)
+        setInterval(nextSlide, 15000);
     </script>
 </body>
 </html>
