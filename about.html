@@ -1,221 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S06WN265PK');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S06WN265PK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S06WN265PK');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Dr. Safwan Moton | Resident Physician</title>
-    <meta name="description" content="Meet Dr. Safwan Moton, a Family Medicine Resident Physician returning to serve the Sugar Land and Fort Bend County community in 2026." />
-    
+    <meta name="description" content="A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land and Fort Bend County.">
     <link rel="canonical" href="https://drmoton.com/about.html">
-
-    <meta property="og:title" content="About Dr. Safwan Moton">
-    <meta property="og:description" content="Resident Physician serving Sugar Land starting Summer 2026. Evidence-based care with a personal connection to Fort Bend County.">
-    <meta property="og:image" content="https://drmoton.com/social-share.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dr. Safwan Moton - Sugar Land Family Medicine">
-    <meta property="og:url" content="https://drmoton.com/about.html">
-    <meta property="og:type" content="profile">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Dr. Safwan Moton | Resident Physician">
     <meta name="twitter:description" content="A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land and Fort Bend County.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
-
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- COPYING THE MAIN THEME --- */
-        :root {
-            --primary-color: #1a3c5e; 
-            --accent-color: #6c7a89;  
-            --bg-cream: #f2f2eb;      
-            --bg-white: #ffffff;
-            --text-dark: #2c3e50;
-            --gold-accent: #D4AF37;   
-            --alert-red: #8B0000;
-            
-            --font-heading: 'Cormorant Garamond', serif; 
-            --font-body: 'Lato', sans-serif;             
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-dark);
-            line-height: 1.8;
-            background-color: var(--bg-cream);
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        p, li { font-weight: 500; color: #2c3e50; }
-        
-        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
-
-        /* --- NAV --- */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 5%; position: fixed; width: 100%; top: 0;
-            background: rgba(242, 242, 235, 0.98); 
-            backdrop-filter: blur(8px);
-            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .logo {
-            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
-            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
-        }
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a {
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--accent-color); font-weight: 700;
-        }
-        .nav-links a:hover { color: var(--primary-color); }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
-        
-        #mobile-menu {
-            display: none; position: fixed; top: 70px; left: 0; width: 100%;
-            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
-        }
-        #mobile-menu a {
-            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
-            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
-        }
-
-        /* --- PAGE HEADER --- */
-        .page-header {
-            padding: 160px 5% 60px 5%;
-            text-align: center;
-            background-color: var(--bg-cream);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .page-header h1 {
-            font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
-
-        /* --- CONTENT SECTIONS --- */
-        .content-section {
-            padding: 80px 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .bio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-            align-items: start;
-            margin-bottom: 80px;
-        }
-        
-        .bio-text h2 {
-            font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color);
-            margin-bottom: 20px; line-height: 1.2;
-        }
-        
-        .bio-text p { margin-bottom: 20px; font-size: 1.1rem; }
-
-        .credentials-box {
-            background: white;
-            padding: 40px;
-            border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .credentials-box h3 {
-            font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary-color);
-            margin-bottom: 25px;
-        }
-        
-        .credential-list {
-            list-style: none;
-        }
-        .credential-list li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .credential-list li::before {
-            content: '•'; position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;
-        }
-        .credential-year {
-            font-size: 0.85rem; color: var(--accent-color); font-weight: 700; display: block;
-            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;
-        }
-
-        /* --- LEGAL DISCLAIMER BOX --- */
-        .legal-notice {
-            background-color: #fff0f0;
-            border-left: 5px solid var(--alert-red);
-            padding: 20px;
-            margin: 0 auto 40px auto;
-            max-width: 800px;
-            font-size: 0.9rem;
-            color: var(--alert-red);
-        }
-
-        /* --- FOOTER --- */
-        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
-        footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        /* UPDATED H4 TO H3 */
-        footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
-        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
-        footer li { margin-bottom: 10px; }
-        
-        .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
-        
-        .copyright { 
-            font-size: 0.7rem; color: rgba(255, 255, 255, 0.8) !important; 
-            margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; 
-            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
-        }
-        
-        .legal-footer {
-            margin-top: 20px;
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        @media (max-width: 900px) {
-            .nav-links { display: none; } .mobile-menu-btn { display: block; }
-            .bio-grid { grid-template-columns: 1fr; }
-            .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
-            footer { text-align: center; }
-        }
-    </style>
 </head>
 <body>
 
-<nav>
-        <a href="https://drmoton.com" class="logo" style="color:var(--primary-color); text-decoration:none;">Dr. Safwan Moton</a>
-        
+    <nav>
+        <a href="https://drmoton.com" class="logo">Dr. Safwan Moton</a>
         <div class="nav-links">
             <a href="https://drmoton.com">Home</a>
             <a href="about.html">About</a>
@@ -225,111 +35,50 @@
             <a href="index.html#location">Location</a>
             <a href="index.html#contact">Contact</a>
         </div>
-        
         <div class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">☰</div>
     </nav>
 
-    <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
-
-    <header class="page-header">
+    <div class="container">
         <h1>About Dr. Moton</h1>
-        <p>A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land.</p>
-    </header>
-
-    <div class="content-section">
-        
-        <div class="legal-notice">
-            <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan. He is <strong>not</strong> currently licensed to practice medicine in Texas. The information below reflects <strong>future intentions</strong> for his medical services in Summer 2026.
-        </div>
-
-        <div class="bio-grid">
-            <div class="bio-image">
-                <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy" style="border-radius: 2px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);">
-            </div>
-            
-            <div class="bio-text">
-                <h2>The Journey Home</h2>
-                <p>
-                    Medicine has always been about community for me. My journey began right here in the greater Houston area, where I earned my Bachelor of Science from the University of Houston, graduating Magna Cum Laude. That early foundation as a Houston Louis Stokes Scholar (H-LSAMP) instilled in me a deep respect for scientific inquiry and research.
-                </p>
-                <p>
-                    I pursued my medical training at Nova Southeastern University's Dr. Kiran C. Patel College of Osteopathic Medicine, followed by rigorous residency training with Authority Health in Michigan. While my training has taken me across the country, my goal has always been to return to Fort Bend County.
-                </p>
-                <p>
-                    My intention is to join an established outpatient clinic in the Sugar Land or Rosenberg area where I can contribute to the community that raised me. While my specific practice location is not yet finalized, my commitment to serving the families of this region is certain.
-                </p>
+        <div class="card">
+            <div style="display:flex; flex-wrap:wrap; gap:30px;">
+                <div style="flex:1; min-width:250px;">
+                    <img src="headshot.jpg" alt="Dr. Safwan Moton" style="width:100%; border-radius:2px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex:2;">
+                    <p style="font-size:1.1rem; margin-bottom:20px;">
+                        Dr. Safwan Moton is a proud native of Sugar Land, Texas (Kempner High School, Class of 2006). After earning his Bachelor of Science in Biology from the University of Houston in 2011, he pursued his medical education with a commitment to primary care.
+                    </p>
+                    <p style="margin-bottom:20px;">
+                        He is currently a Resident Physician at <strong>Authority Health GME</strong> in Detroit, Michigan, gaining extensive experience in urban primary care, chronic disease management, and preventive medicine.
+                    </p>
+                    <p>
+                        He looks forward to returning to Fort Bend County in Summer 2026 to serve the community that raised him.
+                    </p>
+                    
+                    <h3 style="margin-top:30px; font-size:1.5rem; color:var(--primary-color);">Credentials</h3>
+                    <ul style="list-style:none; margin-top:10px;">
+                        <li style="margin-bottom:10px;"><strong>DO:</strong> Nova Southeastern University College of Osteopathic Medicine (2020)</li>
+                        <li style="margin-bottom:10px;"><strong>BS:</strong> University of Houston, Biology (2011)</li>
+                        <li><strong>Residency:</strong> Authority Health GME (Current)</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="credentials-box">
-            <h3>Education & Credentials</h3>
-            <ul class="credential-list">
-                <li>
-                    <span class="credential-year">Current (2026 Completion)</span>
-                    <strong>Family Medicine Residency</strong><br>
-                    Authority Health GME (Affiliated with Michigan State University COM)<br>
-                    <em>Appointed Clinical Faculty, Statewide Campus System</em>
-                </li>
-                <li>
-                    <span class="credential-year">Doctor of Osteopathic Medicine (DO)</span>
-                    <strong>Nova Southeastern University</strong><br>
-                    Dr. Kiran C. Patel College of Osteopathic Medicine
-                </li>
-                <li>
-                    <span class="credential-year">Master of Science</span>
-                    <strong>University of North Texas Health Science Center</strong><br>
-                    Medical Sciences (Research & Biostatistics Focus)
-                </li>
-                <li>
-                    <span class="credential-year">Bachelor of Science</span>
-                    <strong>University of Houston</strong><br>
-                    Magna Cum Laude • H-LSAMP Scholar
-                </li>
-            </ul>
-        </div>
-
-        <div style="margin-top: 60px;">
-            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px;">Philosophy of Care</h2>
-            
-            <h3 style="font-size: 1.4rem; color: var(--primary-color); margin-top: 30px; margin-bottom: 10px;">Empowerment Through Education</h3>
-            <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 20px;">
-                Before attending medical school, I spent years working in education, ranging from private tutoring to consulting for public school systems. This background fundamentally shapes how I practice medicine today. I believe a doctor's most important role is that of a teacher. Diagnoses can be confusing and treatment plans can feel overwhelming. I take the time to ensure my patients understand not just <em>what</em> medicine they are taking, but <em>why</em>. When you understand the "why," you are empowered to take control of your own health.
-            </p>
-
-            <h3 style="font-size: 1.4rem; color: var(--primary-color); margin-top: 30px; margin-bottom: 10px;">Shared Decision Making</h3>
-            <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 20px;">
-                I believe the best health outcomes happen when the physician and patient work as a team. Instead of simply dictating orders, I strive to present options and explain the risks and benefits of each path based on the latest evidence. Whether we are managing a chronic condition like hypertension or addressing an acute illness, my goal is to help you make the decision that fits your life and your values.
-            </p>
-
-            <h3 style="font-size: 1.4rem; color: var(--primary-color); margin-top: 30px; margin-bottom: 10px;">Evidence-Based Medicine</h3>
-            <p style="font-size: 1.1rem; line-height: 1.9;">
-                In an era of medical misinformation, I strive to be a trusted filter for my patients. I combine the latest clinical guidelines from major bodies (like the CDC and AAFP) with a practical approach to care. My focus is on providing high-quality, comprehensive primary care that prioritizes safety and long-term well-being.
-            </p>
-        </div>
-
     </div>
 
-<footer id="contact">
+    <footer id="contact">
         <div class="footer-content">
-            
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
                     Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
-<div style="margin-top:20px;">
-    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
-</div>
-                
+                <div style="margin-top:20px;">
+                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
+                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                </div>
                 <div style="margin-top:20px;">
                     <p style="margin-bottom:5px; font-weight:700; color:#D4AF37; text-transform:uppercase; letter-spacing:1px; font-size:0.75rem;">Academic Profiles</p>
                     <p style="margin-bottom:3px;"><a href="https://www.researchgate.net/profile/Safwan-Moton" target="_blank" rel="noopener noreferrer">ResearchGate</a></p>
@@ -337,7 +86,6 @@
                     <p><a href="https://www.doximity.com/pub/safwan-moton-do" target="_blank" rel="noopener noreferrer">Doximity</a></p>
                 </div>
             </div>
-
             <div>
                 <h3>Patient Resources</h3>
                 <ul>
@@ -347,7 +95,6 @@
                     <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
-
             <div>
                 <h3>Educational Videos</h3>
                 <ul>
@@ -359,13 +106,11 @@
                 </ul>
             </div>
         </div>
-
         <div class="legal-footer">
             <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
-
         <div class="copyright">
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
@@ -375,14 +120,9 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
-
-<script type="application/ld+json">
+    <script src="scripts.js" defer></script>
+    
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -408,23 +148,11 @@
             "medicalSpecialty": "Family Medicine",
             "openingDate": "2026-07-01",
             "alumniOf": [
-                { 
-                    "@type": "CollegeOrUniversity", 
-                    "name": "Nova Southeastern University",
-                    "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University"
-                },
-                { 
-                    "@type": "CollegeOrUniversity", 
-                    "name": "University of Houston",
-                    "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
-                }
+                { "@type": "CollegeOrUniversity", "name": "Nova Southeastern University", "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University" },
+                { "@type": "CollegeOrUniversity", "name": "University of Houston", "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston" }
             ],
             "affiliation": [
-                { 
-                    "@type": "Organization", 
-                    "name": "Authority Health GME",
-                    "sameAs": "https://www.authorityhealth.org/" 
-                }
+                { "@type": "Organization", "name": "Authority Health GME", "sameAs": "https://www.authorityhealth.org/" }
             ],
             "url": "https://drmoton.com/about.html"
           }
@@ -432,6 +160,5 @@
       ]
     }
     </script>
-
 </body>
 </html>
