@@ -1,15 +1,12 @@
 # Force HTTPS and remove www
-# This prevents the redirect loop between http/https/www
 https://www.drmoton.com/* https://drmoton.com/:splat 301!
 http://www.drmoton.com/* https://drmoton.com/:splat 301!
 http://drmoton.com/* https://drmoton.com/:splat 301!
 
-# Redirect /index.html to / (Root)
-# This fixes the "Page with redirect" showing up as an error
+# Redirect /index.html to Root (Home)
 /index.html / 301
 
-# Canonicalize .html extensions
-# This helps with the "Discovered - not indexed" issue by forcing a clean URL structure
+# Canonicalize .html extensions (Forces clean URLs)
 /about.html /about 301
 /articles.html /articles 301
 /privacy.html /privacy 301
