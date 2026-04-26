@@ -126,13 +126,31 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             min-height: 800px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         iframe {
             width: 100%;
             max-width: 700px;
             height: 800px;
             border: none;
+        }
+
+        /* --- SUBMISSION DISCLAIMER --- */
+        .submission-disclaimer {
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            max-width: 700px;
+            width: 100%;
+            font-size: 0.85rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+        .submission-disclaimer strong {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* --- FOOTER --- */
@@ -198,71 +216,35 @@
     </header>
 
     <div class="legal-notice">
-        <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan.
-        He is <strong>not</strong> currently licensed to practice medicine in Texas and is not soliciting patients at this time. 
-        This form is solely for notification purposes regarding future clinical services in Summer 2026.
+        <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in Michigan.
+        He is <strong>not</strong> currently licensed in Texas and is not soliciting patients at this time. 
+        This form is for <strong>administrative outreach and notification purposes only</strong> regarding future services.
     </div>
 
     <div class="contact-container">
         <div class="form-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde8fjHqDuyy8ArfxuwUTBp9YMJC06paet29mHZvuiIcCw9YA/viewform?embedded=true" width="640" height="778" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde8fjHqDuyy8ArfxuwUTBp9YMJC06paet29mHZvuiIcCw9YA/viewform?embedded=true" title="Join 2026 Notification List">Loading…</iframe>
+            
+            <div class="submission-disclaimer">
+                <p><strong>Security & Privacy Notice:</strong></p>
+                <p>
+                    This contact form is intended solely for administrative inquiries and mailing list sign-ups. 
+                    It is <strong>not</strong> a secure medical portal and is <strong>not</strong> intended for the transmission of Protected Health Information (PHI). 
+                    Information submitted via this form is not HIPAA-compliant. 
+                </p>
+                <p style="margin-top:10px;">
+                    Please do <strong>not</strong> include sensitive medical details, symptoms, or personal health records. 
+                    Submitting this form does not establish a physician-patient relationship.
+                </p>
+                <p style="margin-top:10px; color: var(--alert-red); font-weight: 700;">
+                    If you are experiencing a medical emergency, dial 911 immediately.
+                </p>
+            </div>
         </div>
     </div>
 
     <footer id="contact">
-        <div class="footer-content">
-            <div>
-                <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
-                <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
-                    Dedicated to continuity of care and long-term health outcomes.
-                </p>
-                <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
-                </div>
-                <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px; font-weight:700; color:#D4AF37; text-transform:uppercase; letter-spacing:1px; font-size:0.75rem;">Academic Profiles</p>
-                    <p style="margin-bottom:3px;"><a href="https://www.researchgate.net/profile/Safwan-Moton" target="_blank" rel="noopener noreferrer">ResearchGate</a></p>
-                    <p style="margin-bottom:3px;"><a href="https://scholar.google.com/citations?hl=en&user=4uD3_SIAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
-                    <p><a href="https://www.doximity.com/pub/safwan-moton-do" target="_blank" rel="noopener noreferrer">Doximity</a></p>
-                </div>
-            </div>
-            <div>
-                <h3>Patient Resources</h3>
-                <ul>
-                    <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
-                    <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
-                    <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Educational Videos</h3>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=uOHG0u-WKXM" target="_blank" rel="noopener noreferrer">Do You REALLY Need a Flu Shot?</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank" rel="noopener noreferrer">The Side Effects of Vaccines - How High is the Risk?</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank" rel="noopener noreferrer">Homeopathy Explained</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank" rel="noopener noreferrer">Vaping Is Too Good To Be True</a></li>
-                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=SGF3cr9YMF5dyxiD" target="_blank" rel="noopener noreferrer">We Have To Talk About Weed</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
-            <br><br>
-            <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
-        </div>
-        <div class="copyright">
-            © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
-            <span style="font-size:0.6rem; opacity:0.8;">
-                Not medical advice. In an emergency, dial 911. |
-                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
-            </span>
-        </div>
-    </footer>
+        </footer>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
