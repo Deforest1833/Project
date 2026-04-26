@@ -15,6 +15,8 @@
     <title>Page Not Found | Dr. Safwan Moton</title>
 
     <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -23,38 +25,228 @@
             --primary-color: #1a3c5e;
             --accent-color: #6c7a89;
             --bg-cream: #f2f2eb;
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --gold-accent: #D4AF37;
+            --alert-red: #8B0000;
+
             --font-heading: 'Cormorant Garamond', serif;
             --font-body: 'Lato', sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); color: #2c3e50; line-height: 1.8; background-color: var(--bg-cream); text-align: center; }
-
-        .container {
-            min-height: 80vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            padding: 20px;
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1 { font-family: var(--font-heading); font-size: 4rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1; }
-        p { margin-bottom: 30px; font-size: 1.2rem; color: var(--accent-color); max-width: 500px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        p, li { font-weight: 500; color: #2c3e50; }
 
+        /* --- NAV --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; position: fixed; width: 100%; top: 0;
+            background: rgba(242, 242, 235, 0.98);
+            backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600;
+            letter-spacing: 0.5px; color: var(--primary-color); text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent-color); font-weight: 700;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+
+        #mobile-menu {
+            display: none; position: fixed; top: 70px; left: 0; width: 100%;
+            background: var(--bg-cream); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            padding: 20px 0; z-index: 999; text-align: center; border-bottom: 1px solid #eee;
+        }
+        #mobile-menu a {
+            display: block; padding: 15px; font-size: 0.9rem; font-weight: 700;
+            color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* --- 404 CONTENT --- */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 160px 5% 100px 5%;
+            text-align: center;
+        }
+        
+        .content-wrapper h1 {
+            font-family: var(--font-heading); font-size: 5rem; color: var(--primary-color);
+            margin-bottom: 10px; line-height: 1;
+        }
+        .content-wrapper p {
+            font-size: 1.2rem; color: var(--accent-color); max-width: 500px; margin: 0 auto 30px auto;
+        }
+        
         .btn {
             padding: 15px 40px; background-color: var(--primary-color); color: white;
             text-transform: uppercase; letter-spacing: 2px; font-weight: 700; text-decoration: none;
-            border-radius: 2px; transition: 0.3s;
+            border-radius: 2px; transition: 0.3s; display: inline-block;
         }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        .helpful-links {
+            margin-top: 60px;
+        }
+        .helpful-links p {
+            margin-bottom: 10px; font-size: 1.1rem; color: var(--primary-color); font-weight: 700;
+        }
+        .helpful-links a {
+            color: var(--primary-color); font-weight: 700; text-decoration: none;
+            border-bottom: 2px solid var(--gold-accent); padding-bottom: 2px;
+            text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;
+        }
+        .helpful-links a:hover { color: var(--gold-accent); }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; width: 100%; }
+        footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
+        footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
+        footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
+        footer li { margin-bottom: 10px; }
+
+        .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
+
+        .copyright {
+            font-size: 0.7rem; color: rgba(255, 255, 255, 0.8) !important;
+            margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
+        }
+
+        .legal-footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; } .mobile-menu-btn { display: block; }
+            .content-wrapper h1 { font-size: 4rem; }
+            .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
+            footer { text-align: center; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <a href="https://drmoton.com" class="logo" style="color:var(--primary-color); text-decoration:none;">Dr. Safwan Moton</a>
+        <div class="nav-links">
+            <a href="https://drmoton.com">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#experience">Background</a>
+            <a href="articles.html">Articles</a>
+            <a href="faq.html">FAQ</a>
+            <a href="index.html#location">Location</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">  ☰  </div>
+    </nav>
+    <div id="mobile-menu">
+        <a href="https://drmoton.com">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#experience">Background</a>
+        <a href="articles.html">Articles</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#location">Location</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <main class="content-wrapper">
         <h1>404</h1>
         <p>The page you are looking for does not exist or has been moved.</p>
         <a href="https://drmoton.com" class="btn">Return Home</a>
 
-        <div style="margin-top: 40px; font-size: 0.9rem;">
-            <p style="margin-bottom: 10px; font-size: 1rem;">Looking for medical information?</p>
-            <a href="articles.html" style="color: var(--primary-color); font-weight: 700; text-decoration: underline;">Browse Health Articles</a>
+        <div class="helpful-links">
+            <p>Looking for medical information?</p>
+            <a href="articles.html">Browse The Library</a>
         </div>
-    </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
+                <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
+                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
+                    Dedicated to continuity of care and long-term health outcomes.
+                </p>
+                <div style="margin-top:20px;">
+                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
+                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                </div>
+                <div style="margin-top:20px;">
+                    <p style="margin-bottom:5px; font-weight:700; color:#D4AF37; text-transform:uppercase; letter-spacing:1px; font-size:0.75rem;">Academic Profiles</p>
+                    <p style="margin-bottom:3px;"><a href="https://www.researchgate.net/profile/Safwan-Moton" target="_blank" rel="noopener noreferrer">ResearchGate</a></p>
+                    <p style="margin-bottom:3px;"><a href="https://scholar.google.com/citations?hl=en&user=4uD3_SIAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+                    <p><a href="https://www.doximity.com/pub/safwan-moton-do" target="_blank" rel="noopener noreferrer">Doximity</a></p>
+                </div>
+            </div>
+            <div>
+                <h3>Patient Resources</h3>
+                <ul>
+                    <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
+                    <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
+                    <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
+                    <li><a href="articles.html">Health Articles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Educational Videos</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=uOHG0u-WKXM" target="_blank" rel="noopener noreferrer">Do You REALLY Need a Flu Shot?</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=zBkVCpbNnkU" target="_blank" rel="noopener noreferrer">The Side Effects of Vaccines - How High is the Risk?</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=8HslUzw35mc" target="_blank" rel="noopener noreferrer">Homeopathy Explained</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=cHEOsKddURQ" target="_blank" rel="noopener noreferrer">Vaping Is Too Good To Be True</a></li>
+                    <li><a href="https://youtu.be/qBRaI0ZeAf8?si=SGF3cr9YMF5dyxiD" target="_blank" rel="noopener noreferrer">We Have To Talk About Weed</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="legal-footer">
+            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
+            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
+            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <br><br>
+            <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
+        </div>
+        <div class="copyright">
+            © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
+            <span style="font-size:0.6rem; opacity:0.8;">
+                Not medical advice. In an emergency, dial 911. |
+                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
+            </span>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
