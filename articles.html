@@ -136,9 +136,9 @@
             background: #ffffff;
             padding: 40px;
             border-radius: 2px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: opacity 0.4s ease; /* For filtering animation */
+            transition: opacity 0.4s ease;
         }
         .article-meta {
             font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
@@ -151,73 +151,34 @@
         }
         .article-title {
             font-family: var(--font-heading); font-size: 2.2rem;
-            color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;
+            color: var(--primary-color); margin-bottom: 15px; line-height: 1.2;
         }
-        .article-content {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #2c3e50;
+        .article-excerpt {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 25px;
+        }
+        
+        .read-more-btn {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 5px;
+            transition: all 0.3s;
+        }
+        .read-more-btn:hover {
+            color: var(--gold-accent);
         }
 
-        /* Internal Linking Style */
-        .article-content a {
-            color: var(--primary-color);
-            font-weight: 700;
-            border-bottom: 1px solid rgba(26, 60, 94, 0.3);
-        }
-        .article-content a:hover {
-            border-bottom: 2px solid var(--gold-accent);
-        }
-        /* Regular Article H3s */
-        .article-content h3 {
-            font-size: 1.5rem; color: var(--primary-color);
-            margin-top: 30px; margin-bottom: 15px;
-        }
-        /* KEY TAKEAWAYS BOX (UPDATED HIERARCHY) */
-        .takeaways-box {
-            background-color: #f8fbfd;
-            border-left: 4px solid var(--gold-accent);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        /* Changed from H4 to H3 in CSS to match HTML update */
-        .takeaways-box h3 {
-            font-family: var(--font-body);
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--primary-color); margin-bottom: 15px; font-weight: 800;
-            margin-top: 0; /* Override default H3 margin */
-        }
-        .takeaways-box ul {
-            list-style: none; padding: 0;
-        }
-        .takeaways-box li {
-            position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 1rem;
-        }
-        .takeaways-box li::before {
-            content: '•'; position: absolute; left: 0; color: var(--gold-accent); font-size: 1.2rem;
-        }
-        /* --- RESPONSIVE VIDEO (NATIVE) --- */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 30px 0;
-            background-color: #000;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        footer h4 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; }
+        footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
         footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
         footer li { margin-bottom: 10px; }
 
@@ -241,35 +202,6 @@
             margin-right: auto;
         }
 
-        .source-box {
-            background-color: #f9f9f9;
-            border-left: 4px solid var(--primary-color);
-            padding: 15px 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-        .source-box h4 {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        .source-box ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-        .source-box li {
-            margin-bottom: 5px;
-        }
-        .source-box a {
-            color: var(--accent-color);
-            font-weight: 700;
-        }
-        .source-box a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
@@ -304,8 +236,8 @@
         <a href="index.html#contact">Contact</a>
     </div>
     <header class="page-header">
-        <h1>Health Insights</h1>
-        <p>Evidence-based medical articles and updates for the Sugar Land community.</p>
+        <h1>The Library</h1>
+        <p>Evidence-based medical articles and clinical insights for Fort Bend County.</p>
     </header>
     <div class="article-container">
 
@@ -314,6 +246,7 @@
             He is <strong>not</strong> currently licensed to practice medicine in Texas.
             The information below reflects <strong>future intentions</strong> for his medical services in Summer 2026 and is for educational purposes only.
         </div>
+        
         <div class="filter-container">
             <button class="filter-btn active" onclick="filterArticles('all')">All</button>
             <button class="filter-btn" onclick="filterArticles('dermatology')">Dermatology</button>
@@ -322,348 +255,80 @@
             <button class="filter-btn" onclick="filterArticles('occupational')">Occupational</button>
         </div>
 
-        <article class="article-card category-preventive" id="spring-allergies">
-            <div class="article-meta">April 2026 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+        <article class="article-card category-preventive">
+            <div class="article-meta">April 2026 <span class="tag-pill">#Preventive</span></div>
             <h2 class="article-title">The "Houston Hack" for Spring Allergies</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>It is usually pollen, not an infection:</strong> Yellow nasal discharge in the spring is often just severe inflammation from oak and pecan pollen, not necessarily a bacterial sinus infection.</li>
-                    <li><strong>Start early:</strong> Begin your daily over-the-counter nasal steroids before the yellow dust visibly coats your car.</li>
-                    <li><strong>Consistency is key:</strong> Nasal steroid sprays take several days of continuous use to reach maximum effectiveness. Do not stop after one dose.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Every spring, cars across Fort Bend County turn a distinct shade of yellow. As oak and pecan trees release massive amounts of pollen, I see a surge of patients convinced they have a severe sinus infection. They come in requesting antibiotics, but the reality is often much simpler.
-                </p>
-                <p>
-                    In my clinical experience, the vast majority of these cases are allergic rhinitis. While severe allergies can cause pressure and colored nasal discharge, antibiotics will not cure a pollen allergy. The true "Houston Hack" for surviving spring is aggressive, early prevention.
-                </p>
-                <h3>The Right Way to Use Nasal Sprays</h3>
-                <p>
-                    I advise my patients to rely on over-the-counter nasal corticosteroid sprays (like Fluticasone) as their first line of defense. However, these medications are not quick fixes like a decongestant. They work by reducing inflammation over time. You must use them every single day for at least a week to see the full benefit.
-                </p>
-                <p>
-                    Additionally, getting your allergies under control prevents you from constantly rubbing your itchy eyes and nose. Constant friction can break down your skin barrier, which is especially problematic for patients already managing <a href="#eczema">chronic skin conditions like eczema</a>.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>AAAAI: <a href="https://www.aaaai.org/conditions-treatments/allergies/allergic-rhinitis" target="_blank" rel="noopener noreferrer">Allergic Rhinitis Overview</a></li>
-                        <li>CDC: <a href="https://www.cdc.gov/climateandhealth/effects/allergen.htm" target="_blank" rel="noopener noreferrer">Climate Change and Allergens</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Every spring, cars across Fort Bend County turn a distinct shade of yellow. Dr. Moton shares his clinical approach to distinguishing between severe pollen allergies and sinus infections, and the right way to use nasal sprays.
+            </p>
+            <a href="spring-allergies.html" class="read-more-btn">Read Full Article</a>
         </article>
 
-        <article class="article-card category-preventive" id="hurricane-medications">
-            <div class="article-meta">March 2026 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+        <article class="article-card category-preventive">
+            <div class="article-meta">March 2026 <span class="tag-pill">#Preventive</span></div>
             <h2 class="article-title">Hurricane Season Preparedness: Managing Chronic Medications</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>The 30-Day Buffer:</strong> Never let your essential medications run down to the last pill during hurricane season. Always keep at least a two-week backup supply.</li>
-                    <li><strong>Texas Emergency Refill Laws:</strong> During declared disasters, Texas pharmacists have the authority to dispense emergency refills for non-controlled medications.</li>
-                    <li><strong>Safe Insulin Storage:</strong> If you lose power, store insulin in a cooler with ice packs, but never let the vials touch the ice directly to prevent freezing.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Living near the Gulf Coast means we must always be prepared for severe weather. While most families are excellent at stocking up on water and batteries, medical preparedness is frequently overlooked until it is too late.
-                </p>
-                <p>
-                    I have seen patients face serious complications simply because a storm disrupted their access to a pharmacy. If you rely on daily medications for blood pressure, diabetes, or heart conditions, you need a proactive plan for hurricane season.
-                </p>
-                <h3>Creating Your Medical Go-Bag</h3>
-                <p>
-                    I advise my patients to keep a printed list of all their current medications, dosages, and pharmacy phone numbers in a waterproof bag. It is also crucial to understand that if a storm knocks out the power grid, the heat inside a Texas home can quickly degrade medications. 
-                </p>
-                <p>
-                    This is especially true for liquid medications and insulin. You must have a cooler ready. Furthermore, maintaining access to clean drinking water is vital not just for survival, but for <a href="#kidney-stones">preventing kidney stones</a> and acute kidney injury if you are stranded without air conditioning for days.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>Ready.gov: <a href="https://www.ready.gov/prescription-medications" target="_blank" rel="noopener noreferrer">Managing Prescription Medications During a Disaster</a></li>
-                        <li>Texas State Board of Pharmacy: <a href="https://www.pharmacy.texas.gov/" target="_blank" rel="noopener noreferrer">Emergency Dispensing Guidelines</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Living near the Gulf Coast means we must always be prepared for severe weather. Discover the proactive plan for ensuring you have your essential medications and insulin safely stored during power outages.
+            </p>
+            <a href="hurricane-medications.html" class="read-more-btn">Read Full Article</a>
         </article>
 
-        <article class="article-card category-preventive" id="south-asian-heart">
-            <div class="article-meta">February 2026 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+        <article class="article-card category-preventive">
+            <div class="article-meta">February 2026 <span class="tag-pill">#Preventive</span></div>
             <h2 class="article-title">Heart Health in Sugar Land's South Asian Community</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>Elevated Baseline Risk:</strong> South Asians have a significantly higher risk of developing early cardiovascular disease compared to other demographic groups.</li>
-                    <li><strong>The BMI Illusion:</strong> Standard Body Mass Index charts often underestimate metabolic risk for South Asians. Insulin resistance can occur at lower body weights.</li>
-                    <li><strong>Culturally Aware Diet Changes:</strong> You do not need to abandon your cultural foods. Focus on reducing refined carbohydrates and controlling cooking oil portions.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Sugar Land is home to a vibrant and growing South Asian population. While this brings incredible culture and community to Fort Bend County, it also highlights a specific clinical challenge. Extensive data shows that individuals of South Asian descent face a much higher risk for early-onset heart disease and diabetes.
-                </p>
-                <p>
-                    In my practice, I frequently encounter patients who appear healthy by standard metrics but have hidden metabolic risks. A "normal" BMI does not always equal a healthy heart for this demographic.
-                </p>
-                <h3>Earlier Screenings Are Crucial</h3>
-                <p>
-                    Because of this genetic predisposition, I strongly advise my South Asian patients to begin lipid and glucose screenings earlier than the general guidelines might suggest. Just as we have seen with the <a href="#colon-cancer">recent lowering of the colon cancer screening age</a>, catching metabolic issues early is the key to preventing long-term damage.
-                </p>
-                <p>
-                    When it comes to diet, my goal is never to tell a patient to stop eating the foods they grew up with. Instead, we work together to modify traditional recipes. Small changes, like swapping refined white rice for complex carbohydrates and reducing the amount of ghee used in daily cooking, can drastically improve your lipid panel over time.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>American Heart Association: <a href="https://www.heart.org/en/news/2019/05/23/south-asians-high-risk-of-cardiovascular-disease-has-been-hidden-by-a-lack-of-data" target="_blank" rel="noopener noreferrer">South Asians and Cardiovascular Disease</a></li>
-                        <li>CDC: <a href="https://www.cdc.gov/diabetes/health-equity/index.html" target="_blank" rel="noopener noreferrer">Diabetes and Health Equity</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Navigating elevated cardiovascular risks and culturally aware diet modifications for the South Asian demographic in Fort Bend County.
+            </p>
+            <a href="south-asian-heart.html" class="read-more-btn">Read Full Article</a>
         </article>
 
-        <article class="article-card category-preventive" id="flu-shot">
-            <div class="article-meta">January 2026 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+        <article class="article-card category-preventive">
+            <div class="article-meta">January 2026 <span class="tag-pill">#Preventive</span></div>
             <h2 class="article-title">Do You REALLY Need a Flu Shot? (Video)</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>Community Immunity:</strong> Even if you are young and healthy, getting vaccinated protects the vulnerable elders in Fort Bend's multi-generational households.</li>
-                    <li><strong>It's not just a cold:</strong> Influenza can lead to hospitalization and pneumonia. It is a serious respiratory virus.</li>
-                    <li><strong>Severity Reduction:</strong> Even if you still get the flu after the shot, the vaccine significantly reduces the severity and duration of the illness.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Every year in my clinic, I hear the same hesitation: "I'm healthy, I never get sick, so why do I need a flu shot?"
-                    It is a valid question, but it misses the broader picture of public health, especially here in Sugar Land where indoor gatherings are common due to our humidity and heat.
-                </p>
-                <p>
-                    <strong>I highly recommend this educational video by Dr. Mikhail Varshavski, DO (Doctor Mike).</strong> He brilliantly explains exactly how the vaccine works, addresses common concerns about side effects, and demonstrates why vaccination is an act of service to your community.
-                </p>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uOHG0u-WKXM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <h3>Protecting Our Neighbors</h3>
-                <p>
-                    Fort Bend County is home to many multi-generational households. You might be able to fight off the flu in a few days, but the grandmother you see at the grocery store or the infant in your family might not be so lucky.
-                    By getting vaccinated, you interrupt the chain of transmission.
-                </p>
-                <p>
-                    Just as we discuss with <a href="#colon-cancer">colon cancer screenings</a>, preventive medicine is about stopping problems before they start.
-                    The flu shot is one of the easiest, safest tools we have to keep our community healthy through the winter months.
-                </p>
-
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>CDC: <a href="https://www.cdc.gov/flu/prevent/keyfacts.htm" target="_blank" rel="noopener noreferrer">Key Facts About Influenza (Flu)</a></li>
-                        <li>Texas Health & Human Services: <a href="https://www.dshs.texas.gov/influenza-flu" target="_blank" rel="noopener noreferrer">Texas Flu Updates</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Dr. Moton explains the concept of community immunity and shares a comprehensive video breakdown of exactly why the influenza vaccine is critical even for young, healthy adults.
+            </p>
+            <a href="flu-shot.html" class="read-more-btn">Watch Video & Read</a>
         </article>
-        <article class="article-card category-dermatology" id="eczema">
-            <div class="article-meta">December 2025 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Dermatology</span></div>
+        
+        <article class="article-card category-dermatology">
+            <div class="article-meta">December 2025 <span class="tag-pill">#Dermatology</span></div>
             <h2 class="article-title">Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>Humidity helps, heat hurts:</strong> While Gulf Coast humidity aids moisture retention, sweat is a major trigger for eczema flares.</li>
-                    <li><strong>Chlorine is a double-edged sword:</strong> Swimming can dry out skin, but diluted bleach baths (per medical instruction) can actually reduce bacterial load on eczematous skin.</li>
-                    <li><strong>Steroid sparing:</strong> Long-term management should focus on non-steroidal topicals to prevent skin thinning.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Living on the Gulf Coast presents a unique paradox for my patients with chronic skin conditions like eczema (atopic dermatitis) and psoriasis.
-                    On one hand, the naturally high humidity we experience in Sugar Land and Rosenberg helps retain skin moisture, which is often beneficial.
-                    On the other hand, the intense heat and subsequent sweating act as potent irritants that trigger severe flare-ups.
-                </p>
-                <p>
-                    In my clinical experience, I often see patients who believe they just have "dry skin" or "heat rash," when in reality they are dealing with a chronic autoimmune or inflammatory condition.
-                    Distinguishing between the two is critical because the treatments are fundamentally different.
-                </p>
-                <h3>Why "Just Lotion" Isn't Enough</h3>
-                <p>
-                    Eczema is essentially a barrier defect. Think of your skin like a brick wall;
-                    in eczema, the "mortar" holding the cells together is crumbly, allowing moisture to escape and irritants (like pollen or chemicals) to enter.
-                    Psoriasis, conversely, is an autoimmune condition where the skin cells grow too fast, piling up into thick, silvery scales.
-                </p>
-                <p>
-                    For my patients in industrial roles or outdoor professions in Fort Bend County (who often also suffer from <a href="#plantar-fasciitis">occupational foot pain</a>), "just putting on lotion" rarely solves the problem.
-                    We often need a two-pronged approach:
-                </p>
-                <ul>
-                    <li><strong>Acute Phase:</strong> Using topical corticosteroids to extinguish the "fire" of inflammation quickly.</li>
-                    <li><strong>Maintenance Phase:</strong> Transitioning to non-steroidal agents (like calcineurin inhibitors) to keep the skin calm without the risk of thinning the skin that comes with long-term steroid use.</li>
-                </ul>
-                <h3>Local Triggers to Watch</h3>
-                <p>
-                    Specific to our area, I advise patients to be wary of chlorinated pools and heavy sweating.
-                    Immediately rinsing off sweat and pool water, followed by applying a thick emollient (cream or ointment, not thin lotion), is the single most effective preventive step you can take during the Texas summer.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>NIAMS (NIH): <a href="https://www.niams.nih.gov/health-topics/atopic-dermatitis" target="_blank" rel="noopener noreferrer">Atopic Dermatitis (Eczema)</a></li>
-                        <li>National Psoriasis Foundation: <a href="https://www.psoriasis.org/about-psoriasis/" target="_blank" rel="noopener noreferrer">About Psoriasis</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Living in high humidity and heat presents unique challenges for chronic skin conditions. Dr. Moton explains how to manage flare-ups and protect your skin barrier in the Texas climate.
+            </p>
+            <a href="eczema.html" class="read-more-btn">Read Full Article</a>
         </article>
-        <article class="article-card category-preventive" id="colon-cancer">
-            <div class="article-meta">November 2025 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Preventive</span></div>
+        
+        <article class="article-card category-preventive">
+            <div class="article-meta">November 2025 <span class="tag-pill">#Preventive</span></div>
             <h2 class="article-title">Colon Cancer Screening: Cologuard vs. Colonoscopy</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>45 is the new 50:</strong> Screening now begins at age 45 due to rising cancer rates in younger adults.</li>
-                    <li><strong>The "Gold Standard" is preventive:</strong> A colonoscopy is the only test that can actually <em>prevent</em> cancer by removing polyps before they turn malignant.</li>
-                    <li><strong>Home tests have limits:</strong> A positive Cologuard test essentially commits you to a diagnostic colonoscopy anyway.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    One of the most significant shifts in preventive medicine recently has been the lowering of the colorectal cancer screening age from 50 to 45. This wasn't done lightly;
-                    epidemiemiological data showed a concerning rise in colon cancer diagnoses among younger adults.
-                    For residents in Fort Bend County, understanding your screening options is critical.
-                </p>
-                <p>
-                    I often hear patients ask, "Can't I just do the box test at home?"
-                    The answer is yes, but with significant caveats. Understanding the difference between a <strong>screening</strong> test and a <strong>diagnostic</strong> test is vital for your health (and your wallet).
-                </p>
-                <h3>Why I Still Lean Toward Colonoscopy</h3>
-                <p>
-                    A colonoscopy is unique in the medical world because it is both diagnostic and therapeutic.
-                    If a gastroenterologist finds a pre-cancerous polyp during the exam, they remove it right then and there.
-                    By removing the polyp, they have effectively prevented cancer from ever developing. That is a powerful tool.
-                </p>
-                <p>
-                    Stool-based DNA tests like Cologuard are non-invasive and excellent for detecting existing cancer, but they cannot remove polyps.
-                    Furthermore, if you get a positive result on a home test, you must follow up with a colonoscopy.
-                    At that point, the colonoscopy is often coded as "diagnostic" rather than "screening" by insurance companies, which can sometimes change your out-of-pocket costs.
-                </p>
-                <h3>The Best Test is the One You Complete</h3>
-                <p>
-                    Ultimately, if the thought of a colonoscopy preparation prevents you from getting screened at all, then the home test is infinitely better than nothing.
-                    My goal as a physician is to help you choose the method you will actually follow through with.
-                    This philosophy of early screening is similar to the importance of hydration for <a href="#kidney-stones">preventing kidney stones</a>—prevention is always better than a cure.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>CDC: <a href="https://www.cdc.gov/colorectal-cancer/screening/" target="_blank" rel="noopener noreferrer">Colorectal Cancer Screening Tests</a></li>
-                        <li>USPSTF: <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening" target="_blank" rel="noopener noreferrer">Screening Recommendations</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                The screening age has lowered to 45. Understand the critical differences between at-home tests and the gold standard colonoscopy to make the right choice for your health.
+            </p>
+            <a href="colon-cancer.html" class="read-more-btn">Read Full Article</a>
         </article>
-        <article class="article-card category-men" id="kidney-stones">
-            <div class="article-meta">October 2025 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Men's Health</span></div>
+        
+        <article class="article-card category-men">
+            <div class="article-meta">October 2025 <span class="tag-pill">#Men's Health</span></div>
             <h2 class="article-title">Kidney Stones: Prevention Tips for the Texas Heat</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>The "Stone Belt" is real:</strong> High heat leads to chronic low-level dehydration, the #1 cause of stones.</li>
-                    <li><strong>Citrate is your friend:</strong> Adding lemon or lime to your water naturally inhibits stone formation.</li>
-                    <li><strong>Dietary Calcium is actually good:</strong> Contrary to popular belief, cutting dietary calcium can <em>increase</em> stone risk.
-                    It binds oxalate in the gut before it reaches the kidneys.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    Urologists often refer to the southern United States as the "Stone Belt."
-                    In Sugar Land, the combination of high heat and humidity creates a perfect storm for dehydration.
-                    When you don't drink enough water, your urine becomes concentrated, allowing minerals like calcium and oxalate to crystallize and form stones.
-                </p>
-                <p>
-                    If you have ever passed a kidney stone, you know it is an experience you never want to repeat.
-                    The pain is often described as worse than childbirth. The good news is that for most patients, stones are largely preventable with specific lifestyle adjustments.
-                    Men, in particular, should prioritize this preventive care, just as they should stay current on <a href="#colon-cancer">colon cancer screenings</a>.
-                </p>
-                <h3>Hydration: The 2.5 Liter Rule</h3>
-                <p>
-                    The most common advice is "drink more water," but that is too vague.
-                    My clinical recommendation is to drink enough water to <strong>produce</strong> at least 2.5 liters of urine per day.
-                    If your urine is dark yellow, you are already behind.
-                    In the Texas summer, this might mean drinking significantly more than the standard "8 glasses a day."
-                </p>
-                <h3>The Calcium Myth</h3>
-                <p>
-                    A common misconception I encounter is patients cutting out milk or yogurt because their stones are made of calcium.
-                    This is actually counterproductive. Dietary calcium binds with oxalate in your stomach and leaves the body through digestion.
-                    If you cut out calcium, the oxalate has nothing to bind to, so it travels to your kidneys and forms stones.
-                    Continue eating normal amounts of calcium-rich foods, but ask your doctor before taking calcium <em>supplements</em>.
-                </p>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>NIDDK (NIH): <a href="https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones" target="_blank" rel="noopener noreferrer">Kidney Stones Overview</a></li>
-                        <li>National Kidney Foundation: <a href="https://www.kidney.org/atoz/content/kidneystones" target="_blank" rel="noopener noreferrer">Kidney Stones</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                Urologists often refer to the southern United States as the "Stone Belt." Learn the 2.5-liter rule and why cutting dietary calcium might actually be hurting you.
+            </p>
+            <a href="kidney-stones.html" class="read-more-btn">Read Full Article</a>
         </article>
-        <article class="article-card category-occupational" id="plantar-fasciitis">
-            <div class="article-meta">September 2025 • Medically Reviewed: April 24, 2026 • By Dr. Safwan Moton <span class="tag-pill">#Occupational</span></div>
+        
+        <article class="article-card category-occupational">
+            <div class="article-meta">September 2025 <span class="tag-pill">#Occupational</span></div>
             <h2 class="article-title">Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce</h2>
-
-            <div class="takeaways-box">
-                <h3>Clinical Pearls (Key Takeaways)</h3>
-                <ul>
-                    <li><strong>First steps matter:</strong> Pain with the first steps in the morning is the hallmark sign of plantar fasciitis.</li>
-                    <li><strong>Don't go barefoot:</strong> Even at home, wearing supportive footwear prevents the fascia from re-tightening.</li>
-                    <li><strong>Stretch the calf, fix the foot:</strong> Tight calf muscles pull on the heel bone, increasing tension on the foot.
-                    Stretching the calves is often the cure.</li>
-                </ul>
-            </div>
-            <div class="article-content">
-                <p>
-                    For workers in Rosenberg's industrial and warehouse sectors, heel pain is more than a nuisance—it is an occupational hazard.
-                    Plantar fasciitis is caused by inflammation of the thick band of tissue that runs across the bottom of your foot.
-                    It typically presents as a sharp, stabbing pain with your first steps in the morning or after long periods of standing.
-                </p>
-                <p>
-                    In my practice, I often see patients who have "pushed through" the pain for months, leading to chronic inflammation that is much harder to treat.
-                    Industrial workers in our region often face multiple challenges, from joint pain to <a href="#eczema">chronic skin conditions aggravated by heat</a>.
-                    The earlier we intervene, the faster you get back to full function.
-                </p>
-                <h3>Treatment Without Surgery</h3>
-                <p>
-                    The vast majority of plantar fasciitis cases resolve without surgery.
-                    The cornerstone of treatment is mechanical: we must relieve the tension on the fascia. This involves three steps:
-                </p>
-                <ol>
-                    <li><strong>Support:</strong> Replace worn-out work boots. I often recommend insoles that support the arch and cushion the heel.</li>
-                    <li><strong>Stretching:</strong> Most people focus on the foot, but the <em>calf muscle</em> is usually the culprit.
-                    A tight calf pulls on the heel bone, which pulls on the fascia.
-                    Stretching your calves against a wall 3 times a day can work wonders.</li>
-                    <li><strong>Night Splints:</strong> These devices keep your foot flexed while you sleep, preventing the fascia from tightening up overnight.
-                    This helps eliminate that dreaded "morning pain."</li>
-                </ol>
-                <div class="source-box">
-                    <h4>Sources & Further Reading</h4>
-                    <ul>
-                        <li>OrthoInfo (AAOS): <a href="https://orthoinfo.aaos.org/en/diseases--conditions/plantar-fasciitis-and-bone-spurs" target="_blank" rel="noopener noreferrer">Plantar Fasciitis and Bone Spurs</a></li>
-                        <li>MedlinePlus: <a href="https://medlineplus.gov/ency/article/007021.htm" target="_blank" rel="noopener noreferrer">Plantar Fasciitis</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p class="article-excerpt">
+                For workers in the industrial and warehouse sectors, heel pain is an occupational hazard. Discover non-surgical treatments and the importance of calf stretches.
+            </p>
+            <a href="plantar-fasciitis.html" class="read-more-btn">Read Full Article</a>
         </article>
+        
     </div>
+    
     <footer id="contact">
         <div class="footer-content">
 
@@ -729,9 +394,10 @@
         function filterArticles(category) {
             const articles = document.querySelectorAll('.article-card');
             const buttons = document.querySelectorAll('.filter-btn');
-            // Update Active Button State
+            
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
+            
             articles.forEach(article => {
                 if (category === 'all') {
                     article.style.display = 'block';
@@ -747,119 +413,6 @@
                 }
             });
         }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://drmoton.com"
-          },{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Medical Articles",
-            "item": "https://drmoton.com/articles.html"
-          }]
-        },
-        {
-          "@type": "MedicalWebPage",
-          "mainEntity": {
-            "@type": "CollectionPage",
-            "headline": "Medical Articles & Health Insights",
-            "description": "Evidence-based medical articles on Family Medicine topics.",
-            "author": {
-              "@type": "Physician",
-              "name": "Dr. Safwan Moton",
-              "medicalSpecialty": "Family Medicine",
-              "affiliation": [
-                { "@type": "Organization", "name": "Authority Health GME" },
-                { "@type": "Organization", "name": "Michigan State University College of Osteopathic Medicine" }
-              ]
-            },
-            "hasPart": [
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "The \"Houston Hack\" for Spring Allergies",
-                "datePublished": "2026-04-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Hurricane Season Preparedness: Managing Chronic Medications",
-                "datePublished": "2026-03-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Heart Health in Sugar Land's South Asian Community",
-                "datePublished": "2026-02-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Do You REALLY Need a Flu Shot? (Video)",
-                "datePublished": "2026-01-16",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "video": {
-                  "@type": "VideoObject",
-                  "name": "Do You REALLY Need a Flu Shot?",
-                  "description": "Dr. Safwan Moton recommends this video by Dr. Mikhail Varshavski DO explaining the importance of the flu vaccine for community health.",
-                  "thumbnailUrl": "https://img.youtube.com/vi/uOHG0u-WKXM/hqdefault.jpg",
-                  "uploadDate": "2023-11-01",
-                  "contentUrl": "https://www.youtube.com/watch?v=uOHG0u-WKXM",
-                  "embedUrl": "https://www.youtube.com/embed/uOHG0u-WKXM"
-                }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Eczema and Psoriasis: Managing Chronic Skin Conditions in the Gulf Coast",
-                "datePublished": "2025-12-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Colon Cancer Screening: Cologuard vs. Colonoscopy for Fort Bend Residents",
-                "datePublished": "2025-11-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Kidney Stones: Prevention Tips for the Texas Heat",
-                "datePublished": "2025-10-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              },
-              {
-                "@type": "MedicalScholarlyArticle",
-                "headline": "Plantar Fasciitis: Fixing Heel Pain for Rosenberg's Workforce",
-                "datePublished": "2025-09-01",
-                "dateModified": "2026-04-24",
-                "author": { "@type": "Physician", "name": "Dr. Safwan Moton" },
-                "reviewedBy": { "@type": "Physician", "name": "Dr. Safwan Moton" }
-              }
-            ]
-          }
-        }
-      ]
-    }
     </script>
 </body>
 </html>
