@@ -118,6 +118,18 @@
             margin-bottom: 80px;
         }
 
+        /* OPTION 3: THE SOFT CLINICAL LOOK FOR IMAGES */
+        .bio-image img {
+            border-radius: 40px 4px 40px 4px; /* Organic, modern medical look */
+            border: 2px solid var(--bg-cream);
+            box-shadow: 0 25px 50px -12px rgba(108, 122, 137, 0.25);
+            transition: all 0.3s ease;
+        }
+        .bio-image img:hover {
+            border-color: var(--gold-accent);
+            border-radius: 4px; /* Smoothly transitions back to a square on hover */
+        }
+
         .bio-text h2 {
             font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color);
             margin-bottom: 20px; line-height: 1.2;
@@ -234,7 +246,7 @@
         </div>
         <div class="bio-grid">
             <div class="bio-image">
-                <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy" style="border-radius: 2px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);">
+                <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy">
             </div>
 
             <div class="bio-text">
