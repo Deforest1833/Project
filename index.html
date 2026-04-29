@@ -109,7 +109,6 @@
         /* --- HERO --- */
         .hero {
             height: 90vh;
-            /* UPDATED TO WEBP */
             background-image: linear-gradient(rgba(26, 60, 94, 0.9), rgba(26, 60, 94, 0.8)), url('hero-bg.webp');
             background-attachment: fixed;
             background-size: cover; background-position: center;
@@ -152,10 +151,8 @@
             border-radius: 0;
             display: inline-block; transition: all 0.3s ease;
         }
-        .btn:hover { 
-    background: white !important; 
-    color: var(--primary-color) !important; 
-}
+        .btn:hover { background: white !important; color: var(--primary-color) !important; }
+        
         /* --- TRUST BAR --- */
         .trust-bar {
             background-color: var(--primary-color);
@@ -189,9 +186,21 @@
         }
         .text-content p { margin-bottom: 25px; font-size: 1.15rem; font-weight: 500; color: #2c3e50; }
 
-        .image-content img { width: 100%; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.2); }
+        /* OPTION 3: THE SOFT CLINICAL LOOK FOR IMAGES */
+        .image-content img { 
+            width: 100%; 
+            border-radius: 40px 4px 40px 4px; 
+            border: 2px solid var(--bg-cream);
+            box-shadow: 0 25px 50px -12px rgba(108, 122, 137, 0.25);
+            transition: all 0.3s ease;
+        }
+        .image-content img:hover {
+            border-color: var(--gold-accent);
+            border-radius: 4px;
+        }
         #about .image-content { justify-content: flex-start; }
-        #about .image-content img { max-width: 400px; border-radius: 2px; }
+        #about .image-content img { max-width: 400px; }
+        
         /* --- EDUCATION --- */
         .education { background-color: var(--bg-cream); padding: 100px 5% 60px 5%; }
         .section-header { text-align: center; margin-bottom: 40px; }
