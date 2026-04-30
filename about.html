@@ -123,6 +123,8 @@
         .bio-image {
             position: relative;
             z-index: 1;
+            max-width: 400px; /* Restrict container width so blue offset matches the image */
+            width: 100%;
         }
         /* The Blue Shape Behind the Image */
         .bio-image::after {
@@ -204,7 +206,6 @@
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        /* UPDATED H4 TO H3 */
         footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
         footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
         footer li { margin-bottom: 10px; }
@@ -231,6 +232,7 @@
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
             .bio-grid { grid-template-columns: 1fr; }
+            .bio-image { margin: 0 auto; } /* Centers the image nicely on mobile */
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
             footer { text-align: center; }
         }
@@ -404,56 +406,6 @@
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://drmoton.com"
-          },{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "About",
-            "item": "https://drmoton.com/about.html"
-          }]
-        },
-        {
-          "@type": "AboutPage",
-          "mainEntity": {
-            "@type": "Physician",
-            "name": "Dr. Safwan Moton",
-            "medicalSpecialty": "Family Medicine",
-            "openingDate": "2026-07-01",
-            "alumniOf": [
-              {
-                "@type": "CollegeOrUniversity",
-                "name": "Nova Southeastern University",
-                "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University"
-              },
-              {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Houston",
-                "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
-              }
-            ],
-            "affiliation": [
-              {
-                "@type": "Organization",
-                "name": "Authority Health GME",
-                "sameAs": "https://www.authorityhealth.org/"
-              }
-            ],
-            "url": "https://drmoton.com/about.html"
-          }
-        }
-      ]
-    }
     </script>
 </body>
 </html>
