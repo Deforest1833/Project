@@ -147,16 +147,19 @@
             display: block;
             transition: all 0.4s ease;
         }
-        /* Dynamic on mouse hover */
-        .bio-image:hover img {
-            border-radius: 4px;
-            transform: translate(-5px, -5px); /* Lifts image up and left slightly */
-        }
-        .bio-image:hover::after {
-            border-radius: 4px;
-            background-color: var(--gold-accent); /* Blue shifts to gold on hover */
-            bottom: -25px;
-            right: -25px; /* Pushes the shadow further out */
+        
+        /* Only apply hover effects if the device has a mouse/trackpad */
+        @media (hover: hover) {
+            .bio-image:hover img {
+                border-radius: 4px;
+                transform: translate(-5px, -5px); /* Lifts image up and left slightly */
+            }
+            .bio-image:hover::after {
+                border-radius: 4px;
+                background-color: var(--gold-accent); /* Blue shifts to gold on hover */
+                bottom: -25px;
+                right: -25px; /* Pushes the shadow further out */
+            }
         }
 
         .bio-text h2 {
@@ -232,7 +235,7 @@
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
             .bio-grid { grid-template-columns: 1fr; }
-            .bio-image { margin: 0 auto; } /* Centers the image nicely on mobile */
+            .bio-image { margin: 0 auto; justify-self: center; } /* Centers the image nicely on mobile */
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
             footer { text-align: center; }
         }
@@ -244,7 +247,7 @@
 
         <div class="nav-links">
             <a href="https://drmoton.com">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" style="color: var(--primary-color);">About</a>
             <a href="index.html#experience">Background</a>
             <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
@@ -406,6 +409,56 @@
             const menu = document.getElementById('mobile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drmoton.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://drmoton.com/about.html"
+          }]
+        },
+        {
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "Physician",
+            "name": "Dr. Safwan Moton",
+            "medicalSpecialty": "Family Medicine",
+            "openingDate": "2026-07-01",
+            "alumniOf": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Nova Southeastern University",
+                "sameAs": "https://en.wikipedia.org/wiki/Nova_Southeastern_University"
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Houston",
+                "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
+              }
+            ],
+            "affiliation": [
+              {
+                "@type": "Organization",
+                "name": "Authority Health GME",
+                "sameAs": "https://www.authorityhealth.org/"
+              }
+            ],
+            "url": "https://drmoton.com/about.html"
+          }
+        }
+      ]
+    }
     </script>
 </body>
 </html>
