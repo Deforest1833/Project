@@ -223,8 +223,11 @@
             right: -25px; /* Pushes the shadow further out */
         }
 
-        #about .image-content { justify-content: flex-start; }
-        #about .image-content img { max-width: 400px; }
+        /* Restrict container width for the Headshot so blue background matches */
+        #about .image-content { 
+            max-width: 400px; 
+            width: 100%; 
+        }
         
         /* --- EDUCATION --- */
         .education { background-color: var(--bg-cream); padding: 100px 5% 60px 5%; }
@@ -370,7 +373,7 @@
             .hero, .location { background-attachment: scroll; background-position: center top; }
             .split-section, .location-container { grid-template-columns: 1fr; gap: 60px; padding: 80px 5%; }
             .patient-care .image-content { order: -1; }
-            #about .image-content { justify-content: center; }
+            #about .image-content { margin: 0 auto; }
             .hero-content h1 { font-size: 3.5rem; }
             .trust-container { flex-direction: column; gap: 40px; }
             .trust-img { width: 280px; max-width: 80%; }
