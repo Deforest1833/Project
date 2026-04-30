@@ -152,7 +152,6 @@
             display: inline-block; transition: all 0.3s ease;
         }
         .btn:hover { background: white !important; color: var(--primary-color) !important; }
-        
         /* --- TRUST BAR --- */
         .trust-bar {
             background-color: var(--primary-color);
@@ -186,18 +185,44 @@
         }
         .text-content p { margin-bottom: 25px; font-size: 1.15rem; font-weight: 500; color: #2c3e50; }
 
-        /* OPTION 3: THE SOFT CLINICAL LOOK FOR IMAGES */
-        .image-content img { 
-            width: 100%; 
-            border-radius: 40px 4px 40px 4px; 
-            border: 2px solid var(--bg-cream);
-            box-shadow: 0 25px 50px -12px rgba(108, 122, 137, 0.25);
-            transition: all 0.3s ease;
+        /* THE SOLID OFFSET SHAPE LOOK */
+        .image-content {
+            position: relative;
+            z-index: 1;
         }
-        .image-content img:hover {
-            border-color: var(--gold-accent);
+        /* The Blue Shape Behind the Image */
+        .image-content::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;  /* Pushes it down */
+            right: -20px;   /* Pushes it right */
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color); /* The Navy Blue Color */
+            border-radius: 40px 4px 40px 4px; /* Matches the image shape */
+            z-index: -1; /* Keeps it behind the photo */
+            transition: all 0.4s ease;
+        }
+        .image-content img {
+            width: 100%;
+            border-radius: 40px 4px 40px 4px;
+            position: relative;
+            z-index: 2; /* Keeps image in front */
+            display: block;
+            transition: all 0.4s ease;
+        }
+        /* Dynamic on mouse hover */
+        .image-content:hover img {
             border-radius: 4px;
+            transform: translate(-5px, -5px); /* Lifts image up and left slightly */
         }
+        .image-content:hover::after {
+            border-radius: 4px;
+            background-color: var(--gold-accent); /* Blue shifts to gold on hover */
+            bottom: -25px;
+            right: -25px; /* Pushes the shadow further out */
+        }
+
         #about .image-content { justify-content: flex-start; }
         #about .image-content img { max-width: 400px; }
         
@@ -224,6 +249,7 @@
         .timeline-item ul li::before {
             content: '—'; position: absolute; left: 0; color: var(--gold-accent);
         }
+        
         /* --- PREMIUM FEATURED CAROUSEL --- */
         .featured-insight {
             background-color: var(--primary-color);
@@ -233,9 +259,12 @@
         }
         .carousel-container {
             max-width: 900px; margin: 0 auto; overflow: hidden; position: relative;
+            touch-action: pan-y; /* Allows vertical scrolling but captures horizontal swipes */
+            user-select: none; /* Prevents accidentally highlighting text while dragging */
         }
         .carousel-track {
             display: flex; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
         }
         .carousel-slide {
             min-width: 100%; box-sizing: border-box; padding: 0 20px;
@@ -269,10 +298,12 @@
 
         .carousel-dots { text-align: center; margin-top: 40px; }
         .dot {
-            height: 10px; width: 10px; margin: 0 5px; background-color: rgba(255, 255, 255, 0.3); border-radius: 50%;
-            display: inline-block; cursor: pointer; transition: background-color 0.3s;
+            height: 14px; width: 14px; margin: 0 8px; /* Bigger dots, spaced further apart */
+            background-color: rgba(255, 255, 255, 0.3); border-radius: 50%;
+            display: inline-block; cursor: pointer; transition: all 0.3s ease;
         }
-        .dot.active { background-color: var(--gold-accent); }
+        .dot.active { background-color: var(--gold-accent); transform: scale(1.2); }
+        
         /* --- LOCATION --- */
         .location {
             padding: 80px 5% 140px 5%; width: 100%;
@@ -287,21 +318,19 @@
             width: 100%; height: 450px; background: #eee;
             box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1);
         }
-        /* ADDED LOADING=LAZY FOR PERFORMANCE */
         .map-container iframe { width: 100% !important; height: 100% !important; border: 0; }
         .location-info { width: 100%; overflow-wrap: break-word; }
         .location-info p { font-weight: 500; }
+        
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h2 { font-size: 2.8rem; margin-bottom: 40px; color: white; }
-        /* CHANGED H4 TO H3 FOR SEO HIERARCHY */
         footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
         footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
         footer li { margin-bottom: 10px; }
 
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
-        /* UPDATED CONTRAST: Opacity 0.8 */
         .copyright { 
             font-size: 0.7rem; 
             color: rgba(255, 255, 255, 0.8) !important;
@@ -309,7 +338,6 @@
             letter-spacing: 2px; text-transform: uppercase; font-weight: 400; text-align: center;
         }
         
-        /* LEGAL DISCLAIMER STYLING - INCREASED CONTRAST */
         .legal-footer {
             margin-top: 20px;
             font-size: 0.75rem; 
@@ -321,23 +349,22 @@
             margin-left: auto;
             margin-right: auto;
         }
-        /* --- ANIMATIONS RESTORED --- */
+        
+        /* --- ANIMATIONS --- */
         @keyframes heroFadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Elements start invisible and slightly lower */
         .reveal {
             opacity: 0;
             transform: translateY(50px);
             transition: all 1.2s ease-out;
         }
-        /* When JS adds 'active', they become visible and slide up */
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+        
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             .hero, .location { background-attachment: scroll; background-position: center top; }
@@ -491,7 +518,7 @@
                     <div class="insight-body">
                         <p>Dr. Moton shares his clinical approach to distinguishing between severe pollen allergies and sinus infections, and the right way to use nasal sprays.</p>
                     </div>
-                    <a href="articles.html#spring-allergies" class="read-more-btn">Read Full Article</a>
+                    <a href="articles/spring-allergies.html" class="read-more-btn">Read Full Article</a>
                 </div>
 
                 <div class="carousel-slide">
@@ -500,7 +527,7 @@
                     <div class="insight-body">
                         <p>A proactive plan for ensuring you have your essential medications and insulin safely stored during Gulf Coast power outages.</p>
                     </div>
-                    <a href="articles.html#hurricane-medications" class="read-more-btn">Read Full Article</a>
+                    <a href="articles/hurricane-medications.html" class="read-more-btn">Read Full Article</a>
                 </div>
                 
                 <div class="carousel-slide">
@@ -509,7 +536,7 @@
                     <div class="insight-body">
                         <p>Navigating elevated cardiovascular risks and culturally aware diet modifications for the South Asian demographic.</p>
                     </div>
-                    <a href="articles.html#south-asian-heart" class="read-more-btn">Read Full Article</a>
+                    <a href="articles/south-asian-heart.html" class="read-more-btn">Read Full Article</a>
                 </div>
                 
                 <div class="carousel-slide">
@@ -739,31 +766,61 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        /* --- CAROUSEL LOGIC --- */
+
+        /* --- CAROUSEL LOGIC (WITH SWIPE/DRAG) --- */
         let currentSlide = 0;
         const track = document.getElementById('track');
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.dot');
+        let autoAdvance = setInterval(nextSlide, 15000);
 
         function updateCarousel() {
             track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentSlide);
-            });
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
+            slides.forEach((slide, index) => slide.classList.toggle('active', index === currentSlide));
+            dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
         }
-        function goToSlide(n) {
-            currentSlide = n;
-            updateCarousel();
+        function goToSlide(n) { currentSlide = n; updateCarousel(); resetTimer(); }
+        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateCarousel(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateCarousel(); }
+        function resetTimer() { clearInterval(autoAdvance); autoAdvance = setInterval(nextSlide, 15000); }
+
+        // Swipe & Drag Events
+        let startX = 0, currentX = 0, isDragging = false;
+
+        track.addEventListener('touchstart', touchStart, {passive: true});
+        track.addEventListener('touchmove', touchMove, {passive: true});
+        track.addEventListener('touchend', touchEnd);
+        track.addEventListener('mousedown', touchStart);
+        track.addEventListener('mousemove', touchMove);
+        track.addEventListener('mouseup', touchEnd);
+        track.addEventListener('mouseleave', () => { if(isDragging) touchEnd(); });
+
+        function touchStart(e) {
+            isDragging = true;
+            startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            track.style.transition = 'none'; // Lock to finger/mouse while dragging
+            resetTimer();
         }
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateCarousel();
+
+        function touchMove(e) {
+            if (!isDragging) return;
+            currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            const diff = currentX - startX;
+            const percentageMoved = (diff / track.clientWidth) * 100;
+            track.style.transform = `translateX(calc(-${currentSlide * 100}% + ${percentageMoved}%))`;
         }
-        // Auto-advance every 15 seconds (UPDATED FROM 6s)
-        setInterval(nextSlide, 15000);
+
+        function touchEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+            track.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+            const diff = currentX - startX;
+            
+            // If swiped more than 50px, change slide. Otherwise, snap back.
+            if (diff < -50) nextSlide();
+            else if (diff > 50) prevSlide();
+            else updateCarousel(); 
+        }
     </script>
 </body>
 </html>
