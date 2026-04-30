@@ -25,9 +25,63 @@
       <priority>0.7</priority>
    </url>
    <url>
+      <loc>https://drmoton.com/contact.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
       <loc>https://drmoton.com/privacy.html</loc>
       <lastmod>2026-04-24</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.1</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/colon-cancer.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/eczema.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/flu-shot.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/hurricane-medications.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/kidney-stones.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/plantar-fasciitis.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/south-asian-heart.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://drmoton.com/articles/spring-allergies.html</loc>
+      <lastmod>2026-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
    </url>
 </urlset>
