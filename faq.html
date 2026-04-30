@@ -37,7 +37,7 @@
     <style>
         :root {
             --primary-color: #1a3c5e;
-            --accent-color: #6c7a89;
+            --accent-color: #4a5568; /* Updated for WCAG AA Contrast */
             --bg-cream: #f2f2eb;
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
@@ -57,7 +57,18 @@
         .nav-links { display: flex; gap: 40px; }
         .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: 700; }
         .nav-links a:hover { color: var(--primary-color); }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        
+        /* MOBILE MENU BUTTON - Updated to button semantics */
+        .mobile-menu-btn { 
+            display: none; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            color: var(--primary-color); 
+            background: none; 
+            border: none; 
+            padding: 0; 
+        }
+
         #mobile-menu { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: var(--bg-cream); padding: 20px 0; z-index: 999;
             text-align: center; border-bottom: 1px solid #eee; }
         #mobile-menu a { display: block; padding: 15px; font-size: 0.9rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
@@ -123,23 +134,24 @@
             footer { text-align: center; }
         }
     </style>
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
     <nav>
-        <div class="logo">Dr. Safwan Moton</div>
+        <a href="https://drmoton.com" class="logo" style="text-decoration:none;">Dr. Safwan Moton</a>
         <div class="nav-links">
-            <a href="https://drmoton.com">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#experience">Background</a>
             <a href="articles.html">Articles</a>
-            <a href="faq.html">FAQ</a>
+            <a href="faq.html" style="color: var(--primary-color);">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
         </div>
-        <div class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">  ☰  </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu">  ☰  </button>
     </nav>
     <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="index.html#experience">Background</a>
         <a href="articles.html">Articles</a>
@@ -263,12 +275,29 @@
         </div>
     </footer>
     <script>
+        // Mobile Menu with Accessibility updates
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            const btn = document.querySelector('.mobile-menu-btn');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            
+            btn.setAttribute('aria-expanded', !isExpanded);
+            menu.style.display = isExpanded ? 'none' : 'block';
         }
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const menu = document.getElementById('mobile-menu');
+                const btn = document.querySelector('.mobile-menu-btn');
+                
+                menu.style.display = 'none';
+                if(btn) btn.setAttribute('aria-expanded', 'false');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
