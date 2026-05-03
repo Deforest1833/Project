@@ -2,91 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://drmoton.com/</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://drmoton.com/about.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://drmoton.com/faq.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
       <loc>https://drmoton.com/contact.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
+      <loc>https://drmoton.com/articles/blood-pressure-heat.html</loc>
+      <lastmod>2026-05-02</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
       <loc>https://drmoton.com/articles/colon-cancer.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/eczema.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/flu-shot.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/hurricane-medications.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/kidney-stones.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/plantar-fasciitis.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/south-asian-heart.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/articles/spring-allergies.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
       <loc>https://drmoton.com/accessibility.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.3</priority>
    </url>
    <url>
       <loc>https://drmoton.com/privacy.html</loc>
-      <lastmod>2026-04-24</lastmod>
+      <lastmod>2026-05-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.1</priority>
    </url>
