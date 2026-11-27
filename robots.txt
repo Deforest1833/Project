@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /articles.html
+Disallow: /articles/
 
 # Block Mass Training Data Scrapers
 User-agent: GPTBot
