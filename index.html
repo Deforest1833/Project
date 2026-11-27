@@ -14,14 +14,13 @@
 
     <title>Sugar Land Family Medicine | Dr. Safwan Moton, DO</title>
 
-    <meta name="description" content="Dr. Safwan Moton is a Resident Physician planning to practice Family Medicine in Sugar Land, TX (Summer 2026). Serving Fort Bend, Rosenberg, & Richmond."
-    />
+    <meta name="description" content="Dr. Safwan Moton, DO is a Board-Certified Family Medicine Physician at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients from Fort Bend, Rosenberg, & Richmond." />
 
     <link rel="canonical" href="https://drmoton.com/">
     
     <link rel="preload" as="image" href="hero-bg.webp" fetchpriority="high">
     <meta property="og:title" content="Sugar Land Family Medicine | Dr. Safwan Moton, DO">
-    <meta property="og:description" content="Compassionate, evidence-based primary care. Currently in Michigan, serving Sugar Land, TX starting Summer 2026.">
+    <meta property="og:description" content="Compassionate, evidence-based primary care at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,7 +29,7 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sugar Land Family Medicine | Dr. Safwan Moton, DO">
-    <meta name="twitter:description" content="Compassionate, evidence-based primary care. Currently in Michigan, serving Sugar Land, TX starting Summer 2026.">
+    <meta name="twitter:description" content="Compassionate, evidence-based primary care at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -150,7 +149,7 @@
         .hero-content p {
             font-size: 1.3rem; font-weight: 400;
             color: rgba(255, 255, 255, 0.9);
-            margin: 0 auto 40px auto; max-width: 600px;
+            margin: 0 auto 40px auto; max-width: 650px;
         }
         .btn {
             padding: 18px 50px; background: transparent; color: white;
@@ -185,8 +184,8 @@
         .split-section {
             padding: 120px 5%;
             display: grid; grid-template-columns: 1fr 1fr;
-            gap: 60px; /* Reduced gap to pull elements closer */
-            align-items: center; max-width: 1200px; /* Slightly tighter width */
+            gap: 60px;
+            align-items: center; max-width: 1200px;
             margin: 0 auto;
         }
         .text-content h2 {
@@ -204,20 +203,20 @@
         .image-content::after {
             content: '';
             position: absolute;
-            bottom: -20px;  /* Pushes it down */
-            right: -20px;   /* Pushes it right */
+            bottom: -20px;
+            right: -20px;
             width: 100%;
             height: 100%;
-            background-color: var(--primary-color); /* The Navy Blue Color */
-            border-radius: 40px 4px 40px 4px; /* Matches the image shape */
-            z-index: -1; /* Keeps it behind the photo */
+            background-color: var(--primary-color);
+            border-radius: 40px 4px 40px 4px;
+            z-index: -1;
             transition: all 0.4s ease;
         }
         .image-content img {
             width: 100%;
             border-radius: 40px 4px 40px 4px;
             position: relative;
-            z-index: 2; /* Keeps image in front */
+            z-index: 2;
             display: block;
             transition: all 0.4s ease;
         }
@@ -226,13 +225,13 @@
         @media (hover: hover) {
             .image-content:hover img {
                 border-radius: 4px;
-                transform: translate(-5px, -5px); /* Lifts image up and left slightly */
+                transform: translate(-5px, -5px);
             }
             .image-content:hover::after {
                 border-radius: 4px;
-                background-color: var(--gold-accent); /* Blue shifts to gold on hover */
+                background-color: var(--gold-accent);
                 bottom: -25px;
-                right: -25px; /* Pushes the shadow further out */
+                right: -25px;
             }
         }
 
@@ -240,7 +239,7 @@
         #about .image-content { 
             max-width: 400px; 
             width: 100%; 
-            justify-self: center; /* Pushes it slightly right, closing the gap */
+            justify-self: center;
         }
         
         /* --- EDUCATION --- */
@@ -267,60 +266,6 @@
             content: '—'; position: absolute; left: 0; color: var(--gold-accent);
         }
         
-        /* --- PREMIUM FEATURED CAROUSEL --- */
-        .featured-insight {
-            background-color: var(--primary-color);
-            padding: 100px 5%; position: relative;
-            border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);
-            color: white;
-        }
-        .carousel-container {
-            max-width: 900px; margin: 0 auto; overflow: hidden; position: relative;
-            touch-action: pan-y; /* Allows vertical scrolling but captures horizontal swipes */
-            user-select: none; /* Prevents accidentally highlighting text while dragging */
-        }
-        .carousel-track {
-            display: flex; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-            will-change: transform;
-        }
-        .carousel-slide {
-            min-width: 100%; box-sizing: border-box; padding: 0 20px;
-            opacity: 0; transform: scale(0.95); transition: all 0.8s ease;
-        }
-        .carousel-slide.active { opacity: 1; transform: scale(1); }
-
-        .insight-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); font-weight: 700; margin-bottom: 15px; }
-        .insight-title { font-family: var(--font-heading); font-size: 2.5rem; color: white; margin-bottom: 20px; line-height: 1.1; }
-        .insight-body { font-size: 1.1rem; color: white !important; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
-
-        /* Force White Text Override */
-        .featured-insight p {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-        /* View All Slide */
-        .view-all-slide {
-            display: flex; flex-direction: column; justify-content: center; align-items: center; height: 300px;
-            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .read-more-btn {
-            background: none; border: none; color: var(--gold-accent);
-            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-            font-size: 0.8rem; cursor: pointer; padding: 0;
-            border-bottom: 1px solid var(--gold-accent); transition: all 0.3s;
-        }
-        .read-more-btn:hover { opacity: 0.8; color: white; border-color: white; }
-
-        .carousel-dots { text-align: center; margin-top: 40px; }
-        .dot {
-            height: 14px; width: 14px; margin: 0 8px; /* Bigger dots, spaced further apart */
-            background-color: rgba(255, 255, 255, 0.3); border-radius: 50%;
-            display: inline-block; cursor: pointer; transition: all 0.3s ease;
-        }
-        .dot.active { background-color: var(--gold-accent); transform: scale(1.2); }
-        
         /* --- LOCATION --- */
         .location {
             padding: 80px 5% 140px 5%; width: 100%;
@@ -338,6 +283,8 @@
         .map-container iframe { width: 100% !important; height: 100% !important; border: 0; }
         .location-info { width: 100%; overflow-wrap: break-word; }
         .location-info p { font-weight: 500; }
+        .location-details p { margin-bottom: 15px; }
+        .location-details a { color: var(--primary-color); font-weight: 700; text-decoration: underline; }
         
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
@@ -414,7 +361,6 @@
             <a href="https://drmoton.com">Home</a>
             <a href="about.html">About</a>
             <a href="#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="#location">Location</a>
             <a href="contact.html">Contact</a>
@@ -426,7 +372,6 @@
         <a href="https://drmoton.com" onclick="toggleMenu()">Home</a>
         <a href="about.html" onclick="toggleMenu()">About</a>
         <a href="#experience" onclick="toggleMenu()">Background</a>
-        <a href="articles.html" onclick="toggleMenu()">Articles</a>
         <a href="faq.html" onclick="toggleMenu()">FAQ</a>
         <a href="#location" onclick="toggleMenu()">Location</a>
         <a href="contact.html" onclick="toggleMenu()">Contact</a>
@@ -435,10 +380,10 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="status-badge">Not currently licensed in Texas <br> Not currently soliciting patients or advertising medical services in Texas</div>
+                <div class="status-badge">Now Accepting New Patients • Sugar Lakes Family Practice</div>
                 <h1>Sugar Land<br>Family Medicine</h1>
-                <p>Resident Physician joining the Sugar Land and Fort Bend County medical community in Summer 2026</p>
-                <a href="#care" class="btn">Get 2026 Updates</a>
+                <p>Board-Certified Family Medicine Physician serving Sugar Land and Fort Bend County at Sugar Lakes Family Practice</p>
+                <a href="contact.html" class="btn">Schedule an Appointment</a>
             </div>
         </section>
         <section class="trust-bar">
@@ -450,18 +395,17 @@
         </section>
         <section id="about" class="split-section">
             <div class="image-content reveal">
-                <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy">
+                <img src="Headshot.jpg" alt="Dr. Safwan Moton, DO - Board-Certified Family Medicine Physician" width="400" height="500" loading="lazy">
             </div>
             <div class="text-content reveal">
                 <span class="eyebrow">Biography</span>
                 <h2>Clinical Excellence & Compassion</h2>
                 <p>
-                    Dr. Safwan Moton is a <strong>Family Medicine Resident Physician</strong> distinguished by a solid foundation in evidence-based medicine and a dedication to comprehensive patient care. 
-                    He is currently completing his advanced training in Michigan and plans to begin practicing in Sugar Land, Texas in July/August 2026.
+                    Dr. Safwan Moton, DO is a <strong>Board-Certified Family Medicine Physician</strong> practicing at <strong>Sugar Lakes Family Practice</strong> in Sugar Land, Texas. He brings a strong foundation in evidence-based medicine and a commitment to comprehensive primary care for patients across Fort Bend County.
                 </p>
                 <p>
                     Dr. Moton combines rigorous medical science with real-world clinical experience. 
-                    He provides care rooted in established guidelines and tailored to effective outcomes. 
+                    He provides care rooted in established guidelines and tailored to effective, long-term outcomes. 
                     This commitment to clinical excellence earned him recognition as a <strong>"Top 10% Most Cited Clinician"</strong> by Doximity.
                 </p>
             </div>
@@ -474,9 +418,9 @@
                     Dr. Moton believes that informed patients make healthier choices. He takes the time to clearly explain diagnoses and treatment options, utilizing modern tools to ensure you feel confident about your healthcare journey.
                 </p>
                 <p>
-                    <strong>Join the Community:</strong> Sign up below to be notified when Dr. Moton begins seeing patients in 2026.
+                    <strong>Now Accepting New Patients:</strong> Call Sugar Lakes Family Practice at <a href="tel:+12815652800" style="color: var(--primary-color); font-weight: 700; text-decoration: underline;">(281) 565-2800</a> to schedule your visit with Dr. Moton.
                 </p>
-                <a href="contact.html" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Join 2026 Notification List</a>
+                <a href="contact.html" class="btn" style="background-color: #1a3c5e; margin-top: 10px;">Contact & Location</a>
             </div>
             <div class="image-content reveal">
                 <img src="patient-care.webp" alt="Dr. Safwan Moton consulting with a patient in a clinical setting" width="600" height="400" loading="lazy">
@@ -488,11 +432,18 @@
             </div>
             <div class="timeline">
                 <div class="timeline-item reveal">
-                    <h3>Authority Health Family Medicine</h3>
-                    <span class="role">Residency Training • Affiliated with MSUCOM</span>
+                    <h3>Sugar Lakes Family Practice</h3>
+                    <span class="role">Attending Physician • Sugar Land, TX (2026 – Present)</span>
                     <ul>
-                        <li><strong>Current Position:</strong> PGY-3 Resident Physician.</li>
-                        <li>Extensive training in broad-spectrum Family Medicine.</li>
+                        <li>Board-Certified Family Medicine Physician providing full-spectrum primary and preventive care.</li>
+                        <li>Serving patients across Sugar Land, Rosenberg, Richmond, and greater Fort Bend County.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item reveal">
+                    <h3>Authority Health Family Medicine</h3>
+                    <span class="role">Residency Training • Affiliated with MSUCOM (Graduated June 2026)</span>
+                    <ul>
+                        <li>Completed Family Medicine Residency training in broad-spectrum primary care.</li>
                         <li>Clinical practice at the <strong>Family Medical Center of Michigan</strong> (Temperance, MI).</li>
                     </ul>
                 </div>
@@ -529,84 +480,34 @@
                 </div>
             </div>
         </section>
-        <section class="featured-insight">
-            <div class="carousel-container reveal">
-                <div class="carousel-track" id="track">
-
-                    <div class="carousel-slide active">
-                        <div class="insight-meta">Latest Article • May 2026 • #Preventive</div>
-                        <h2 class="insight-title">The Blood Pressure Paradox in the Texas Summer</h2>
-                        <div class="insight-body">
-                            <p>Working outdoors or taking a diuretic in the Fort Bend County heat can cause a dangerous double fluid drain. Learn how to prevent acute kidney injury and dangerous blood pressure drops.</p>
-                        </div>
-                        <a href="articles/blood-pressure-heat.html" class="read-more-btn" aria-label="Read Full Article about The Blood Pressure Paradox in the Texas Summer">Read Full Article</a>
-                    </div>
-
-                    <div class="carousel-slide">
-                        <div class="insight-meta">Preventive Care • Apr 2026 • #Preventive</div>
-                        <h2 class="insight-title">The "Houston Hack" for Spring Allergies</h2>
-                        <div class="insight-body">
-                            <p>Dr. Moton shares his clinical approach to distinguishing between severe pollen allergies and sinus infections, and the right way to use nasal sprays.</p>
-                        </div>
-                        <a href="articles/spring-allergies.html" class="read-more-btn" aria-label="Read Full Article about The Houston Hack for Spring Allergies">Read Full Article</a>
-                    </div>
-
-                    <div class="carousel-slide">
-                        <div class="insight-meta">Preventive Care • Mar 2026 • #Preventive</div>
-                        <h2 class="insight-title">Hurricane Season Preparedness: Managing Chronic Medications</h2>
-                        <div class="insight-body">
-                            <p>A proactive plan for ensuring you have your essential medications and insulin safely stored during Gulf Coast power outages.</p>
-                        </div>
-                        <a href="articles/hurricane-medications.html" class="read-more-btn" aria-label="Read Full Article about Hurricane Season Preparedness">Read Full Article</a>
-                    </div>
-                    
-                    <div class="carousel-slide">
-                        <div class="view-all-slide">
-                            <h2 class="insight-title">Explore the Library</h2>
-                            <p style="margin-bottom:30px;">Read insights on Pediatrics, Allergies, and Travel Medicine.</p>
-                            <a href="articles.html" class="btn" style="color:white; border-color:white;">View All Articles</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="carousel-dots">
-                    <span class="dot active" onclick="goToSlide(0)"></span>
-                    <span class="dot" onclick="goToSlide(1)"></span>
-                    <span class="dot" onclick="goToSlide(2)"></span>
-                    <span class="dot" onclick="goToSlide(3)"></span>
-                </div>
-            </div>
-        </section>
         <section id="location" class="location">
             <div class="location-container">
                 <div class="location-info reveal">
                     <span class="eyebrow">Location</span>
-                    <h2>Current Residency Practice</h2>
-                    <p style="margin-bottom:20px; color:#666;">
-                        Dr. Moton is currently seeing patients in Michigan until Summer 2026.
-                    </p>
+                    <h2>Sugar Lakes Family Practice</h2>
                     <p style="margin-bottom:20px; color:#1a3c5e; font-weight:700; border-left:3px solid #D4AF37; padding-left:15px;">
-                        Beginning Summer 2026, Dr. Moton plans to practice Family Medicine in Sugar Land, TX, serving Fort Bend County including Rosenberg and Richmond. 
-                        This information is provided for informational purposes only.
+                        Now accepting new patients in Sugar Land, TX, serving Fort Bend County including Rosenberg and Richmond.
                     </p>
                     <div class="location-details">
                         <p><strong>Address:</strong><br>
-                        8765 Lewis Ave<br>
-                        Temperance, MI 48182</p>
+                        16902 Southwest Fwy, Ste 100<br>
+                        Sugar Land, TX 77479</p>
                         <p><strong>Phone:</strong><br>
-                        (734) 847-3802</p>
-                        <p><strong>Hours:</strong><br>
+                        <a href="tel:+12815652800">(281) 565-2800</a></p>
+                        <p><strong>Practice Website:</strong><br>
+                        <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">sugarlakesfamilypractice.com</a></p>
+                        <p><strong>Office Hours:</strong><br>
                         Mon - Fri: 8:00 AM - 5:00 PM</p>
                     </div>
                 </div>
                 <div class="map-container reveal">
                     <iframe 
-                        title="Map of Family Medical Center of Michigan in Temperance, MI"
+                        title="Map of Sugar Lakes Family Practice in Sugar Land, TX"
                         width="100%" 
                         height="450" 
                         frameborder="0" 
                         style="border:0" 
-                        src="https://maps.google.com/maps?q=8765%20Lewis%20Ave%2C%20Temperance%2C%20MI%2048182&z=15&output=embed" 
+                        src="https://maps.google.com/maps?q=16902%20Southwest%20Fwy%20Ste%20100%2C%20Sugar%20Land%2C%20TX%2077479&z=15&output=embed" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
                         allowfullscreen>
@@ -622,12 +523,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
+                    Evidence-based Family Medicine for the Sugar Land and Fort Bend County communities. 
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
                 
                 <div style="margin-top:20px;">
@@ -644,7 +546,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
 
@@ -662,9 +563,7 @@
         </div>
 
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. 
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. 
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -694,20 +593,24 @@
         },
         {
           "@type": "Physician",
-          "name": "Dr. Safwan Moton",
+          "name": "Dr. Safwan Moton, DO",
           "image": "https://drmoton.com/Headshot.jpg",
-          "description": "Family Medicine Resident Physician providing evidence-based care.",
+          "description": "Board-Certified Family Medicine Physician providing evidence-based primary care at Sugar Lakes Family Practice in Sugar Land, TX.",
           "medicalSpecialty": "Family Medicine",
+          "worksFor": {
+            "@type": "MedicalClinic",
+            "name": "Sugar Lakes Family Practice",
+            "url": "https://sugarlakesfamilypractice.com"
+          },
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "8765 Lewis Ave",
-            "addressLocality": "Temperance",
-            "addressRegion": "MI",
-            "postalCode": "48182",
+            "streetAddress": "16902 Southwest Fwy, Ste 100",
+            "addressLocality": "Sugar Land",
+            "addressRegion": "TX",
+            "postalCode": "77479",
             "addressCountry": "US"
           },
-          "telephone": "+13138713751",
-          "openingDate": "2026-07-01",
+          "telephone": "+12815652800",
           "url": "https://drmoton.com",
           "sameAs": [
             "https://www.doximity.com/pub/safwan-moton-do",
@@ -730,12 +633,12 @@
           "areaServed": [
             {
               "@type": "AdministrativeArea",
-              "name": "Temperance, Michigan",
-              "sameAs": "https://en.wikipedia.org/wiki/Temperance,_Michigan"
+              "name": "Sugar Land, Texas",
+              "sameAs": "https://en.wikipedia.org/wiki/Sugar_Land,_Texas"
             },
             {
               "@type": "AdministrativeArea",
-              "name": "Fort Bend County, Texas (Future)",
+              "name": "Fort Bend County, Texas",
               "sameAs": "https://en.wikipedia.org/wiki/Fort_Bend_County,_Texas"
             }
           ],
@@ -799,65 +702,6 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-        /* --- CAROUSEL LOGIC (WITH SWIPE/DRAG) --- */
-        let currentSlide = 0;
-        const track = document.getElementById('track');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.dot');
-        let autoAdvance;
-        
-        if (track && slides.length > 0) {
-            autoAdvance = setInterval(nextSlide, 15000);
-            
-            // Swipe & Drag Events
-            let startX = 0, currentX = 0, isDragging = false;
-
-            track.addEventListener('touchstart', touchStart, {passive: true});
-            track.addEventListener('touchmove', touchMove, {passive: true});
-            track.addEventListener('touchend', touchEnd);
-            track.addEventListener('mousedown', touchStart);
-            track.addEventListener('mousemove', touchMove);
-            track.addEventListener('mouseup', touchEnd);
-            track.addEventListener('mouseleave', () => { if(isDragging) touchEnd(); });
-
-            function touchStart(e) {
-                isDragging = true;
-                startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-                track.style.transition = 'none'; 
-                resetTimer();
-            }
-
-            function touchMove(e) {
-                if (!isDragging) return;
-                currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-                const diff = currentX - startX;
-                const percentageMoved = (diff / track.clientWidth) * 100;
-                track.style.transform = `translateX(calc(-${currentSlide * 100}% + ${percentageMoved}%))`;
-            }
-
-            function touchEnd() {
-                if (!isDragging) return;
-                isDragging = false;
-                track.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
-                const diff = currentX - startX;
-                
-                if (diff < -50) nextSlide();
-                else if (diff > 50) prevSlide();
-                else updateCarousel(); 
-            }
-        }
-
-        function updateCarousel() {
-            if(!track) return;
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            slides.forEach((slide, index) => slide.classList.toggle('active', index === currentSlide));
-            dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
-        }
-        function goToSlide(n) { currentSlide = n; updateCarousel(); resetTimer(); }
-        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateCarousel(); }
-        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateCarousel(); }
-        function resetTimer() { clearInterval(autoAdvance); autoAdvance = setInterval(nextSlide, 15000); }
     </script>
 </body>
 </html>
