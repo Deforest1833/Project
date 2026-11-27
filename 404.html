@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Page Not Found | Dr. Safwan Moton</title>
+    <title>Page Not Found | Dr. Safwan Moton, DO</title>
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -28,7 +28,6 @@
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;
-            --alert-red: #8B0000;
 
             --font-heading: 'Cormorant Garamond', serif;
             --font-body: 'Lato', sans-serif;
@@ -171,7 +170,6 @@
             <a href="https://drmoton.com">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
@@ -179,13 +177,12 @@
         <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu"> ☰ </button>
     </nav>
     <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#experience">Background</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="https://drmoton.com" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main class="content-wrapper">
@@ -194,8 +191,8 @@
         <a href="https://drmoton.com" class="btn">Return Home</a>
 
         <div class="helpful-links">
-            <p>Looking for medical information?</p>
-            <a href="articles.html">Browse The Library</a>
+            <p>Looking to schedule an appointment?</p>
+            <a href="contact.html">Contact & Location</a>
         </div>
     </main>
 
@@ -204,12 +201,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
+                    Evidence-based Family Medicine for the Sugar Land and Fort&nbsp;Bend&nbsp;County communities.
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
                 <div style="margin-top:20px;">
                     <p style="margin-bottom:5px; font-weight:700; color:#D4AF37; text-transform:uppercase; letter-spacing:1px; font-size:0.75rem;">Academic Profiles</p>
@@ -224,7 +222,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
             <div>
@@ -239,9 +236,7 @@
             </div>
         </div>
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -249,7 +244,8 @@
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
                 Not medical advice. In an emergency, dial 911. |
-                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
+                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy & Terms</a> |
+                <a href="accessibility.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Accessibility</a>
             </span>
         </div>
     </footer>
@@ -263,19 +259,6 @@
             btn.setAttribute('aria-expanded', !isExpanded);
             menu.style.display = isExpanded ? 'none' : 'block';
         }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const menu = document.getElementById('mobile-menu');
-                const btn = document.querySelector('.mobile-menu-btn');
-                
-                menu.style.display = 'none';
-                if(btn) btn.setAttribute('aria-expanded', 'false');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
 </body>
 </html>
