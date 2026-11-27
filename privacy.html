@@ -11,10 +11,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Terms | Dr. Safwan Moton</title>
-    <meta name="description" content="Privacy Policy and Terms of Use for Dr. Safwan Moton's website." />
+    <title>Privacy Policy & Terms | Dr. Safwan Moton, DO</title>
+    <meta name="description" content="Privacy Policy and Terms of Use for Dr. Safwan Moton, DO's website." />
     
-    <link rel="canonical" href="https://drmoton.com/privacy">
+    <link rel="canonical" href="https://drmoton.com/privacy.html">
     
     <meta name="robots" content="noindex"> 
     
@@ -128,11 +128,13 @@
         p { margin-bottom: 20px; font-size: 1rem; color: #4a5568; }
         ul { margin-bottom: 20px; padding-left: 20px; color: #4a5568; }
         li { margin-bottom: 10px; }
+        .content-section a { color: var(--primary-color); font-weight: 700; text-decoration: underline; }
 
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
         footer h3 { color:var(--gold-accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; font-size:0.8rem; font-weight: 700; font-family: var(--font-body); }
         footer p, footer li, footer span, footer a { color: rgba(255, 255, 255, 0.9) !important; font-weight: 400; font-size: 0.9rem; }
+        footer ul { list-style: none; padding-left: 0; }
         footer li { margin-bottom: 10px; }
         .footer-content { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto; }
         
@@ -168,10 +170,9 @@
         <a href="https://drmoton.com" class="logo" style="text-decoration:none;">Dr. Safwan Moton</a>
         
         <div class="nav-links">
-            <a href="https://drmoton.com">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
@@ -181,45 +182,43 @@
     </nav>
 
     <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main>
         <header class="page-header">
             <h1>Privacy Policy & Terms of Use</h1>
-            <p style="text-align:center;">Last Updated: January 30, 2026</p>
+            <p style="text-align:center;">Last Updated: November 27, 2026</p>
         </header>
 
         <div class="content-section">
             
             <h2>1. Introduction</h2>
             <p>
-                Welcome to Dr. Safwan Moton's website. We respect your privacy and are committed to protecting your personal data. 
+                Welcome to Dr. Safwan Moton, DO's website. We respect your privacy and are committed to protecting your personal data. 
                 This document outlines our Privacy Policy and the Terms of Use governing your interaction with this website.
             </p>
 
             <h2>2. Terms of Use & Medical Disclaimer</h2>
-            <p><strong>No Medical Advice:</strong> The content on this website is for informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
-            <p><strong>No Doctor-Patient Relationship:</strong> Using this website, reading our articles, or sending us an email does not create a doctor-patient relationship between you and Dr. Safwan Moton.</p>
-            <p><strong>Limitation of Liability:</strong> To the fullest extent permitted by applicable law, Dr. Safwan Moton and his affiliates shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use this website or its content.</p>
+            <p><strong>No Medical Advice:</strong> The content on this website is for educational and informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            <p><strong>No Doctor-Patient Relationship:</strong> Using this website does not create a doctor-patient relationship between you and Dr. Safwan Moton, DO. To schedule an appointment, please contact Sugar Lakes Family Practice directly.</p>
+            <p><strong>Limitation of Liability:</strong> To the fullest extent permitted by applicable law, Dr. Safwan Moton, DO and his affiliates shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use this website or its content.</p>
 
             <h2>3. Information We Collect</h2>
-            <p>We may collect, use, store, and transfer different kinds of personal data about you which we have grouped together follows:</p>
+            <p>This website is an informational site and does not include online forms or patient portals. We may collect limited, non-personally identifiable technical data as follows:</p>
             <ul>
                 <li><strong>Technical Data:</strong> Includes internet protocol (IP) address, browser type and version, time zone setting, and operating system.</li>
-                <li><strong>Usage Data:</strong> Includes information about how you use our website.</li>
-                <li><strong>Communication Data:</strong> Includes any information you voluntarily provide via email or contact forms.</li>
+                <li><strong>Usage Data:</strong> Includes anonymous information about how visitors navigate and use our website.</li>
             </ul>
 
             <h2>4. How We Use Your Information</h2>
             <ul>
                 <li>To improve our website and ensure content is presented in the most effective manner.</li>
-                <li>To respond to your inquiries if you contact us directly.</li>
                 <li>To analyze site traffic and usage trends (via Google Analytics).</li>
             </ul>
 
@@ -235,29 +234,31 @@
 
             <h2>6. Third-Party Services</h2>
             <ul>
-                <li><strong>Google Analytics:</strong> Collects anonymous usage data.</li>
-                <li><strong>YouTube:</strong> We embed videos from YouTube, which may track your interaction.</li>
+                <li><strong>Google Analytics:</strong> Collects anonymous usage data to help us understand website traffic.</li>
+                <li><strong>Google Maps:</strong> Embedded maps on our location and contact pages are provided by Google and subject to Google's privacy policy.</li>
+                <li><strong>YouTube:</strong> We link to educational videos hosted on YouTube, which is governed by Google/YouTube's privacy policies.</li>
             </ul>
 
             <h2>7. External Links</h2>
             <p>
-                Our Service may contain links to external sites (such as the CDC, AHA, or other medical resources) that are not operated by us. 
+                Our website may contain links to external sites (such as Sugar Lakes Family Practice, AAFP, AHA, or other medical resources) that are not operated by us. 
                 We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
             </p>
 
             <h2>8. Children's Privacy</h2>
             <p>
-                Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.
+                Our website does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.
             </p>
 
             <h2>9. Contact Us</h2>
-            <p>If you have any questions about this privacy policy, terms of use, or our practices, please contact us at:</p>
+            <p>If you have any questions about this privacy policy, terms of use, or our practices, please contact:</p>
             <p>
-                <strong>Authority Health GME</strong><br>
-                Attn: Dr. Safwan Moton<br>
-                3031 W. Grand Boulevard, Suite 600<br>
-                Detroit, MI 48202<br>
-                Phone: (313) 871-3751
+                <strong>Sugar Lakes Family Practice</strong><br>
+                Attn: Dr. Safwan Moton, DO<br>
+                16902 Southwest Fwy, Ste 100<br>
+                Sugar Land, TX 77479<br>
+                Phone: <a href="tel:+12815652800">(281) 565-2800</a><br>
+                Website: <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">sugarlakesfamilypractice.com</a>
             </p>
 
         </div>
@@ -269,12 +270,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities. 
+                    Evidence-based Family Medicine for the Sugar Land and Fort&nbsp;Bend&nbsp;County communities. 
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
                 
                 <div style="margin-top:20px;">
@@ -291,7 +293,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
 
@@ -309,9 +310,7 @@
         </div>
 
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan. 
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time. 
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -336,19 +335,6 @@
             btn.setAttribute('aria-expanded', !isExpanded);
             menu.style.display = isExpanded ? 'none' : 'block';
         }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const menu = document.getElementById('mobile-menu');
-                const btn = document.querySelector('.mobile-menu-btn');
-                
-                menu.style.display = 'none';
-                if(btn) btn.setAttribute('aria-expanded', 'false');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
 </body>
 </html>
