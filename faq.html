@@ -11,13 +11,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient FAQ | Sugar Land Family Medicine | Dr. Safwan Moton</title>
-    <meta name="description" content="Frequently asked questions about Dr. Safwan Moton's future clinical services in Sugar Land and Rosenberg, TX. Arriving Summer 2026."
-    />
+    <title>Patient FAQ | Sugar Land Family Medicine | Dr. Safwan Moton, DO</title>
+    <meta name="description" content="Frequently asked questions about Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients from Fort Bend County." />
 
     <link rel="canonical" href="https://drmoton.com/faq.html">
-    <meta property="og:title" content="Patient FAQ | Dr. Safwan Moton">
-    <meta property="og:description" content="Resident Physician serving Sugar Land starting Summer 2026. Evidence-based care with a personal connection to Fort Bend County.">
+    <meta property="og:title" content="Patient FAQ | Dr. Safwan Moton, DO">
+    <meta property="og:description" content="Frequently asked questions about appointments, services, and insurance with Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,8 +24,8 @@
     <meta property="og:url" content="https://drmoton.com/faq.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Patient FAQ | Dr. Safwan Moton">
-    <meta name="twitter:description" content="Frequently asked questions about Dr. Safwan Moton's future clinical services in Sugar Land and Rosenberg, TX.">
+    <meta name="twitter:title" content="Patient FAQ | Dr. Safwan Moton, DO">
+    <meta name="twitter:description" content="Frequently asked questions about appointments, services, and insurance with Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -42,7 +41,6 @@
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;
-            --alert-red: #8B0000;
 
             --font-heading: 'Cormorant Garamond', serif;
             --font-body: 'Lato', sans-serif;
@@ -86,7 +84,7 @@
         /* HEADER */
         .page-header { padding: 160px 5% 60px 5%; text-align: center; }
         .page-header h1 { font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color); margin-bottom: 10px; }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
+        .page-header p { max-width: 650px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
 
         .last-updated {
             font-size: 0.75rem;
@@ -98,22 +96,12 @@
             display: block;
         }
 
-        /* DISCLAIMER BOX */
-        .legal-notice {
-            background-color: #fff0f0;
-            border-left: 5px solid var(--alert-red);
-            padding: 20px;
-            margin: 0 auto 40px auto;
-            max-width: 800px;
-            font-size: 0.9rem;
-            color: var(--alert-red);
-        }
-
         /* FAQ CONTAINER */
         .faq-container { max-width: 800px; margin: 0 auto; padding: 0 20px 100px 20px; }
         .faq-item { background: white; padding: 30px; margin-bottom: 20px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .faq-question { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 600; }
         .faq-answer { font-size: 1.1rem; color: #4a5568; }
+        .faq-answer a { color: var(--primary-color); font-weight: 700; text-decoration: underline; }
 
         /* FOOTER - MATCHING HOMEPAGE STYLE */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
@@ -158,61 +146,53 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html" style="color: var(--primary-color);">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
         </div>
-        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu">  ☰  </button>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu"> ☰ </button>
     </nav>
     <div id="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#experience">Background</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main>
         <header class="page-header">
             <h1>Common Questions</h1>
-            <p>Information regarding future clinical plans for 2026.</p>
-            <span class="last-updated">Last Updated: January 2026</span>
+            <p>Frequently asked questions about appointments, services, and care at Sugar Lakes Family Practice.</p>
+            <span class="last-updated">Last Updated: November 2026</span>
         </header>
-        <div class="legal-notice">
-            <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan.
-            He is <strong>not</strong> currently licensed to practice medicine in Texas and is <strong>not</strong> soliciting patients for current medical care.
-            The information below reflects <strong>future intentions</strong> for his medical services upon completion of residency and Texas licensure in Summer 2026.
-        </div>
+
         <div class="faq-container">
 
             <div class="faq-item">
                 <div class="faq-question">Are you currently accepting new patients in Sugar Land or Rosenberg?</div>
                 <div class="faq-answer">
-                    <strong>No.</strong> I am currently completing my residency training in Michigan.
-                    I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the <strong>Summer of 2026</strong>.
-                    I am not currently practicing medicine in the state of Texas.
+                    <strong>Yes.</strong> I am currently accepting new patients at <strong>Sugar Lakes Family Practice</strong> in Sugar Land, TX, serving families across Fort&nbsp;Bend&nbsp;County including Rosenberg and Richmond. To schedule an appointment, please call our office at <a href="tel:+12815652800">(281) 565-2800</a>.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">What services will you provide?</div>
+                <div class="faq-question">What services do you provide?</div>
                 <div class="faq-answer">
-                    I intend to provide comprehensive primary care for the whole family (children and adults).
-                    This will include chronic disease management (Diabetes, Hypertension), preventive screenings, and acute care for minor illnesses.
+                    I provide comprehensive primary care for the whole family (children and adults).
+                    This includes chronic disease management (such as diabetes and hypertension), preventive screenings, annual wellness exams, and acute care for minor illnesses.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Will you provide Telemedicine or Virtual Visits?</div>
+                <div class="faq-question">Do you provide Telemedicine or Virtual Visits?</div>
                 <div class="faq-answer">
-                    Upon beginning my clinical work in Texas, I plan to offer secure telemedicine options for appropriate follow-up visits and lab reviews to provide convenience for patients in the Greater Houston area.
+                    Yes. We offer secure telemedicine options for appropriate follow-up visits and lab reviews to provide convenience for patients in the Greater Houston area. Please call the office at <a href="tel:+12815652800">(281) 565-2800</a> to confirm whether your visit is eligible for telemedicine.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Will you perform Sports Physicals?</div>
+                <div class="faq-question">Do you perform Sports Physicals?</div>
                 <div class="faq-answer">
-                    Yes. I intend to offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD and Fort Bend ISD starting in Summer 2026.
+                    Yes. I offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD, Fort&nbsp;Bend&nbsp;ISD, and surrounding school districts.
                 </div>
             </div>
             <div class="faq-item">
@@ -225,13 +205,13 @@
             <div class="faq-item">
                 <div class="faq-question">Do you provide Obstetrics (OB) care?</div>
                 <div class="faq-answer">
-                    No. While I will provide general women's health and gynecological care, I do not intend to practice obstetrics or deliver babies.
+                    No. While I provide general women's health and gynecological care, I do not practice obstetrics or deliver babies.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">What insurance plans will you accept?</div>
+                <div class="faq-question">What insurance plans do you accept?</div>
                 <div class="faq-answer">
-                    Insurance credentialing will occur closer to my start date in 2026. Once I have finalized my clinical location, I will update this website with a full list of accepted insurance providers.
+                    Sugar Lakes Family Practice accepts most major insurance plans. Because coverage can vary by specific policy, please call our office at <a href="tel:+12815652800">(281) 565-2800</a> or visit <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">sugarlakesfamilypractice.com</a> to verify your plan before scheduling.
                 </div>
             </div>
         </div>
@@ -243,12 +223,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
+                    Evidence-based Family Medicine for the Sugar Land and Fort&nbsp;Bend&nbsp;County communities.
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
 
                 <div style="margin-top:20px;">
@@ -264,7 +245,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
             <div>
@@ -279,9 +259,7 @@
             </div>
         </div>
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -289,7 +267,8 @@
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
                 Not medical advice. In an emergency, dial 911. |
-                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
+                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy & Terms</a> |
+                <a href="accessibility.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Accessibility</a>
             </span>
         </div>
     </footer>
@@ -303,19 +282,6 @@
             btn.setAttribute('aria-expanded', !isExpanded);
             menu.style.display = isExpanded ? 'none' : 'block';
         }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const menu = document.getElementById('mobile-menu');
-                const btn = document.querySelector('.mobile-menu-btn');
-                
-                menu.style.display = 'none';
-                if(btn) btn.setAttribute('aria-expanded', 'false');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
     <script type="application/ld+json">
     {
@@ -342,36 +308,47 @@
             "name": "Are you currently accepting new patients in Sugar Land or Rosenberg?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. I am currently completing my residency training in Michigan. I intend to begin practicing in the Fort Bend County area (Sugar Land, Rosenberg, Richmond) in the Summer of 2026."
+              "text": "Yes. Dr. Safwan Moton, DO is currently accepting new patients at Sugar Lakes Family Practice in Sugar Land, TX, serving Fort Bend County including Rosenberg and Richmond. Call (281) 565-2800 to schedule."
             }
           }, {
             "@type": "Question",
-            "name": "What services will you provide?",
+            "name": "What services do you provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "I intend to provide comprehensive primary care for the whole family (children and adults), including chronic disease management, preventive screenings, and acute care."
+              "text": "Dr. Moton provides comprehensive primary care for the whole family (children and adults), including chronic disease management, preventive screenings, annual wellness exams, and acute care for minor illnesses."
             }
           }, {
             "@type": "Question",
-            "name": "Will you provide Telemedicine or Virtual Visits?",
+            "name": "Do you provide Telemedicine or Virtual Visits?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Upon beginning my clinical work in Texas, I plan to offer secure telemedicine options for appropriate follow-up visits and lab reviews."
+              "text": "Yes. Secure telemedicine options are available for appropriate follow-up visits and lab reviews. Call (281) 565-2800 to confirm visit eligibility."
             }
           }, {
             "@type": "Question",
-            "name": "Will you perform Sports Physicals?",
+            "name": "Do you perform Sports Physicals?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. I intend to offer UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD and Fort Bend ISD starting in Summer 2026."
+              "text": "Yes. Dr. Moton offers UIL-compliant Pre-Participation Physical Evaluations for student athletes in Lamar CISD, Fort Bend ISD, and surrounding school districts."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What insurance plans do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sugar Lakes Family Practice accepts most major insurance plans. Please call (281) 565-2800 or visit sugarlakesfamilypractice.com to verify your specific plan."
             }
           }],
           "datePublished": "2025-01-01",
-          "dateModified": "2026-01-16",
+          "dateModified": "2026-11-27",
           "author": {
             "@type": "Physician",
-            "name": "Dr. Safwan Moton",
-            "openingDate": "2026-07-01"
+            "name": "Dr. Safwan Moton, DO",
+            "worksFor": {
+              "@type": "MedicalClinic",
+              "name": "Sugar Lakes Family Practice",
+              "url": "https://sugarlakesfamilypractice.com"
+            }
           }
         }
       ]
