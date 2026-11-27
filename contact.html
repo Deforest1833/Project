@@ -11,12 +11,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & 2026 Updates | Dr. Safwan Moton</title>
-    <meta name="description" content="Sign up for updates regarding Dr. Safwan Moton's future family medicine practice in Sugar Land and Fort Bend County (Summer 2026)." />
+    <title>Contact & Appointments | Dr. Safwan Moton, DO</title>
+    <meta name="description" content="Schedule an appointment with Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX. Call (281) 565-2800. Now accepting new patients." />
 
     <link rel="canonical" href="https://drmoton.com/contact.html">
-    <meta property="og:title" content="Contact & 2026 Updates | Dr. Safwan Moton">
-    <meta property="og:description" content="Sign up for updates regarding Dr. Safwan Moton's future family medicine practice in Sugar Land and Fort Bend County (Summer 2026).">
+    <meta property="og:title" content="Contact & Appointments | Dr. Safwan Moton, DO">
+    <meta property="og:description" content="Schedule an appointment with Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX. Call (281) 565-2800.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -24,8 +24,8 @@
     <meta property="og:url" content="https://drmoton.com/contact.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact | Dr. Safwan Moton">
-    <meta name="twitter:description" content="Sign up for updates regarding Dr. Safwan Moton's future family medicine practice in Sugar Land and Fort Bend County.">
+    <meta name="twitter:title" content="Contact & Appointments | Dr. Safwan Moton, DO">
+    <meta name="twitter:description" content="Schedule an appointment with Dr. Safwan Moton, DO at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -110,57 +110,106 @@
             font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
             margin-bottom: 10px;
         }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
-
-        /* --- LEGAL DISCLAIMER BOX --- */
-        .legal-notice {
-            background-color: #fff0f0;
-            border-left: 5px solid var(--alert-red);
-            padding: 20px;
-            margin: 40px auto 20px auto;
-            max-width: 800px;
-            font-size: 0.9rem;
-            color: var(--alert-red);
-        }
+        .page-header p { max-width: 650px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
 
         /* --- CONTACT CONTENT --- */
         .contact-container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px 100px 20px;
+            padding: 60px 5% 100px 5%;
         }
-        .form-wrapper {
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: stretch;
+        }
+        .contact-card {
             background: #ffffff;
-            padding: 20px;
+            padding: 45px 40px;
             border-radius: 2px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            min-height: 800px;
+            border-top: 4px solid var(--primary-color);
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
         }
-        iframe {
-            width: 100%;
-            max-width: 700px;
-            height: 800px;
-            border: none;
-        }
-
-        /* --- SUBMISSION DISCLAIMER --- */
-        .submission-disclaimer {
-            margin-top: 30px;
-            padding: 20px;
-            border-top: 1px solid #eee;
-            max-width: 700px;
-            width: 100%;
-            font-size: 0.85rem;
-            color: #718096;
-            line-height: 1.6;
-        }
-        .submission-disclaimer strong {
+        .contact-card h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
             color: var(--primary-color);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .status-tag {
+            display: inline-block;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            color: var(--primary-color);
+            border-left: 3px solid var(--gold-accent);
+            padding-left: 12px;
+            margin-bottom: 25px;
+        }
+        .contact-item {
+            margin-bottom: 20px;
+        }
+        .contact-item strong {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-color);
+            margin-bottom: 4px;
+        }
+        .contact-item a {
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        .btn-primary {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 15px 32px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid var(--primary-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+        .emergency-note {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: var(--alert-red);
+            font-weight: 700;
+        }
+        .map-wrapper {
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            min-height: 450px;
+            height: 100%;
+            width: 100%;
+        }
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border: 0;
+            display: block;
         }
 
         /* --- FOOTER --- */
@@ -191,11 +240,12 @@
         }
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .map-wrapper, .map-wrapper iframe { min-height: 350px; }
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
             footer { text-align: center; }
         }
     </style>
-    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
     <nav>
@@ -204,7 +254,6 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html" style="color: var(--primary-color);">Contact</a>
@@ -212,45 +261,65 @@
         <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu"> ☰ </button>
     </nav>
     <div id="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#experience">Background</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main>
         <header class="page-header">
-            <h1>Contact & Updates</h1>
-            <p>Join the notification list for Dr. Moton's arrival in Fort Bend County in Summer 2026.</p>
+            <h1>Contact & Appointments</h1>
+            <p>Dr. Safwan Moton, DO sees patients at Sugar Lakes Family Practice in Sugar Land, serving Fort&nbsp;Bend&nbsp;County.</p>
         </header>
 
-        <div class="legal-notice">
-            <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in Michigan.
-            He is <strong>not</strong> currently licensed in Texas and is not soliciting patients at this time. 
-            This form is for <strong>administrative outreach and notification purposes only</strong> regarding future services.
-        </div>
-
         <div class="contact-container">
-            <div class="form-wrapper">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde8fjHqDuyy8ArfxuwUTBp9YMJC06paet29mHZvuiIcCw9YA/viewform?embedded=true" title="Join 2026 Notification List">Loading…</iframe>
-                
-                <div class="submission-disclaimer">
-                    <p><strong>Security & Privacy Notice:</strong></p>
-                    <p>
-                        This contact form is intended solely for administrative inquiries and mailing list sign-ups. 
-                        It is <strong>not</strong> a secure medical portal and is <strong>not</strong> intended for the transmission of Protected Health Information (PHI). 
-                        Information submitted via this form is not HIPAA-compliant. 
-                    </p>
-                    <p style="margin-top:10px;">
-                        Please do <strong>not</strong> include sensitive medical details, symptoms, or personal health records. 
-                        Submitting this form does not establish a physician-patient relationship.
-                    </p>
-                    <p style="margin-top:10px; color: var(--alert-red); font-weight: 700;">
-                        If you are experiencing a medical emergency, dial 911 immediately.
-                    </p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div>
+                        <h2>Sugar Lakes Family Practice</h2>
+                        <div class="status-tag">Now Accepting New Patients</div>
+
+                        <div class="contact-item">
+                            <strong>Phone</strong>
+                            <a href="tel:+12815652800" style="font-size: 1.2rem;">(281) 565-2800</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Practice Website</strong>
+                            <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">sugarlakesfamilypractice.com</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Address</strong>
+                            16902 Southwest Fwy, Ste 100<br>
+                            Sugar Land, TX 77479
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Practice Hours</strong>
+                            Mon – Fri: 8:00 AM – 5:00 PM<br>
+                            <span style="font-size: 0.85rem; color: var(--accent-color); font-style: italic;">(General clinic hours; individual physician schedules may vary. Please call to schedule.)</span>
+                        </div>
+
+                        <a href="tel:+12815652800" class="btn-primary">Call to Schedule</a>
+                    </div>
+
+                    <div class="emergency-note">
+                        If you are experiencing a medical emergency, please dial 911 immediately.
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe 
+                        title="Map of Sugar Lakes Family Practice in Sugar Land, TX"
+                        src="https://maps.google.com/maps?q=16902%20Southwest%20Fwy%20Ste%20100%2C%20Sugar%20Land%2C%20TX%2077479&z=15&output=embed" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -261,12 +330,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
+                    Evidence-based Family Medicine for the Sugar Land and Fort&nbsp;Bend&nbsp;County communities.
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
                 <div style="margin-top:20px;">
                     <p style="margin-bottom:5px; font-weight:700; color:#D4AF37; text-transform:uppercase; letter-spacing:1px; font-size:0.75rem;">Academic Profiles</p>
@@ -281,7 +351,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
             <div>
@@ -296,9 +365,7 @@
             </div>
         </div>
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -306,10 +373,55 @@
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
                 Not medical advice. In an emergency, dial 911. |
-                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
+                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy & Terms</a> |
+                <a href="accessibility.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Accessibility</a>
             </span>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drmoton.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://drmoton.com/contact.html"
+          }]
+        },
+        {
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Physician",
+            "name": "Dr. Safwan Moton, DO",
+            "medicalSpecialty": "Family Medicine",
+            "worksFor": {
+              "@type": "MedicalClinic",
+              "name": "Sugar Lakes Family Practice",
+              "url": "https://sugarlakesfamilypractice.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "16902 Southwest Fwy, Ste 100",
+              "addressLocality": "Sugar Land",
+              "addressRegion": "TX",
+              "postalCode": "77479",
+              "addressCountry": "US"
+            },
+            "telephone": "+12815652800",
+            "url": "https://drmoton.com/contact.html"
+          }
+        }
+      ]
+    }
+    </script>
     <script>
         // Mobile Menu with Accessibility updates
         function toggleMenu() {
@@ -320,19 +432,6 @@
             btn.setAttribute('aria-expanded', !isExpanded);
             menu.style.display = isExpanded ? 'none' : 'block';
         }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const menu = document.getElementById('mobile-menu');
-                const btn = document.querySelector('.mobile-menu-btn');
-                
-                menu.style.display = 'none';
-                if(btn) btn.setAttribute('aria-expanded', 'false');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
 </body>
 </html>
