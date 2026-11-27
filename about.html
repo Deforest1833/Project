@@ -11,13 +11,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Dr. Safwan Moton | Resident Physician</title>
-    <meta name="description" content="Meet Dr. Safwan Moton, a Family Medicine Resident Physician returning to serve the Sugar Land and Fort Bend County community in 2026."
-    />
+    <title>About Dr. Safwan Moton, DO | Board-Certified Family Medicine Physician</title>
+    <meta name="description" content="Meet Dr. Safwan Moton, DO, a Board-Certified Family Medicine Physician practicing at Sugar Lakes Family Practice in Sugar Land, TX. Now accepting new patients." />
 
     <link rel="canonical" href="https://drmoton.com/about.html">
-    <meta property="og:title" content="About Dr. Safwan Moton">
-    <meta property="og:description" content="Resident Physician serving Sugar Land starting Summer 2026. Evidence-based care with a personal connection to Fort Bend County.">
+    <meta property="og:title" content="About Dr. Safwan Moton, DO">
+    <meta property="og:description" content="Board-Certified Family Medicine Physician at Sugar Lakes Family Practice in Sugar Land, TX. Evidence-based care with a personal connection to Fort Bend County.">
     <meta property="og:image" content="https://drmoton.com/social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,8 +24,8 @@
     <meta property="og:url" content="https://drmoton.com/about.html">
     <meta property="og:type" content="profile">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Dr. Safwan Moton | Resident Physician">
-    <meta name="twitter:description" content="A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land and Fort Bend County.">
+    <meta name="twitter:title" content="About Dr. Safwan Moton, DO | Board-Certified Family Medicine Physician">
+    <meta name="twitter:description" content="Board-Certified Family Medicine Physician bringing evidence-based primary care to Sugar Land and Fort Bend County at Sugar Lakes Family Practice.">
     <meta name="twitter:image" content="https://drmoton.com/social-share.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -38,12 +37,11 @@
         /* --- COPYING THE MAIN THEME --- */
         :root {
             --primary-color: #1a3c5e;
-            --accent-color: #6c7a89;
+            --accent-color: #4a5568; /* Updated for WCAG AA Contrast */
             --bg-cream: #f2f2eb;
             --bg-white: #ffffff;
             --text-dark: #2c3e50;
             --gold-accent: #D4AF37;
-            --alert-red: #8B0000;
 
             --font-heading: 'Cormorant Garamond', serif;
             --font-body: 'Lato', sans-serif;
@@ -80,7 +78,15 @@
             color: var(--accent-color); font-weight: 700;
         }
         .nav-links a:hover { color: var(--primary-color); }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            padding: 0;
+        }
 
         #mobile-menu {
             display: none; position: fixed; top: 70px; left: 0; width: 100%;
@@ -102,7 +108,7 @@
             font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary-color);
             margin-bottom: 10px;
         }
-        .page-header p { max-width: 600px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
+        .page-header p { max-width: 650px; margin: 0 auto; color: var(--accent-color); font-weight: 700; }
         
         /* --- CONTENT SECTIONS --- */
         .content-section {
@@ -123,27 +129,27 @@
         .bio-image {
             position: relative;
             z-index: 1;
-            max-width: 400px; /* Restrict container width so blue offset matches the image */
+            max-width: 400px;
             width: 100%;
         }
         /* The Blue Shape Behind the Image */
         .bio-image::after {
             content: '';
             position: absolute;
-            bottom: -20px;  /* Pushes it down */
-            right: -20px;   /* Pushes it right */
+            bottom: -20px;
+            right: -20px;
             width: 100%;
             height: 100%;
-            background-color: var(--primary-color); /* The Navy Blue Color */
-            border-radius: 40px 4px 40px 4px; /* Matches the image shape */
-            z-index: -1; /* Keeps it behind the photo */
+            background-color: var(--primary-color);
+            border-radius: 40px 4px 40px 4px;
+            z-index: -1;
             transition: all 0.4s ease;
         }
         .bio-image img {
             width: 100%;
             border-radius: 40px 4px 40px 4px;
             position: relative;
-            z-index: 2; /* Keeps image in front */
+            z-index: 2;
             display: block;
             transition: all 0.4s ease;
         }
@@ -152,13 +158,13 @@
         @media (hover: hover) {
             .bio-image:hover img {
                 border-radius: 4px;
-                transform: translate(-5px, -5px); /* Lifts image up and left slightly */
+                transform: translate(-5px, -5px);
             }
             .bio-image:hover::after {
                 border-radius: 4px;
-                background-color: var(--gold-accent); /* Blue shifts to gold on hover */
+                background-color: var(--gold-accent);
                 bottom: -25px;
-                right: -25px; /* Pushes the shadow further out */
+                right: -25px;
             }
         }
 
@@ -168,6 +174,7 @@
         }
 
         .bio-text p { margin-bottom: 20px; font-size: 1.1rem; }
+        .bio-text a { color: var(--primary-color); font-weight: 700; text-decoration: underline; }
         .credentials-box {
             background: white;
             padding: 40px;
@@ -195,16 +202,6 @@
         .credential-year {
             font-size: 0.85rem; color: var(--accent-color); font-weight: 700; display: block;
             text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;
-        }
-        /* --- LEGAL DISCLAIMER BOX --- */
-        .legal-notice {
-            background-color: #fff0f0;
-            border-left: 5px solid var(--alert-red);
-            padding: 20px;
-            margin: 0 auto 40px auto;
-            max-width: 800px;
-            font-size: 0.9rem;
-            color: var(--alert-red);
         }
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: left; }
@@ -235,7 +232,7 @@
         @media (max-width: 900px) {
             .nav-links { display: none; } .mobile-menu-btn { display: block; }
             .bio-grid { grid-template-columns: 1fr; }
-            .bio-image { margin: 0 auto; justify-self: center; } /* Centers the image nicely on mobile */
+            .bio-image { margin: 0 auto; justify-self: center; }
             .footer-content { grid-template-columns: 1fr !important; text-align: center !important; }
             footer { text-align: center; }
         }
@@ -249,38 +246,32 @@
             <a href="https://drmoton.com">Home</a>
             <a href="about.html" style="color: var(--primary-color);">About</a>
             <a href="index.html#experience">Background</a>
-            <a href="articles.html">Articles</a>
             <a href="faq.html">FAQ</a>
             <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
         </div>
 
-        <div class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0"> ☰ </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu"> ☰ </button>
     </nav>
     <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="faq.html">FAQ</a>
-        <a href="index.html#location">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="https://drmoton.com" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main>
         <header class="page-header">
             <h1>About Dr. Moton</h1>
-            <p>A Resident Physician dedicated to bringing evidence-based family medicine home to Sugar Land.</p>
+            <p>Board-Certified Family Medicine Physician bringing evidence-based primary care home to Sugar Land and Fort&nbsp;Bend&nbsp;County.</p>
         </header>
         <div class="content-section">
 
-            <div class="legal-notice">
-                <strong>IMPORTANT NOTICE:</strong> Dr. Safwan Moton is currently a Resident Physician licensed in the state of Michigan.
-                He is <strong>not</strong> currently licensed to practice medicine in Texas.
-                The information below reflects <strong>future intentions</strong> for his medical services in Summer 2026.
-            </div>
             <div class="bio-grid">
                 <div class="bio-image">
-                    <img src="Headshot.jpg" alt="Dr. Safwan Moton, Resident Physician" width="400" height="500" loading="lazy">
+                    <img src="Headshot.jpg" alt="Dr. Safwan Moton, DO - Board-Certified Family Medicine Physician" width="400" height="500" loading="lazy">
                 </div>
 
                 <div class="bio-text">
@@ -291,11 +282,10 @@
                     </p>
                     <p>
                         I pursued my medical training at Nova Southeastern University's Dr. Kiran C. Patel College of Osteopathic Medicine, followed by rigorous residency training with Authority Health in Michigan.
-                        While my training has taken me across the country, my goal has always been to return to Fort Bend County.
+                        While my training took me across the country, my goal was always to return to Fort&nbsp;Bend&nbsp;County.
                     </p>
                     <p>
-                        My intention is to join an established outpatient clinic in the Sugar Land or Rosenberg area where I can contribute to the community that raised me.
-                        While my specific practice location is not yet finalized, my commitment to serving the families of this region is certain.
+                        Today, I am proud to serve the community that raised me as an attending physician at <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">Sugar Lakes Family Practice</a> in Sugar Land. I am currently accepting new patients and look forward to partnering with families across Sugar Land, Rosenberg, Richmond, and greater Fort&nbsp;Bend&nbsp;County.
                     </p>
                 </div>
             </div>
@@ -303,7 +293,12 @@
                 <h3>Education & Credentials</h3>
                 <ul class="credential-list">
                     <li>
-                        <span class="credential-year">Current (2026 Completion)</span>
+                        <span class="credential-year">2026 – Present</span>
+                        <strong>Attending Physician — Board-Certified Family Medicine</strong><br>
+                        Sugar Lakes Family Practice • Sugar Land, TX
+                    </li>
+                    <li>
+                        <span class="credential-year">Completed June 2026</span>
                         <strong>Family Medicine Residency</strong><br>
                         Authority Health GME (Affiliated with Michigan State University COM)<br>
                         <em>Appointed Clinical Faculty, Statewide Campus System</em>
@@ -358,12 +353,13 @@
             <div>
                 <div class="logo" style="color:white; margin-bottom:20px; font-size:1.4rem;">Dr. Safwan Moton</div>
                 <p style="font-size:0.9rem; opacity:0.8; line-height:1.6;">
-                    Evidence-based Family Medicine for the Sugar Land and Rosenberg communities.
+                    Evidence-based Family Medicine for the Sugar Land and Fort&nbsp;Bend&nbsp;County communities.
                     Dedicated to continuity of care and long-term health outcomes.
                 </p>
                 <div style="margin-top:20px;">
-                    <p style="margin-bottom:5px;"><strong>Residency Contact:</strong><br>Authority Health GME</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+13138713751" style="color:white; text-decoration:none;">(313) 871-3751</a></p>
+                    <p style="margin-bottom:5px;"><strong>Practice:</strong><br>Sugar Lakes Family Practice</p>
+                    <p style="margin-bottom:5px;"><strong>Phone:</strong><br><a href="tel:+12815652800" style="color:white; text-decoration:none;">(281) 565-2800</a></p>
+                    <p><strong>Website:</strong><br><a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration:underline;">sugarlakesfamilypractice.com</a></p>
                 </div>
 
                 <div style="margin-top:20px;">
@@ -379,7 +375,6 @@
                     <li><a href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html" target="_blank" rel="noopener noreferrer">AAFP Vaccine Schedules</a></li>
                     <li><a href="https://www.heart.org/en/-/media/Healthy-Living-Files/Infographics/Deliciously_Balanced_Plate_Infographic.pdf?sc_lang=en" target="_blank" rel="noopener noreferrer">Heart Healthy Plate (AHA)</a></li>
                     <li><a href="https://www.myplate.gov/myplate-plan" target="_blank" rel="noopener noreferrer">USDA MyPlate Plan</a></li>
-                    <li><a href="articles.html">Health Articles</a></li>
                 </ul>
             </div>
             <div>
@@ -394,9 +389,7 @@
             </div>
         </div>
         <div class="legal-footer">
-            <strong>LEGAL NOTICE:</strong> Dr. Safwan Moton is a Resident Physician currently licensed to practice medicine in the State of Michigan.
-            He is not currently licensed in Texas and is not soliciting patients for medical services in Texas at this time.
-            All information regarding future clinical services in Fort Bend County is for informational purposes only regarding anticipated services in Summer 2026.
+            <strong>Notice:</strong> Information on this website is for educational and informational purposes only and does not constitute medical advice or establish a physician-patient relationship. For appointments or medical inquiries, please call Sugar Lakes Family Practice at (281) 565-2800.
             <br><br>
             <strong>Funding:</strong> This website is self-funded. No external sponsorship influences the content.
         </div>
@@ -404,14 +397,19 @@
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
                 Not medical advice. In an emergency, dial 911. |
-                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy</a>
+                <a href="privacy.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Privacy Policy & Terms</a> |
+                <a href="accessibility.html" style="color:inherit; text-decoration:underline; font-size:inherit;">Accessibility</a>
             </span>
         </div>
     </footer>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            const btn = document.querySelector('.mobile-menu-btn');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            
+            btn.setAttribute('aria-expanded', !isExpanded);
+            menu.style.display = isExpanded ? 'none' : 'block';
         }
     </script>
     <script type="application/ld+json">
@@ -436,9 +434,22 @@
           "@type": "AboutPage",
           "mainEntity": {
             "@type": "Physician",
-            "name": "Dr. Safwan Moton",
+            "name": "Dr. Safwan Moton, DO",
             "medicalSpecialty": "Family Medicine",
-            "openingDate": "2026-07-01",
+            "worksFor": {
+              "@type": "MedicalClinic",
+              "name": "Sugar Lakes Family Practice",
+              "url": "https://sugarlakesfamilypractice.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "16902 Southwest Fwy, Ste 100",
+              "addressLocality": "Sugar Land",
+              "addressRegion": "TX",
+              "postalCode": "77479",
+              "addressCountry": "US"
+            },
+            "telephone": "+12815652800",
             "alumniOf": [
               {
                 "@type": "CollegeOrUniversity",
@@ -449,13 +460,6 @@
                 "@type": "CollegeOrUniversity",
                 "name": "University of Houston",
                 "sameAs": "https://en.wikipedia.org/wiki/University_of_Houston"
-              }
-            ],
-            "affiliation": [
-              {
-                "@type": "Organization",
-                "name": "Authority Health GME",
-                "sameAs": "https://www.authorityhealth.org/"
               }
             ],
             "url": "https://drmoton.com/about.html"
