@@ -11,7 +11,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Statement | Dr. Safwan Moton</title>
+    <title>Accessibility Statement | Dr. Safwan Moton, DO</title>
     <meta name="robots" content="noindex"> 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,6 +113,7 @@
         }
 
         p { margin-bottom: 20px; font-size: 1rem; color: #4a5568; }
+        .content-section a { color: var(--primary-color); font-weight: 700; text-decoration: underline; }
 
         /* --- FOOTER --- */
         footer { background-color: var(--primary-color); color: white; padding: 100px 5% 50px 5%; text-align: center; }
@@ -133,17 +134,23 @@
     <nav>
         <a href="https://drmoton.com" class="logo" style="color:var(--primary-color); text-decoration:none;">Dr. Safwan Moton</a>
         <div class="nav-links">
-            <a href="https://drmoton.com">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
+            <a href="index.html#experience">Background</a>
+            <a href="faq.html">FAQ</a>
+            <a href="index.html#location">Location</a>
             <a href="contact.html">Contact</a>
         </div>
         <button class="mobile-menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu"> ☰ </button>
     </nav>
 
     <div id="mobile-menu">
-        <a href="https://drmoton.com">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="index.html#experience" onclick="toggleMenu()">Background</a>
+        <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+        <a href="index.html#location" onclick="toggleMenu()">Location</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
 
     <main>
@@ -155,7 +162,7 @@
             
             <h2>General</h2>
             <p>
-                Dr. Safwan Moton is committed to ensuring that his website is accessible to people with disabilities. 
+                Dr. Safwan Moton, DO is committed to ensuring that his website is accessible to people with disabilities. 
                 We continue to make changes to improve the user experience for everyone and apply the relevant accessibility standards.
             </p>
 
@@ -174,8 +181,8 @@
             <p>We take the following measures to ensure accessibility:</p>
             <ul style="margin-left:20px; color:#4a5568; margin-bottom:20px;">
                 <li>Include accessibility as part of our internal mission.</li>
-                <li>Integrate accessibility into our procurement practices.</li>
-                <li>Provide continual accessibility training for our staff.</li>
+                <li>Integrate accessibility into our web design and update practices.</li>
+                <li>Review content and navigation for readability and keyboard/screen-reader compatibility.</li>
             </ul>
 
             <h2>Feedback</h2>
@@ -184,12 +191,13 @@
                 Please let us know if you encounter accessibility barriers:
             </p>
             <p>
-                <strong>Phone:</strong> (313) 871-3751<br>
+                <strong>Phone:</strong> <a href="tel:+12815652800">(281) 565-2800</a><br>
+                <strong>Website:</strong> <a href="https://sugarlakesfamilypractice.com" target="_blank" rel="noopener noreferrer">sugarlakesfamilypractice.com</a><br>
                 <strong>Postal Address:</strong><br>
-                Authority Health GME<br>
-                Attn: Dr. Safwan Moton<br>
-                3031 W. Grand Boulevard, Suite 600<br>
-                Detroit, MI 48202
+                Sugar Lakes Family Practice<br>
+                Attn: Dr. Safwan Moton, DO<br>
+                16902 Southwest Fwy, Ste 100<br>
+                Sugar Land, TX 77479
             </p>
             <p>We try to respond to feedback within 5 business days.</p>
 
@@ -200,6 +208,7 @@
         <div class="copyright">
             © 2026 Dr. Safwan Moton. All Rights Reserved. <br>
             <span style="font-size:0.6rem; opacity:0.8;">
+                Not medical advice. In an emergency, dial 911. | 
                 <a href="privacy.html" style="text-decoration:underline; color:inherit;">Privacy Policy & Terms</a> | 
                 <a href="accessibility.html" style="text-decoration:underline; color:inherit;">Accessibility</a>
             </span>
@@ -216,19 +225,6 @@
             btn.setAttribute('aria-expanded', !isExpanded);
             menu.style.display = isExpanded ? 'none' : 'block';
         }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const menu = document.getElementById('mobile-menu');
-                const btn = document.querySelector('.mobile-menu-btn');
-                
-                menu.style.display = 'none';
-                if(btn) btn.setAttribute('aria-expanded', 'false');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
 </body>
 </html>
